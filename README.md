@@ -8,3 +8,5 @@ Each mod here is one of two things:
 
 - a mod I created from scratch, or
 - an existing mod by another developer that I changed or fixed.
+
+Other authors' original files (their `.asi` plugins, data files and readmes) are not included. Where a mod's README mentions an original file kept next to it, that file is kept outside this repo. Each README credits the original mod and its author where known.
