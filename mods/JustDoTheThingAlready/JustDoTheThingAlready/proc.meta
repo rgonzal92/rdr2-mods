@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_THIEF_SEARCHING_TREE</Name>
+      <ConditionalAnims>
+        <Name>THIEF_SEARCHING_TREE</Name>
+        <ConditionalAnims>
+          <Item ref="THIEF_SEARCHING_TREE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>jr_foreman</SingleParticipantId>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_GENERIC_PAMPHLET_W11_5_H20_5_FLOOR_STASH</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>CASH</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_GENERIC_PAMPHLET_W11_5_H20_5_FLOOR_STASH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_PLAYER_GENERIC_PAMPHLET_W11_5_H20_5_FLOOR_STASH_LEFT" />
+          <Item ref="PROP_PLAYER_GENERIC_PAMPHLET_W11_5_H20_5_FLOOR_STASH_RIGHT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>INSPECT_FLOORBOARD</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHeading value="90.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>GENERIC_PAMPHLET_W11_5_H20_5</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_LNS_FLOOR_STASH</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>Left_or_Right</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Floorboard_L" />
+          <Item ref="Loot_Floorboard_R" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>REMOVE_PLANK</PromptText>
+          <PromptGroupText>HIDDEN_STASH</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHeading value="90.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_LNS_PILLOW_STASH</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_LNS_PILLOW_STASH</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Pillow" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.500000" y="-0.575000" z="-1.100000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>HIDDEN_STASH</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_High</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHeading value="-101.875000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_LNS_SACK_STASH</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_LNS_SACK_STASH</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Sack" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>HIDDEN_STASH</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="2.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_LOOT_WALL_STASH</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_LOOT_WALL_STASH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_PLAYER_LOOT_WALL_STASH_LONNIES" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>plr</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.300000" y="0.100000" z="0.500000" />
+          <PromptText>REMOVE_PLANK</PromptText>
+          <PromptGroupText>HIDDEN_STASH</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="50.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitPromptOnlyWhenFullyActive value="false" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MONEY</Id>
+          <PropSet>BILLSTACKS</PropSet>
+          <Offset x="0.000000" y="0.100000" z="-0.500000" />
+          <Rotation x="90.000000" y="0.000000" z="90.000000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_OPEN_ARMOIR_CORPSE</Name>
+      <ScriptName>armoire_corpse_scenario</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_OPEN_ARMOIR_CORPSE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_PLAYER_OPEN_ARMOIR_CORPSE_ABERDEEN" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <PromptText>OPEN</PromptText>
+          <PromptGroupText>ARMOIR</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="-1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="60.000000" />
+          <CamLookAngle value="0.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RHO_GUN_TRAP_DOOR</Name>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_RHO_GUN_TRAP_DOOR</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_PLAYER_RHO_GUN_TRAP_DOOR" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="-0.300000" y="-1.300000" z="0.500000" />
+          <PromptText>OPEN</PromptText>
+          <PromptGroupText>OPEN_TRAP_DOOR</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <PointDirectionWeight value="-1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CamLookAngle value="45.000000" />
+          <CloseRadius value="1.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitPromptWeight value="0.000000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_STR_GEN_BSMT_LOOT</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockGestures DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_STR_GEN_BSMT_LOOT</Name>
+        <ConditionalAnims>
+          <Item ref="ROCKandLOOT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="-0.600000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>HIDDEN_STASH</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <PointDirectionWeight value="1.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MONEY</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="-0.083000" y="-0.073000" z="0.032000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_brickplug01x</Id>
+          <PropSet>STR_GEN_BRK_PLG</PropSet>
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_STR_GEN_TRAP_DOOR</Name>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_STR_GEN_TRAP_DOOR</Name>
+        <ConditionalAnims>
+          <Item ref="OpenTrapDoor" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>OPEN</PromptText>
+          <PromptGroupText>OPEN_TRAP_DOOR</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.700000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="-90.000000" />
+          <PointDirectionHalfAngle value="45.000000" />
+          <CloseRadius value="1.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_SIT_SUPPER</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>BlockLegIk DontTimeoutUntilIdleFinishes NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll WaitOnStreamingBeforeNavigatingToStartPosition BlockMeleeGrapple DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_SIT_SUPPER</Name>
+        <ConditionalAnims>
+          <Item ref="PLAYER_SIT_SUPPER_ABERDEEN_LEFT_OR_RIGHT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>PLAYER_SIT</PromptText>
+		  <PromptGroupText>CHAIR</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.800000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_SIT_ABERDEEN_DRINKING</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>BlockLegIk DontTimeoutUntilIdleFinishes NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll WaitOnStreamingBeforeNavigatingToStartPosition BlockMeleeGrapple DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_SIT_ABERDEEN_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="PLAYER_SIT_ABERDEEN_DRINKING_LEFT_OR_RIGHT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>PLAYER_SIT</PromptText>
+		  <PromptGroupText>CHAIR</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.800000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_SIT_ROCKY_SEV</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>BlockLegIk DontTimeoutUntilIdleFinishes NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll WaitOnStreamingBeforeNavigatingToStartPosition BlockMeleeGrapple DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_SIT_ROCKY_SEV</Name>
+        <ConditionalAnims>
+          <Item ref="PLAYER_SIT_ROCKY_SEV_LEFT_OR_RIGHT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>PLAYER_SIT</PromptText>
+		  <PromptGroupText>CHAIR</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.800000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_HIDDEN_CABINET</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_HIDDEN_CABINET</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_PLAYER_HIDDEN_CABINET_ABERDEEN" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="-0.300000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>INSPECT_PICTURE</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="-1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="60.000000" />
+          <CamLookAngle value="20.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH01</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="-0.055702" y="-0.002785" z="0.029018" />
+          <Rotation x="0.000000" y="0.000000" z="75.358700" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+        </Item>
+        <Item>
+          <Id>CASH02</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="0.096698" y="-0.035195" z="-0.247075" />
+          <Rotation x="0.000000" y="0.000000" z="55.234690" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_PLAYER_STR_GEN_BSMT_PEEK</Name>
+      <Flags>DontAttachPed DontRandomizeBaseOnStartup ForceLegIK IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>WORLD_PLAYER_STR_GEN_BSMT_PEEK</Name>
+        <ConditionalAnims>
+          <Item ref="PEEK_WINDOW" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>pedPlayer</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="1.900000" y="1.100000" z="-0.175000" />
+          <PromptText>PEEK_GENERIC</PromptText>
+          <PromptGroupText>BASEMENT_WINDOW</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.850000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="-90.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitInputType>INPUT_CONTEXT_B</QuitInputType>
+          <QuitPromptDelay value="7.000000" />
+          <!-- <QuitPromptHoldDuration value="0.300000" /> -->
+          <!-- <QuitHoldTimeType>SHORT_TIMED_EVENT</QuitHoldTimeType> -->
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_NBX_GUN_GAMB_SAFE</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_NBX_GUN_GAMB_SAFE</Name>
+        <ConditionalAnims>
+          <Item ref="PROC_PLAYER_SHOPROB_NBX_GAMBLING_SAFE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="-0.300000" y="0.000000" z="-0.210000" />
+          <PromptText>ROB</PromptText>
+          <PromptGroupText>SAFE</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="70.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MONEY_A</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="-0.327091" y="0.213545" z="0.274962" />
+          <Rotation x="-0.000001" y="0.000000" z="40.903060" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>MONEY_B</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="-0.218495" y="0.202221" z="0.093323" />
+          <Rotation x="0.000000" y="0.000000" z="32.214100" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>MONEY_C</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="-0.343039" y="0.233459" z="0.093323" />
+          <Rotation x="-0.000007" y="0.000005" z="32.214120" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_VAL_BANKTELLER</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes NavmeshBlocking</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_VAL_BANKTELLER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_VAL_BANKTELLER" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LNS_SEAN_IDLE</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes NavmeshBlocking</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LNS_SEAN_IDLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LNS_SEAN_IDLE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_CATFISH_COWER_BED</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>BlockGestures DontRandomizeBaseOnStartup IgnoreBlockingAreas NavmeshBlocking NoMeleeTakedowns Temp WaitOnStreamingBeforeNavigatingToStartPosition EnableEnterAlignHelper BlockMeleeGrapple DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_CATFISH_COWER_BED</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_CATFISH_COWER_BED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <eLookAtImportance>LOW</eLookAtImportance>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_PLAYER_RHO_GUN_BSMT_PEEK</Name>
+      <Flags>LootingScenario DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition DisableWeaponSelection DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>WORLD_PLAYER_RHO_GUN_BSMT_PEEK</Name>
+        <ConditionalAnims>
+          <Item ref="RHODES_GUNSMITH_BASEMENT_PEEK" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TREASURE_HUNTER_ROCK_STASH</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TREASURE_HUNTER_ROCK_STASH</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Rockstash_L" />
+          <Item ref="Loot_Rockstash_R" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>EXAMINE</PromptText>
+          <PromptGroupText>INSPECT_ROCK</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CloseRadius value="2.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>GOLD_BAR</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TREASURE_HUNTER_ROCK_STASH_NEW_THCHAINS</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TREASURE_HUNTER_ROCK_STASH_NEW_THCHAINS</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Rockstash_New_THChains_L" />
+          <Item ref="Loot_Rockstash_New_THChains_R" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>EXAMINE</PromptText>
+          <PromptGroupText>INSPECT_ROCK</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CloseRadius value="2.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>GOLD_BAR_NEW_THCHAINS</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TREASURE_HUNTER_ROCK_STASH_NEW_THCHAINS_GRAVE</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TREASURE_HUNTER_ROCK_STASH_NEW_THCHAINS_GRAVE</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Rockstash_New_THChains_Trinket_L" />
+          <Item ref="Loot_Rockstash_New_THChains_Trinket_R" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>EXAMINE</PromptText>
+          <PromptGroupText>INSPECT_ROCK</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CloseRadius value="2.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>GOLD_BAR_CROW_TRINKET</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TS_BURIED_GOLD</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TS_BURIED_GOLD</Name>
+        <ConditionalAnims>
+          <Item ref="Loot_Rockstash_L" />
+          <Item ref="Loot_Rockstash_R" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>INSPECT_ROCK</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="2.500000" />
+          <PointDirectionWeight value="2.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="2.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>GOLD_BAR</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TREASURE_HUNTER_BGV_OBELISK_LOOT</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockGestures DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TREASURE_HUNTER_BGV_OBELISK_LOOT</Name>
+        <ConditionalAnims>
+          <Item ref="TREASURE_HUNTER_BGV_OBELISK_LOOT_ARTHUR" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="-0.600000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>INSPECT_WALL</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <PointDirectionWeight value="1.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MONEY</Id>
+          <PropSet>GOLD_BAR</PropSet>
+          <Offset x="-0.083000" y="-0.073000" z="0.032000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_brickplug01x</Id>
+          <PropSet>TREASURE_HUNTER_BGV_OBELISK</PropSet>
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget RegisterWithEagleEye</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TREASURE_HUNTER_PLAQUE_LOOT</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockGestures DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TREASURE_HUNTER_PLAQUE_LOOT</Name>
+        <ConditionalAnims>
+          <Item ref="TREASURE_HUNTER_PLAQUE_LOOT_ARTHUR" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="-0.600000" />
+          <PromptText>EXAMINE</PromptText>
+          <PromptGroupText>INSPECT_WALL</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <PointDirectionWeight value="1.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MONEY</Id>
+          <PropSet>GOLD_BAR</PropSet>
+          <Offset x="-0.083000" y="-0.273" z="0.032000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_brickplug01x</Id>
+          <PropSet>TREASURE_HUNTER_WALL_PLAQUE</PropSet>
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget RegisterWithEagleEye</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_TREASURE_HUNTER_PLAQUE_STATUE_LOOT</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockGestures DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition IgnoreBrokenAttachment DisableCombatExitFromAim</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_TREASURE_HUNTER_PLAQUE_STATUE_LOOT</Name>
+        <ConditionalAnims>
+          <Item ref="TREASURE_HUNTER_PLAQUE_LOOT_ARTHUR" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="-0.600000" />
+          <PromptText>EXAMINE</PromptText>
+          <PromptGroupText>INSPECT_PLAQUE</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <PointDirectionWeight value="1.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MONEY</Id>
+          <PropSet>GOLD_BAR</PropSet>
+          <Offset x="-0.083000" y="-0.273" z="0.032000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_brickplug01x</Id>
+          <PropSet>TREASURE_HUNTER_WALL_PLAQUE_ENGRAVED</PropSet>
+	  <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget RegisterWithEagleEye</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>

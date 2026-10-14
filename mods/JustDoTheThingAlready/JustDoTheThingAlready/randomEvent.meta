@@ -1,0 +1,1049 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>RE_MURDER_CAMPFIRE_RANGED_SCRIPT</Name>
+      <StationaryReactHash />
+      <Flags>AllowSpawnAndUseInRain IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>beat_murder_campfire</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>RE_MURDER_CAMPFIRE_RANGED_SCRIPT_SHORT</Name>
+      <StationaryReactHash />
+      <Flags>AllowSpawnAndUseInRain IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>beat_murder_campfire</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="100.000000" />
+        <ScriptStopDistance value="150.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_RE_DUEL_BOASTER_BOASTER</Name>
+      <Flags>EnableKinematicPhysicsForPed Temp DontValidateExitsWithProbeChecks</Flags>
+      <ConditionalAnims>
+        <Name>SCRIPT_RE_DUEL_BOASTER_BOASTER</Name>
+        <ConditionalAnims>
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V2" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V3" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V4" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V5" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V6" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V7" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V8" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V9" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V10" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V11" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V12" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS_V2" />
+          <Item ref="DUAL_BOASTER_NO_DRINK_BOASTER__TRANS_V3" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V6" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V7" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V8" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V9" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V14" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V16" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V18" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V19" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V20" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V21" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V2" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V3" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V4" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V5" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V5b" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V6" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V6b" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V7" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V7b" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V8" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUAL_BOASTER_NO_DRINK_BOASTER_V9" />
+          <Item ref="SCRIPT_COMMON__DUEL_BOASTER_BOASTER_FINAL" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.250000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.300000" z="0.400000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_RE_DUEL_BOASTER_FRIEND</Name>
+      <Flags>EnableKinematicPhysicsForPed Temp DontValidateExitsWithProbeChecks</Flags>
+      <ConditionalAnims>
+        <Name>SCRIPT_RE_DUEL_BOASTER_FRIEND</Name>
+        <ConditionalAnims>
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V2" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V3" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V4" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V5" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V6" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V7" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V8" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS__SCRIPT_COMMON_STAND_GENERIC_MALE_A_V9" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS_V2" />
+          <Item ref="DUEL_BOASTER_HAS_WHISKEY_FRIEND__TRANS_V3" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V10" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V11" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V12" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V13" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V15" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V17" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V22" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V23" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V24" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS_V25" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIENDb" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V2" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V2b" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V3" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V3b" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V4" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V5" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V6" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V7" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V8" />
+          <Item ref="SCRIPT_COMMON_STAND_GENERIC_MALE_A__TRANS__DUEL_BOASTER_HAS_WHISKEY_FRIEND_V9" />
+          <Item ref="SCRIPT_COMMON__DUEL_BOASTER_FRIEND_FINAL" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.250000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.300000" z="0.400000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_RELS_LOOT_SAFE_MALE_B</Name>
+      <Flags>EnableKinematicPhysicsForPed Temp DontValidateExitsWithProbeChecks</Flags>
+      <ConditionalAnims>
+        <Name>SCRIPT_RELS_LOCKEDSAFE_OPEN_MALE_B</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LOCKEDSAFE_OPEN_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_REGR_MALE_A_POSE1</Name>
+      <Flags>ForceLegIK Temp UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>SCRIPT_REGR_MALE_A_POSE1</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS_V2" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS_V3" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS_V4" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS_V5" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS_V6" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE1__TRANS_V7" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_REGR_MALE_A_POSE2</Name>
+      <Flags>ForceLegIK Temp UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>SCRIPT_REGR_MALE_A_POSE2</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_REGR_MALE_A_POSE2" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_REGR_MALE_A_POSE2__TRANS" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE2__TRANS_V2" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE2__TRANS_V3" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE2__TRANS_V4" />
+          <Item ref="SCRIPT_REGR_MALE_A_POSE2__TRANS_V5" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.250000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.300000" z="0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_REHOB_HERBALIST</Name>
+      <Flags>DontAttachPed AllowSpawnAndUseInRain EnableKinematicPhysicsForPed</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_IMPACT</RagdollBlockingFlags>
+      <ConditionalAnims>
+        <Name>SCRIPT_REHOB_HERBALIST_STAND</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_COMMON_STAND_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_MIX_MORTAR_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_LEAN_READ_HERBALIST" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_COMMON_STAND_HERBALIST__TRANS__WORLD_HUMAN_SIT_GROUND_MALE_A" />
+          <Item ref="SCRIPT_COMMON_STAND_HERBALIST__TRANS__LEAN_READ_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_STAND_HERBALIST__TRANS__MIX_MORTAR_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_MIX_MORTAR_HERBALIST__TRANS__WORLD_HUMAN_SIT_GROUND_MALE_A" />
+          <Item ref="SCRIPT_COMMON_MIX_MORTAR_HERBALIST__TRANS__LEAN_READ_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_MIX_MORTAR_HERBALIST__TRANS__STAND_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_LEAN_READ_HERBALIST__TRANS__STAND_HERBALIST" />
+          <Item ref="SCRIPT_COMMON_LEAN_READ_HERBALIST__TRANS__MIX_MORTAR_HERBALIST" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_A__TRANS__SCRIPT_COMMON_STAND_HERBALIST" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_A__TRANS__SCRIPT_COMMON_MIX_MORTAR_HERBALIST" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.250000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.300000" z="0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIPT_RETB_PREACHER</Name>
+      <Flags>Temp UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>SCRIPT_RETB_PREACHER</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_RETB_PREACHER_Aa" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc" />
+          <Item ref="SCRIPT_RETB_PREACHER_Dd" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V5" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V6" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V7" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V8" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V9" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V10" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V11" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V12" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V13" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V14" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V15" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V16" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V17" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V18" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V19" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS_V20" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Cc" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Cc_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Cc_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Cc_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Cc_V5" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Bb" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Bb_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Bb_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Bb_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Dd" />
+          <Item ref="SCRIPT_RETB_PREACHER_Aa__TRANS__Dd_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS__Dd" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS__Dd_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS__Dd_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS__Aa" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS_V5" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS_V6" />
+          <Item ref="SCRIPT_RETB_PREACHER_Bb__TRANS__Cc" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS__Aa" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS__Aa_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS__Aa_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS__Aa_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS__Dd" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS__Dd_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V5" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V6" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V7" />
+          <Item ref="SCRIPT_RETB_PREACHER_Cc__TRANS_V8" />
+          <Item ref="SCRIPT_RETB_PREACHER_Dd__TRANS" />
+          <Item ref="SCRIPT_RETB_PREACHER_Dd__TRANS_V2" />
+          <Item ref="SCRIPT_RETB_PREACHER_Dd__TRANS_V3" />
+          <Item ref="SCRIPT_RETB_PREACHER_Dd__TRANS_V4" />
+          <Item ref="SCRIPT_RETB_PREACHER_Dd__TRANS_V5" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_2H_TOOL</Name>
+      <Flags>Temp UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_2H_TOOL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_2H_TOOL_WORKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_2H_TOOL_AFTER_SWING_01_MALE_A" />
+          <Item ref="WORLD_HUMAN_LOCKEDSAFE_OPEN_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_2H_TOOL_WORKING_MALE_A__TRANS__AFTER_SWING_01_MALE_A" />
+          <Item ref="WORLD_HUMAN_2H_TOOL_AFTER_SWING_01_MALE_A__TRANS__WORKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_2H_TOOL_AFTER_SWING_01_MALE_A__TRANS__LOCKEDSAFE_OPEN_MALE_A" />
+          <Item ref="WORLD_HUMAN_2H_TOOL_AFTER_SWING_01_MALE_A__TRANS" />
+          <Item ref="WORLD_HUMAN_2H_TOOL_AFTER_SWING_01_MALE_A__TRANS_V2" />
+          <Item ref="WORLD_HUMAN_2H_TOOL_AFTER_SWING_01_MALE_A__TRANS_V3" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIP_REMC_RET_MALE_A_POSE2</Name>
+      <Flags>AllowSpawnAndUseInRain EnableKinematicPhysicsForPed</Flags>
+      <ConditionalAnims>
+        <Name>SCRIP_REMC_RETURN_MALE_A_POSE2</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_2" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIP_REMC_RET_MALE_A_POSE3</Name>
+      <Flags>AllowSpawnAndUseInRain EnableKinematicPhysicsForPed</Flags>
+      <ConditionalAnims>
+        <Name>SCRIP_REMC_RETURN_MALE_A_POSE3</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_3" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_3__TRANS" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_3__TRANS_V2" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_3__TRANS_V3" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_3__TRANS_V4" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_3__TRANS_V5" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIP_REMC_RET_MALE_B_POSE2</Name>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup AllowSpawnAndUseInRain EnableKinematicPhysicsForPed IgnoreLowShockingEvents NoMeleeTakedowns SingleUse BlockMeleeGrapple</Flags>
+      <ConditionalAnims>
+        <Name>SCRIP_REMC_RETURN_MALE_B_POSE2</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_2" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>SCRIP_REMC_RET_MALE_B_POSE3</Name>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup AllowSpawnAndUseInRain EnableKinematicPhysicsForPed IgnoreLowShockingEvents NoMeleeTakedowns SingleUse BlockMeleeGrapple</Flags>
+      <ConditionalAnims>
+        <Name>SCRIP_REMC_RETURN_MALE_B_POSE3</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_3" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_3__TRANS" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_3__TRANS_V2" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_3__TRANS_V3" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_3__TRANS_V4" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_REHR_SACK_STASH</Name>
+      <ScriptName>money_scenario</ScriptName>
+      <Flags>LootingScenario BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas IgnoreObstructions PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>RE_HOSTAGE_RESCUE_SACK_STASH</Name>
+        <ConditionalAnims>
+          <Item ref="RE_HOSTAGE_RESCUE_SACK_STASH" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <PromptGroupText>INSPECT_SACK</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <FixedWeight value="5.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="2.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CASH</Id>
+          <PropSet>BILLSTACK_FOLDED</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.100000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RE_DRUNK_CAMP_SIT</Name>
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes ForceLegIK IgnoreBlockingAreas NavmeshBlocking NoMeleeTakedowns PlayerOnly PreferMeleeRagdoll SeatedScenarioChair TriggerExitOnStick KeepMoverVerticalWhileAttached AllowItemInteractions BlockMeleeGrapple DisableWeaponSelection</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_RE_DRUNK_CAMP_SIT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_PLAYER_RE_DRUNK_CAMP_SIT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>PLAYER_SIT</PromptText>
+          <PromptGroupText>STOOL</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_High</Priority>
+          <FixedWeight value="8.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionHalfAngle value="0.000000" />
+          <AbsolutePointHeadingHalfAngle value="0.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.350000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+      <CameraFramingInfo>
+        <eCameraFraming>CameraFraming_Seated</eCameraFraming>
+      </CameraFramingInfo>
+      <SeatedOffset x="0.000000" y="0.000000" z="0.200000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_PLAYER_RE_LOST_DOG_FEED</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse UseAnimationOffsets WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_PLAYER_RE_LOST_DOG_FEED</Name>
+        <ConditionalAnims>
+          <Item ref="RE_LOST_DOG_FEED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <PromptText>PLACE_BAIT</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <DirectionWeight value="0.000000" />
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <TimeoutSeconds value="6.633333" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioGroupInfo">
+      <Name>WORLD_PLAYER_RE_ANIMAL_MAULING</Name>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup AllowSpawnAndUseInRain EnableKinematicPhysicsForPed IgnoreLowShockingEvents IgnoreObstructions NoMeleeTakedowns SingleUse DontValidateExitsWithProbeChecks BlockMeleeGrapple DisableCombatExitFromAim</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_IMPACT RBF_PLAYER_BUMP RBF_PLAYER_RAGDOLL_BUMP RBF_HORSE_BUMP</RagdollBlockingFlags>
+      <ConditionalAnims>
+        <Name>GIVE_MEDS_OR_BOOZE</Name>
+        <ConditionalAnims>
+          <Item ref="RE_ANIMAL_MAULING_VICTIM_IDLES" />
+          <Item ref="PLAYER_SYNC_MEDS_F" />
+          <Item ref="PLAYER_SYNC_MEDS_L" />
+          <Item ref="PLAYER_SYNC_MEDS_R" />
+          <Item ref="GIVE_MEDS_F" />
+          <Item ref="GIVE_MEDS_L" />
+          <Item ref="GIVE_MEDS_R" />
+          <Item ref="PLAYER_SYNC_WHISKEY_F" />
+          <Item ref="PLAYER_SYNC_WHISKEY_L" />
+          <Item ref="PLAYER_SYNC_WHISKEY_R" />
+          <Item ref="RE_ANIMAL_MAULING_GIVE_WHISKEY_F" />
+          <Item ref="RE_ANIMAL_MAULING_GIVE_WHISKEY_L" />
+          <Item ref="RE_ANIMAL_MAULING_GIVE_WHISKEY_R" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>GIVE_WHISKEY</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_High</Priority>
+          <FixedWeight value="3.000000" />
+          <InteractionRadius value="3.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="178.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="3.000000" />
+          <QuitPromptOnlyWhenFullyActive value="false" />
+          <VisibleQuitPrompt value="false" />
+          <CreateOnlyInIlo value="true" />
+        </Item>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>GIVE_MEDS</PromptText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <Priority>PP_High</Priority>
+          <FixedWeight value="3.000000" />
+          <InteractionRadius value="3.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="178.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="3.000000" />
+          <QuitPromptOnlyWhenFullyActive value="false" />
+          <VisibleQuitPrompt value="false" />
+          <CreateOnlyInIlo value="true" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>meds</Id>
+          <PropSet>INV_MEDICINE</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.500000" />
+          <DisablePickup value="true" />
+          <Flags>CreateOnRequest</Flags>
+        </Item>
+        <Item>
+          <Id>BOOZE</Id>
+          <PropSet>INV_WHISKEY</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-0.500000" />
+          <DisablePickup value="true" />
+          <Flags>CreateOnRequest</Flags>
+        </Item>
+      </PrespawnedProps>
+      <Participants>
+        <Item>
+          <Id>Victim</Id>
+        </Item>
+        <Item>
+          <Id>player</Id>
+          <SpawnProbability value="0.000000" />
+        </Item>
+      </Participants>
+      <IsSynchronized value="true" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RE_MURDER_CAMP_ROCK_NOTE</Name>
+      <ScriptName>re_murder_camp_note</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <Flags>LootingScenario DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse UseAnimationOffsets WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat AllowItemInteractions</Flags>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="-0.015000" y="0.543000" z="1.000000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="160.000000" />
+          <PointDirectionHalfAngle value="130.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.750000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap01</PropSet>
+          <Offset x="-0.015095" y="0.543741" z="0.954149" />
+          <Rotation x="176.682800" y="-4.545377" z="121.438400" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap02</PropSet>
+          <Offset x="-0.015095" y="0.543741" z="0.954149" />
+          <Rotation x="176.682800" y="-4.545377" z="121.438400" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap03</PropSet>
+          <Offset x="-0.015095" y="0.543741" z="0.954149" />
+          <Rotation x="176.682800" y="-4.545377" z="121.438400" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>Head</Id>
+          <PropSet>MURD_CAMP_HEAD</PropSet>
+          <Offset x="0.121142" y="0.690153" z="1.006435" />
+          <Rotation x="-0.000058" y="0.000003" z="111.324500" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RE_MURDER_CAMP_TREE_NOTE</Name>
+      <ScriptName>re_murder_camp_note</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <Flags>LootingScenario DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse UseAnimationOffsets WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat AllowItemInteractions</Flags>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.044000" y="0.507000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap01</PropSet>
+          <Offset x="0.044586" y="0.507271" z="1.648458" />
+          <Rotation x="1.427249" y="-6.421764" z="6.825211" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap02</PropSet>
+          <Offset x="0.044586" y="0.507271" z="1.648458" />
+          <Rotation x="1.427249" y="-6.421764" z="6.825211" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap03</PropSet>
+          <Offset x="0.044586" y="0.507271" z="1.648458" />
+          <Rotation x="1.427249" y="-6.421764" z="6.825211" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>Head</Id>
+          <PropSet>MURD_CAMP_HEAD</PropSet>
+          <Offset x="0.036250" y="0.696103" z="1.649914" />
+          <Rotation x="79.637340" y="-48.714460" z="119.695500" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>KNIFE</Id>
+          <PropSet>MURD_CAMP_KNIFE</PropSet>
+          <Offset x="-0.001472" y="0.550686" z="1.728344" />
+          <Rotation x="-104.661100" y="-25.255230" z="0.944750" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RE_MURDER_CAMP_STAKE_NOTE</Name>
+      <ScriptName>re_murder_camp_note</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <Flags>LootingScenario DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse UseAnimationOffsets WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat AllowItemInteractions</Flags>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.030000" y="0.503000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap01</PropSet>
+          <Offset x="0.031398" y="0.503930" z="1.098410" />
+          <Rotation x="-134.749600" y="65.132410" z="-144.477200" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap02</PropSet>
+          <Offset x="0.031398" y="0.503930" z="1.098410" />
+          <Rotation x="-134.749600" y="65.132410" z="-144.477200" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>MAP</Id>
+          <PropSet>REMurderMap03</PropSet>
+          <Offset x="0.031398" y="0.503930" z="1.098410" />
+          <Rotation x="-134.749600" y="65.132410" z="-144.477200" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE1</ItemName>
+              </Item>
+              <Item type="CAIConditionHasSatchelItem">
+                <ItemName>DOCUMENT_SERIAL_KILLER_CLUE2</ItemName>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionHasSatchelItem">
+                  <ItemName>DOCUMENT_SERIAL_KILLER_CLUE3</ItemName>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>Head</Id>
+          <PropSet>MURD_CAMP_HEAD</PropSet>
+          <Offset x="0.051720" y="0.680234" z="1.083553" />
+          <Rotation x="75.700260" y="-45.194670" z="118.168100" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RE_FROZEN_TO_DEATH</Name>
+      <ScriptName>frozen_to_death_scenario</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <Flags>LootingScenario DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition NotUsableInCombat AllowItemInteractions</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_RE_FROZEN_TO_DEATH</Name>
+        <ConditionalAnims>
+          <Item ref="RE_FROZEN_TO_DEATH" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <Priority>PP_MissionCritical</Priority>
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CamLookAngle value="0.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitPromptText>PUT_AWAY_NOTE</QuitPromptText>
+          <QuitInputType>INPUT_CONTEXT_Y</QuitInputType>
+          <!-- <QuitPromptHoldDuration value="0.500000" /> -->
+          <!-- <QuitHoldTimeType>MEDIUM_TIMED_EVENT</QuitHoldTimeType> -->
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>LETTER</Id>
+          <PropSet>FROZEN_NOTE</PropSet>
+          <Offset x="0.022491" y="-0.014186" z="0.572334" />
+          <Rotation x="82.873240" y="-24.671360" z="-79.395400" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_RE_LOST_DRUNK_SLEEP</Name>
+      <Flags>BlockGestures AllowSpawnAndUseInRain DontTimeoutUntilBaseFinishes ForceModel IgnoreBlockingAreas PreciseUseTime SleepingScenario CannotSee</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <Condition type="CAIConditionTime">
+        <Hours>H0 H1 H2 H3 H4 H5 H6 H18 H19 H20 H21 H22 H23</Hours>
+      </Condition>
+      <ConditionalAnims>
+        <Name>RE_LOST_DRUNK_SLEEPING</Name>
+        <ConditionalAnims>
+          <Item ref="SCRIPT_RE_LOST_DRUNK_SLEEP_A" />
+          <Item ref="SCRIPT_RE_LOST_DRUNK_SLEEP_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioGroupInfo">
+      <Name>WORLD_PLAYER_RE_DARK_ALLEY_DESP_GIVE</Name>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AllowSpawnAndUseInRain IgnoreBlockingAreas IgnoreLowShockingEvents NoMeleeTakedowns SingleUse BlockMeleeGrapple</Flags>
+      <ConditionalAnims>
+        <Name>DESPERATE_GIVE_MONEY</Name>
+        <ConditionalAnims>
+          <Item ref="RE_DARK_ALLEY_DESP_GIVE_PLAYER_NONSYNC" />
+          <Item ref="RE_DARK_ALLEY_DESP_GIVE_BUM_NONSYNC" />
+          <Item ref="GIVE_MONEY" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <Participants>
+        <Item>
+          <Id>BUM</Id>
+        </Item>
+        <Item>
+          <Id>player</Id>
+          <SpawnProbability value="0.000000" />
+        </Item>
+      </Participants>
+      <IsSynchronized value="true" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_PLAYER_RE_DARK_ALLEY_DRUNK_STEAL</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse UseAnimationOffsets WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_PLAYER_RE_DARK_ALLEY_DRUNK_STEAL</Name>
+        <ConditionalAnims>
+          <Item ref="RE_DARK_ALLEY_DRUNK_STEAL" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <PromptText>TAKE_MONEY</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <DirectionWeight value="0.000000" />
+          <PointDirectionWeight value="1.000000" />
+          <CamLookAngle value="0.000000" />
+          <TimeoutSeconds value="6.633333" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>COIN01</Id>
+          <PropSet>COIN</PropSet>
+          <Offset x="0.023284" y="0.028760" z="0.010267" />
+          <Rotation x="-4.707386" y="3.890571" z="-131.675300" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>COIN02</Id>
+          <PropSet>COIN</PropSet>
+          <Offset x="0.030461" y="0.030544" z="0.014268" />
+          <Rotation x="-4.707386" y="3.890571" z="-131.675300" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioGroupInfo">
+      <Name>WORLD_PLAYER_RE_DARK_ALLEY_DRUNK_HELP</Name>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AllowSpawnAndUseInRain IgnoreBlockingAreas IgnoreLowShockingEvents NoMeleeTakedowns SingleUse BlockMeleeGrapple</Flags>
+      <ConditionalAnims>
+        <Name>DRUNK_HELP</Name>
+        <ConditionalAnims>
+          <Item ref="RE_DARK_ALLEY_DRUNK_HELP_PLAYER_NONSYNC" />
+          <Item ref="RE_DARK_ALLEY_DRUNK_HELP_BUM_NONSYNC" />
+          <Item ref="Help" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <Participants>
+        <Item>
+          <Id>BUM</Id>
+        </Item>
+        <Item>
+          <Id>player</Id>
+          <SpawnProbability value="0.000000" />
+        </Item>
+      </Participants>
+      <IsSynchronized value="true" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_RE_MOONSHINE_ADD_PLANT</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>DontRandomizeBaseOnStartup AllowSpawnAndUseInRain IgnoreBlockingAreas PlayerOnly SingleUse UseAnimationOffsets WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_RE_MOONSHINE_ADD_PLANT</Name>
+        <ConditionalAnims>
+          <Item ref="RE_MOONSHINE_ADD_PLANT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="-0.600000" y="1.100000" z="1.000000" />
+          <PromptText>ADD_PLANTS</PromptText>
+		  <PromptGroupText>STILL</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.600000" />
+          <PointDirectionWeight value="1.000000" />
+          <TimeoutSeconds value="7.000000" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>YARROW</Id>
+          <PropSet>YARROW</PropSet>
+          <Offset x="0.000000" y="0.000000" z="-3.000000" />
+          <DisablePickup value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>

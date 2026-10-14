@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_COOKING</Name>
+      <ScriptName>camp_fire_cooking</ScriptName>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_COOKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_COOKING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_COOKING_EATING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_COOKING_EATING_BITE1_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_FIRE_COOKING_EATING_BITE1_MALE_A_TRANS_EATING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_COOKING_EATING_MALE_A_TRANS_BITE1_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_COOKING_MALE_A_TRANS_EATING_MALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="60.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_stickFirePoker01x_PH_R_HAND</Id>
+          <PropSet>FIRE_POKER</PropSet>
+          <Offset x="0.707400" y="0.156300" z="0.012800" />
+          <Rotation x="93.311775" y="-80.086784" z="173.839355" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_BUTCHER_DEER</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoBulkyItems PreciseUseTime WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_BUTCHER_DEER</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_RESTING" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_RESTING" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_GRAB__TRANS__SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_SLICE__TRANS__MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_CHOP__TRANS__DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_DEER_SCOOP__TRANS__MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_DROP__TRANS__LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_RESTING__TRANS__LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_GRAB__TRANS__SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_SLICE__TRANS__MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_CHOP__TRANS__DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_DEER_SCOOP__TRANS__MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_DROP__TRANS__LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_RESTING__TRANS__LEG_GRAB" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="60.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+          <PropSet>MEAT_BOWL</PropSet>
+          <Offset x="0.830100" y="0.254600" z="0.801500" />
+          <Rotation x="0.000000" y="0.000003" z="90.000000" />
+					<FixedPhysics value="true" />
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>meatBowl_fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+          <SpawnCondition type="CAIConditionNot">
+						<Condition type="CAIConditionScenarioPointHasProp">
+							<Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+						</Condition>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_BUTCHER_DEER_ALWAYS</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoBulkyItems PreciseUseTime WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_BUTCHER_DEER_ALWAYS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_RESTING" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_RESTING" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_GRAB__TRANS__SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_LEG_SLICE__TRANS__MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_CHOP__TRANS__DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_DEER_SCOOP__TRANS__MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_DROP__TRANS__LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_MALE_A_RESTING__TRANS__LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_GRAB__TRANS__SLICE" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_LEG_SLICE__TRANS__MEAT_CHOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_CHOP__TRANS__DEER_SCOOP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_DEER_SCOOP__TRANS__MEAT_DROP" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_DROP__TRANS__LEG_GRAB" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="PROP_HUMAN_BUTCHER_DEER_FEMALE_A_RESTING__TRANS__LEG_GRAB" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="60.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+          <PropSet>MEAT_BOWL</PropSet>
+          <Offset x="0.830100" y="0.254600" z="0.801500" />
+          <Rotation x="0.000000" y="0.000003" z="90.000000" />
+          <FixedPhysics value="true" />
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>meatBowl_fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+          <SpawnCondition type="CAIConditionNot">
+            <Condition type="CAIConditionScenarioPointHasProp">
+              <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+            </Condition>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BUTCHER_RABBIT</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoBulkyItems PreciseUseTime WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BUTCHER_RABBIT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RESTING" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RESTING" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_GRAB__TRANS__CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_CHOP__TRANS__MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_SCOOP__TRANS__DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_DROP__TRANS__RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RESTING__TRANS__RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_GRAB__TRANS__CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_CHOP__TRANS__MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_SCOOP__TRANS__DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_DROP__TRANS__RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RESTING__TRANS__RABBIT_GRAB" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="60.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+          <PropSet>MEAT_BOWL</PropSet>
+          <Offset x="0.830100" y="0.254600" z="0.801500" />
+          <Rotation x="0.000000" y="0.000003" z="90.000000" />
+          <FixedPhysics value="true" />
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>meatBowl_fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+          <SpawnCondition type="CAIConditionNot">
+						<Condition type="CAIConditionScenarioPointHasProp">
+							<Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+						</Condition>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BUTCHER_RABBIT_ALWAYS</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoBulkyItems PreciseUseTime WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BUTCHER_RABBIT_ALWAYS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RESTING" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RESTING" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_GRAB__TRANS__CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RABBIT_CHOP__TRANS__MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_SCOOP__TRANS__DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_DROP__TRANS__RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_MALE_A_RESTING__TRANS__RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_GRAB__TRANS__CHOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RABBIT_CHOP__TRANS__MEAT_SCOOP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_SCOOP__TRANS__DROP" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_DROP__TRANS__RABBIT_GRAB" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_MEAT_DROP__TRANS__RESTING" />
+          <Item ref="WORLD_HUMAN_BUTCHER_RABBIT_FEMALE_A_RESTING__TRANS__RABBIT_GRAB" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="60.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+          <PropSet>MEAT_BOWL</PropSet>
+          <Offset x="0.830100" y="0.254600" z="0.801500" />
+          <Rotation x="0.000000" y="0.000003" z="90.000000" />
+          <FixedPhysics value="true" />
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>meatBowl_fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+          <SpawnCondition type="CAIConditionNot">
+            <Condition type="CAIConditionScenarioPointHasProp">
+              <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+            </Condition>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK</Name>
+      <Flags>AttachPed NavmeshBlocking ResetPrespawnedPropsOnPedDestruction SeatedScenarioTableChair EnableEnterAlignHelper UseExitDirection TriggerExitOnStick SingleUse</Flags>
+      <RagdollBlockingFlags>RBF_PED_RAGDOLL_BUMP</RagdollBlockingFlags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING1_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING2_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_GRABDRINK1_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_GRABDRINK2_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_FEMALE_A__TRANS__CUTTING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_FEMALE_A__TRANS__CHEWING_FEMALE_A_6_TO_5PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_FEMALE_A__TRANS__CHEWING_FEMALE_A_5_TO_4PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_FEMALE_A__TRANS__CHEWING_FEMALE_A_3_TO_2PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_FEMALE_A__TRANS__CHEWING_FEMALE_A_2_TO_1PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_FEMALE_A__TRANS__CHEWING_FEMALE_A_4_TO_3PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_FEMALE_A__TRANS__CHEWING_FEMALE_A_1_TO_0PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_FEMALE_A__TRANS__SIDEDISH_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A__TRANS__EATSIDE_FEMALE_A_6_TO_5PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A__TRANS__EATSIDE_FEMALE_A_5_TO_4PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A__TRANS__EATSIDE_FEMALE_A_4_TO_3PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A__TRANS__EATSIDE_FEMALE_A_3_TO_2PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A__TRANS__EATSIDE_FEMALE_A_2_TO_1PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_FEMALE_A__TRANS__EATSIDE_FEMALE_A_1_TO_0PC" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_FEMALE_A__TRANS__CUTTING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_FEMALE_A__TRANS__RESTFRONT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_FEMALE_A__TRANS__SIDEDISH_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_FEMALE_A__TRANS__CUTTING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_FEMALE_A__TRANS__SIDEDISH_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_FEMALE_A__TRANS__RESTFRONT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS_V3" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__CUTTING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__CUTTING_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__EATSIDE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__EATSIDE_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__GRABDRINK1_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__SIDEDISH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CHEWING_MALE_A__TRANS__SIDEDISH_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_MALE_A__TRANS__CHEWING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_MALE_A__TRANS__CHEWING_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_MALE_A__TRANS__CHEWING_MALE_A_V3" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_CUTTING_MALE_A__TRANS__CHEWING_MALE_A_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING1_MALE_A__TRANS__CUTTING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING1_MALE_A__TRANS__RESTFRONT_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING2_MALE_A__TRANS__CUTTING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING2_MALE_A__TRANS__RESTFRONT_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_DRINKING2_MALE_A__TRANS__SIDEDISH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS__CHEWING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS__GRABDRINK2_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS__RESTFRONT_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS__SIDEDISH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS__SIDEDISH_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_EATSIDE_MALE_A__TRANS__CUTTING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_GRABDRINK1_MALE_A__TRANS__DRINKING1_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_GRABDRINK2_MALE_A__TRANS__DRINKING2_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_GRABDRINK2_MALE_A__TRANS__EATSIDE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A__TRANS__CUTTING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A__TRANS__CUTTING_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A__TRANS__CUTTING_MALE_A_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A__TRANS__CUTTING_MALE_A_V6" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A__TRANS__SIDEDISH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_RESTFRONT_MALE_A__TRANS__SIDEDISH_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A__TRANS__EATSIDE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A__TRANS__EATSIDE_MALE_A_V2" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A__TRANS__EATSIDE_MALE_A_V3" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A__TRANS__EATSIDE_MALE_A_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A__TRANS__EATSIDE_MALE_A_V5" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_EATING_KNIFE_FORK_SIDEDISH_MALE_A__TRANS__EATSIDE_MALE_A_V6" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.100000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.010000" z="0.250000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_plate17x_PH_L_HAND</Id>
+          <PropSet>FOOD_PLATE_03</PropSet>
+          <Offset x="0.000000" y="0.540000" z="0.300000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest LookAtTarget</Flags>
+        </Item>
+        <Item>
+          <Id>Main</Id>
+          <PropSet>MUTTON_CHOP</PropSet>
+          <Offset x="0.028202" y="0.517729" z="0.325264" />
+          <Rotation x="0.000000" y="0.000000" z="40.306271" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest</Flags>
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>Food_DOF_Fill</DofName>
+            <MinInitValue value="6.000000" />
+            <MaxInitValue value="6.000000" />
+          </AnimDofInitData>
+        </Item>
+        <Item>
+          <Id>FORK</Id>
+          <PropSet>FORKS_DINING</PropSet>
+          <Offset x="-0.155000" y="0.540000" z="0.310000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+        </Item>
+        <Item>
+          <Id>KNIFE</Id>
+          <PropSet>KNIVES_DINING</PropSet>
+          <Offset x="0.155000" y="0.540000" z="0.310000" />
+          <Rotation x="0.000000" y="180.000000" z="0.000000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+        </Item>
+        <Item>
+          <Id>SIDE1</Id>
+          <PropSet>SIDE_PEAPOTATOES</PropSet>
+          <Offset x="-0.049391" y="0.551208" z="0.310840" />
+          <Rotation x="0.000000" y="0.000000" z="-114.929497" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest</Flags>
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>Food_DOF_Fill</DofName>
+            <MinInitValue value="3.000000" />
+            <MaxInitValue value="3.000000" />
+          </AnimDofInitData>
+        </Item>
+        <Item>
+          <Id>SIDE2</Id>
+          <PropSet>SIDE_PEAPOTATOES</PropSet>
+          <Offset x="0.002734" y="0.597660" z="0.310840" />
+          <Rotation x="0.000000" y="0.000000" z="-161.409302" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest</Flags>
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>Food_DOF_Fill</DofName>
+            <MinInitValue value="3.000000" />
+            <MaxInitValue value="3.000000" />
+          </AnimDofInitData>
+        </Item>
+        <Item>
+          <Id>DRINK</Id>
+          <PropSet>DRINK_BEER</PropSet>
+          <Offset x="0.250935" y="0.715690" z="0.299970" />
+          <Rotation x="0.000000" y="0.000000" z="90.000000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest</Flags>
+        </Item>
+      </PrespawnedProps>
+      <CameraFramingInfo>
+        <eCameraFraming>CameraFraming_Seated</eCameraFraming>
+        <FirstPersonCameraSettingsNameHash>TEMPLATE_FP_LOOK_HEAD_BONE_SCENARIO_SITTING_EXTRA_DOWN_PITCH</FirstPersonCameraSettingsNameHash>
+      </CameraFramingInfo>
+      <WIPAccessOffset x="0.000000" y="0.600000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_WOOD_CHOP</Name>
+      <TimeTilPedLeaves value="10.000000" />
+      <Flags>BlockGestures DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection UseLookHeadBoneIfInFirstPersonWhileNavigating NotUsableInCombat</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_WOOD_CHOP</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_CHOP_FRONT" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_09_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_09_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_09_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_09_10" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_11_12_PLAYER" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_CHOP_FRONT_LAST" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_TO_WOODROP" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPLSIDE1" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_CARRYLOG1_06_03_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_LOGDROP1_06_03_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPRSIDE1_01_05_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPLSIDE2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_CARRYLOG2_12_10_07" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_LOGDROP2_12_10_07" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPRSIDE2_08_09_11" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_SLING_GRAB" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_01_02__TRANS__PRE_CHOP_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_01_02__TRANS__PRE_CHOP_01_02_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_01_02__TRANS__POST_CHOP_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_01_02__TRANS__POST_CHOP_01_02_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_01_02__TRANS__GRAB_LOG_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_01_02__TRANS__AXESTUCK_01_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_01_02__TRANS__GRAB_LOG_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_03_04__TRANS__PRE_CHOP_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_03_04__TRANS__PRE_CHOP_03_04_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_03_04__TRANS__POST_CHOP_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_03_04__TRANS__POST_CHOP_03_04_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_03_04__TRANS__GRAB_LOG_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_03_04__TRANS__AXESTUCK_03_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_03_04__TRANS__GRAB_LOG_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_05_06__TRANS__PRE_CHOP_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_05_06__TRANS__PRE_CHOP_05_06_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_05_06__TRANS__POST_CHOP_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_05_06__TRANS__POST_CHOP_05_06_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_05_06__TRANS__GRAB_LOG_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_05_06__TRANS__AXESTUCK_05_06" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_05_06__TRANS__GRAB_LOG_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_07_08__TRANS__PRE_CHOP_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_07_08__TRANS__PRE_CHOP_07_08_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_07_08__TRANS__POST_CHOP_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_07_08__TRANS__POST_CHOP_07_08_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_07_08__TRANS__GRAB_LOG_09_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_07_08__TRANS__AXESTUCK_07_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_07_08__TRANS__GRAB_LOG_09_10" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_09_08__TRANS__PRE_CHOP_09_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_09_08__TRANS__PRE_CHOP_09_08_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_09_08__TRANS__POST_CHOP_09_08" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_09_08__TRANS__POST_CHOP_09_08_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_09_08__TRANS__GRAB_LOG_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_09_10__TRANS__AXESTUCK_09_10" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_AXESTUCK_09_10__TRANS__GRAB_LOG_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_11_12__TRANS__PRE_CHOP_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_GRAB_LOG_11_12__TRANS__PRE_CHOP_11_12_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_11_12__TRANS__POST_CHOP_11_12" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_11_12__TRANS__POST_CHOP_11_12_V2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PRE_CHOP_11_12__TRANS__POST_CHOP_11_12_NO_PROMPT" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_11_12__TRANS__PICKUPLSIDE1" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_POST_CHOP_TO_WOODROP__TRANS__PICKUPLSIDE1" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPLSIDE1__TRANS__CARRYLOG1_06_03_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_CARRYLOG1_06_03_02__TRANS__LOGDROP1_06_03_02" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_LOGDROP1_06_03_02__TRANS__PICKUPRSIDE1_01_05_04" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPRSIDE1_01_05_04__TRANS__PICKUPLSIDE2" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPLSIDE2__TRANS__CARRYLOG2_12_10_07" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_CARRYLOG2_12_10_07__TRANS__LOGDROP2_12_10_07" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_LOGDROP2_12_10_07__TRANS__PICKUPRSIDE2_08_09_11" />
+          <Item ref="PROP_HUMAN_WOOD_CHOP_PICKUPRSIDE2_08_09_11__TRANS__SLING_GRAB" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="60.000000" />
+      <vegVolumeRadius value="2.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <PromptText>CHOP_WOOD</PromptText>
+          <PromptGroupText>FIRE_WOOD</PromptGroupText>
+          <InputType>INPUT_DYNAMIC_SCENARIO</InputType>
+          <FixedWeight value="2.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="180.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.350000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>SLING</Id>
+          <PropSet>WOOD_SLING</PropSet>
+          <Offset x="0.024242" y="-0.988141" z="0.000000" />
+          <Rotation x="0.000000" y="0.000000" z="18.441441" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_axe01x_PH_R_HAND</Id>
+          <PropSet>AXES_SMALL</PropSet>
+          <Offset x="-0.156873" y="0.033545" z="0.636094" />
+          <Rotation x="-162.687103" y="-1.419896" z="75.426392" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+        <Item>
+          <Id>LOG01</Id>
+          <PropSet>WOOD_HALF_1</PropSet>
+          <Offset x="-0.207128" y="0.634033" z="0.180372" />
+          <Rotation x="84.584763" y="28.844810" z="177.381500" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG02</Id>
+          <PropSet>WOOD_HALF_2</PropSet>
+          <Offset x="-0.207121" y="0.634039" z="0.180368" />
+          <Rotation x="84.584763" y="28.844810" z="177.381500" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG03</Id>
+          <PropSet>WOOD_HALF_1</PropSet>
+          <Offset x="-0.458076" y="0.552493" z="0.072855" />
+          <Rotation x="-87.886337" y="62.976521" z="10.568120" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG04</Id>
+          <PropSet>WOOD_HALF_2</PropSet>
+          <Offset x="-0.458076" y="0.552493" z="0.072855" />
+          <Rotation x="-87.886337" y="62.976521" z="10.568120" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG05</Id>
+          <PropSet>WOOD_HALF_1</PropSet>
+          <Offset x="-0.310686" y="0.731741" z="0.082299" />
+          <Rotation x="91.472076" y="33.459480" z="175.917206" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG06</Id>
+          <PropSet>WOOD_HALF_2</PropSet>
+          <Offset x="-0.310686" y="0.731741" z="0.082299" />
+          <Rotation x="91.472076" y="33.459480" z="175.917206" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG07</Id>
+          <PropSet>WOOD_HALF_1</PropSet>
+          <Offset x="0.028921" y="0.711209" z="0.204486" />
+          <Rotation x="86.145401" y="-69.521637" z="-165.564804" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG08</Id>
+          <PropSet>WOOD_HALF_2</PropSet>
+          <Offset x="0.028921" y="0.711209" z="0.204486" />
+          <Rotation x="86.145401" y="-69.521637" z="-165.564804" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG09</Id>
+          <PropSet>WOOD_HALF_1</PropSet>
+          <Offset x="-0.075035" y="0.668878" z="0.083595" />
+          <Rotation x="-90.166710" y="44.244881" z="7.437667" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG10</Id>
+          <PropSet>WOOD_HALF_2</PropSet>
+          <Offset x="-0.075035" y="0.668878" z="0.083595" />
+          <Rotation x="-90.166710" y="44.244881" z="7.437667" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG11</Id>
+          <PropSet>WOOD_HALF_1</PropSet>
+          <Offset x="0.128342" y="0.748616" z="0.081744" />
+          <Rotation x="90.634193" y="-0.182902" z="-163.913300" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>LOG12</Id>
+          <PropSet>WOOD_HALF_2</PropSet>
+          <Offset x="0.128342" y="0.748616" z="0.081744" />
+          <Rotation x="90.634193" y="-0.182902" z="-163.913300" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>WOOD_CHOP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BARCUSTOMER</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontDropEquippedWeapons DontTimeoutUntilIdleFinishes DisableCombatExitFromAim EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat TriggerExitOnStick AllowItemInteractions NoDummy</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BARCUSTOMER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_ARTHUR" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_1" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_2" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_3" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_4" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_5" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_6" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_7" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_BEER_MALE_A_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__NO_DRINK_ARTHUR_REORDER" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_WHISKEY_GLASS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_WHISKEY_GLASS_MALE_A_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__HAS_BEER_ARTHUR" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__HAS_WHISKEY_GLASS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_ARTHUR__TRANS__NO_DRINK_ARTHUR" />
+          <!--
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_ARTHUR__TRANS__HAS_BEER_ARTHUR_DRINK_A" />
+          -->
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V3" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V4" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V5" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V6" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V7" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V8" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V9" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V10" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V11" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V12" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V13" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V14" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V15" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V16" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V17" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V18" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__HAS_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__HAS_WHISKEY_GLASS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A__TRANS__NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A__TRANS__NO_DRINK_MALE_B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A__TRANS__PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_1" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_1__TRANS__2" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_2__TRANS__3" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_3__TRANS__4" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_4__TRANS__5" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_5__TRANS__6" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_6__TRANS__7" />
+          <Item ref="WORLD_PLAYER_BARCUSTOMER_HAS_BEER_MALE_A_7__TRANS__HUMAN_BARCUSTOMER_NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A__TRANS__NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_ARTHUR__TRANS__NO_DRINK_ARTHUR_NO_COIN" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A__TRANS__NO_DRINK_MALE_A_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A__TRANS__NO_DRINK_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+	   <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <InteractionRadius value="1.200000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisiblePrompt value="true" />
+          <QuitPromptText>LEAVE</QuitPromptText>
+          <QuitInputType>INPUT_CONTEXT_B</QuitInputType>
+          <QuitPromptWeight value="0.000000" />
+          <VisibleQuitPrompt value="true" />
+        </Item>
+      </PlayerUseInfos>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <CameraFramingInfo>
+        <FirstPersonCameraSettingsNameHash>TEMPLATE_FP_LOOK_HEAD_BONE_HEAD_FACING_PITCH_SLOW_BLENDS</FirstPersonCameraSettingsNameHash>
+      </CameraFramingInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BARCUSTOMER_BEER</Name>
+      <ScriptName>Barcustomer_interaction</ScriptName>
+      <ScriptCondition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPlayer" />
+      </ScriptCondition>
+      <BlockedModels ref="CANT_LEAN" />
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontDropEquippedWeapons DontTimeoutUntilIdleFinishes DisableCombatExitFromAim EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat TriggerExitOnStick AllowItemInteractions NoDummy</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BARCUSTOMER_BEER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_ARTHUR" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_BEER_MALE_A_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__HAS_BEER_ARTHUR" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__NO_DRINK_ARTHUR_REORDER" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_ARTHUR__TRANS__NO_DRINK_ARTHUR" />
+          <!--
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_ARTHUR__TRANS__HAS_BEER_ARTHUR_DRINK_A" />
+          -->
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V3" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V4" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V5" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V6" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V7" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V8" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V9" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V10" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V11" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V12" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V13" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V14" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V15" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V16" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V17" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V18" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__HAS_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A__TRANS__NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_BEER_MALE_A__TRANS__NO_DRINK_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <CameraFramingInfo>
+        <FirstPersonCameraSettingsNameHash>TEMPLATE_FP_LOOK_HEAD_BONE_HEAD_FACING_PITCH_SLOW_BLENDS</FirstPersonCameraSettingsNameHash>
+      </CameraFramingInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BARCUSTOMER_WHISKEY</Name>
+      <ScriptName>Barcustomer_interaction</ScriptName>
+      <ScriptCondition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPlayer" />
+      </ScriptCondition>
+      <BlockedModels ref="CANT_LEAN" />
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontDropEquippedWeapons DontTimeoutUntilIdleFinishes DisableCombatExitFromAim EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat TriggerExitOnStick AllowItemInteractions NoDummy</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BARCUSTOMER_WHISKEY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_WHISKEY_GLASS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS__HAS_WHISKEY_GLASS_MALE_A_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__HAS_WHISKEY_GLASS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_ARTHUR__TRANS__NO_DRINK_ARTHUR_REORDER" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V3" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V4" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V5" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V6" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V7" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V8" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V9" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V10" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V11" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V12" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V13" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V14" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V15" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V16" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V17" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_A__TRANS_V18" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_NO_DRINK_MALE_B__TRANS__HAS_WHISKEY_GLASS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A__TRANS__NO_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_ARTHUR__TRANS__NO_DRINK_ARTHUR_NO_COIN" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A__TRANS__NO_DRINK_MALE_A_V2" />
+          <Item ref="WORLD_HUMAN_BARCUSTOMER_HAS_WHISKEY_GLASS_MALE_A__TRANS__NO_DRINK_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <CameraFramingInfo>
+        <FirstPersonCameraSettingsNameHash>TEMPLATE_FP_LOOK_HEAD_BONE_HEAD_FACING_PITCH_SLOW_BLENDS</FirstPersonCameraSettingsNameHash>
+      </CameraFramingInfo>
+	  <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="1.000000" />
+          <InteractionRadius value="1.200000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisiblePrompt value="true" />
+          <QuitPromptText>LEAVE</QuitPromptText>
+          <QuitInputType>INPUT_CONTEXT_B</QuitInputType>
+          <QuitPromptWeight value="0.000000" />
+          <VisibleQuitPrompt value="true" />
+        </Item>
+      </PlayerUseInfos>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <TimeToHoldLSForExit value="0.250000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BARTENDER</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NoDummy</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionOr" />
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BARTENDER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_BEER_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_BEER_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_MALE_A__TRANS__UNDER_BAR_ONE_HAND_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_BEER_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_BEER_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_ONE_HAND_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BARTENDER_BEER</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NoDummy</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionOr">
+        <Conditions>
+          <Item type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionChainedScenarioPointsHasProp">
+                <Id>p_bottleBeer01x_PH_R_HAND</Id>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionChainedScenarioPointsInUse">
+                  <ChainTypes>Sharing</ChainTypes>
+                </Condition>
+              </Item>
+            </Conditions>
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BARTENDER_BEER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_BEER_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_BEER_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_BEER_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_BEER_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_UNDER_BAR_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_OVER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_OVER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_REPLACE_BOTTLE_UNDER_BAR_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_BEER_RETURN_BOTTLE_UNDER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BARTENDER_WHISKEY</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NoDummy</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionOr">
+        <Conditions>
+          <Item type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionChainedScenarioPointsHasProp">
+                <Id>p_shotGlass01x_PH_L_HAND</Id>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionChainedScenarioPointsInUse">
+                  <ChainTypes>Sharing</ChainTypes>
+                </Condition>
+              </Item>
+            </Conditions>
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BARTENDER_WHISKEY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_MALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_MALE_A__TRANS__UNDER_BAR_ONE_HAND_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A__TRANS__OVER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_MALE_A__TRANS__UNDER_BAR_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_MALE_A__TRANS__BARFRONT_MALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_PRE_SERVICE_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_BARFRONT_FEMALE_A__TRANS__SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_ONE_HAND_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_ONE_HAND_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_POUR_GLASS_UNDER_BAR_TWO_HANDS_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A__TRANS__OVER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_REFILL_GLASS_UNDER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_OVER_BAR_FEMALE_A__TRANS__UNDER_BAR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BARTENDER_SERVE_WHISKEY_RETURN_GLASS_UNDER_BAR_FEMALE_A__TRANS__BARFRONT_FEMALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_WASH_DISHES_TABLE_LEFT</Name>
+      <Flags>BlockGestures DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_WASH_DISHES_TABLE_LEFT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_GRAB_DISH_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_WASH_BOWL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_DROP_BOWL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_WASH_SPOON_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_DROP_SPOON_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_WASH_PLATE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_DROP_PLATE_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_GRAB_DISH_FEMALE_A__TRANS__WASH_BOWL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_GRAB_DISH_FEMALE_A__TRANS__WASH_SPOON_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_GRAB_DISH_FEMALE_A__TRANS__WASH_PLATE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_WASH_BOWL_FEMALE_A__TRANS__DROP_BOWL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_DROP_BOWL_FEMALE_A__TRANS__GRAB_DISH_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_WASH_SPOON_FEMALE_A__TRANS__DROP_SPOON_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_DROP_SPOON_FEMALE_A__TRANS__GRAB_DISH_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_WASH_PLATE_FEMALE_A__TRANS__DROP_PLATE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_WASH_DISHES_TABLE_LEFT_DROP_PLATE_FEMALE_A__TRANS__GRAB_DISH_FEMALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.150000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_FOODPREP_STEW</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionScenarioPointHasProp">
+            <Id>p_kettle03x_PH_L_HAND</Id>
+          </Item>
+          <Item type="CAIConditionTime">
+            <Hours>H8 H9 H10 H11 H12 H13 H14 H15</Hours>
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_FOODPREP_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_ADD_MEAT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SEASONING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SEASONING_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_ADD_MEAT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_VEG_GRAB_POTATO_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_VEG_GRAB_CARROT_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_CARROT_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_POTATO_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CARRY_CAULDRON_MALE_D" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_FEMALE_A__TRANS__CHOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_FEMALE_A__TRANS__SCOOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_CARROT_FEMALE_A__TRANS__VEGDROP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_FEMALE_A__TRANS__GRAB_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_FEMALE_A__TRANS__GRAB_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_FEMALE_A__TRANS__CHOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_FEMALE_A__TRANS__SCOOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_POTATO_FEMALE_A__TRANS__VEGDROP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_FEMALE_A__TRANS__GRAB_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_FEMALE_A__TRANS__GRAB_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SEASONING_MALE_B__TRANS__CARRY_CAULDRON_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_ADD_MEAT_MALE_B__TRANS__RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_ADD_MEAT_MALE_B__TRANS__CARRY_CAULDRON_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_MALE_B__TRANS__CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_MALE_B__TRANS__QUICKREST_PRE_VEG_GRAB_CARROT_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_MALE_B__TRANS__SCOOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_MALE_B__TRANS__QUICKREST_PRE_CARROT_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_CARROT_MALE_B__TRANS__VEGDROP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_MALE_B__TRANS__GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_MALE_B__TRANS__GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_MALE_B__TRANS__RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_MALE_B__TRANS__CARRY_CAULDRON_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_MALE_B__TRANS__CHOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_MALE_B__TRANS__QUICKREST_PRE_VEG_GRAB_POTATO_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_MALE_B__TRANS__SCOOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_MALE_B__TRANS__QUICKREST_PRE_POTATO_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_POTATO_MALE_B__TRANS__VEGDROP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_MALE_B__TRANS__GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_MALE_B__TRANS__GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_MALE_B__TRANS__RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_MALE_B__TRANS__CARRY_CAULDRON_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_RESTING_MALE_D__TRANS__GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_RESTING_MALE_D__TRANS__GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_RESTING_MALE_D__TRANS__SEASONING_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_RESTING_MALE_D__TRANS__ADD_MEAT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_VEG_GRAB_POTATO_MALE_D__TRANS__CHOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_VEG_GRAB_CARROT_MALE_D__TRANS__CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_CARROT_CHOP_MALE_D__TRANS__CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_QUICKREST_PRE_POTATO_CHOP_MALE_D__TRANS__CHOP_POTATO_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_peppershaker02x_PH_R_HAND</Id>
+          <PropSet>PEPPER_SHAKER</PropSet>
+          <Offset x="-0.135400" y="1.117800" z="0.800700" />
+          <Rotation x="0.000000" y="0.000000" z="195.000000" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_bottleJD01x_ph_r_hand</Id>
+          <PropSet>DRINK_JD</PropSet>
+          <Offset x="0.390000" y="0.939900" z="0.800100" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_kettle03x_PH_L_HAND</Id>
+          <PropSet>KETTLE_CAMP_NOBOIL</PropSet>
+          <InitClipSet>amb_camp@prop_camp_foodprep@cauldron_handle_down@base</InitClipSet>
+          <Offset x="-0.583756" y="0.888300" z="0.787039" />
+          <Rotation x="0.000000" y="0.000000" z="-90.000000" />
+          <FixedPhysics value="true" />
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionScenarioPointHasProp">
+                  <Id>p_kettle03x_PH_L_HAND</Id>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionChainedScenarioPointsHasProp">
+                  <Id>p_kettle03x_PH_L_HAND</Id>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionTime">
+                <Hours>H8 H9 H10 H11 H12</Hours>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_FOODPREP_STEW_ALWAYS</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionScenarioPointHasProp">
+            <Id>p_kettle03x_PH_L_HAND</Id>
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_FOODPREP_STEW_ALWAYS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_ADD_MEAT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SEASONING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_SEASONING_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_SCOOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_CHOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_SCOOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_VEG_GRAB_CARROT_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_VEG_GRAB_POTATO_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_CARROT_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_POTATO_CHOP_MALE_D" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_CARROT_FEMALE_A__TRANS__CHOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_CARROT_FEMALE_A__TRANS__SCOOP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_CARROT_FEMALE_A__TRANS__VEGDROP_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_FEMALE_A__TRANS__GRAB_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_CARROT_FEMALE_A__TRANS__GRAB_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_GRAB_POTATO_FEMALE_A__TRANS__CHOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_CHOP_POTATO_FEMALE_A__TRANS__SCOOP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_SCOOP_POTATO_FEMALE_A__TRANS__VEGDROP_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_FEMALE_A__TRANS__GRAB_CARROT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_STEW_VEGDROP_POTATO_FEMALE_A__TRANS__GRAB_POTATO_FEMALE_A" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_SEASONING_MALE_B__TRANS__RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_GRAB_CARROT_MALE_B__TRANS__CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_GRAB_CARROT_MALE_B__TRANS__QUICKREST_PRE_VEG_GRAB_CARROT_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_CHOP_CARROT_MALE_B__TRANS__SCOOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_CHOP_CARROT_MALE_B__TRANS__QUICKREST_PRE_CARROT_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_SCOOP_CARROT_MALE_B__TRANS__VEGDROP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_CARROT_MALE_B__TRANS__GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_CARROT_MALE_B__TRANS__GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_CARROT_MALE_B__TRANS__RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_GRAB_POTATO_MALE_B__TRANS__CHOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_GRAB_POTATO_MALE_B__TRANS__QUICKREST_PRE_VEG_GRAB_POTATO_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_CHOP_POTATO_MALE_B__TRANS__SCOOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_CHOP_POTATO_MALE_B__TRANS__QUICKREST_PRE_POTATO_CHOP_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_SCOOP_POTATO_MALE_B__TRANS__VEGDROP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_POTATO_MALE_B__TRANS__GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_POTATO_MALE_B__TRANS__GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_VEGDROP_POTATO_MALE_B__TRANS__RESTING_MALE_D" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_RESTING_MALE_D__TRANS__GRAB_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_RESTING_MALE_D__TRANS__GRAB_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_RESTING_MALE_D__TRANS__SEASONING_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_VEG_GRAB_CARROT_MALE_D__TRANS__CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_VEG_GRAB_POTATO_MALE_D__TRANS__CHOP_POTATO_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_CARROT_CHOP_MALE_D__TRANS__CHOP_CARROT_MALE_B" />
+          <Item ref="PROP_HUMAN_FOODPREP_ALWAYS_STEW_QUICKREST_PRE_POTATO_CHOP_MALE_D__TRANS__CHOP_POTATO_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_peppershaker02x_PH_R_HAND</Id>
+          <PropSet>PEPPER_SHAKER</PropSet>
+          <Offset x="-0.146000" y="1.122000" z="0.805000" />
+          <Rotation x="0.000000" y="0.000000" z="195.000000" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_bottleJD01x_ph_r_hand</Id>
+          <PropSet>DRINK_JD</PropSet>
+          <Offset x="0.390000" y="0.939900" z="0.800100" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_kettle03x_PH_L_HAND</Id>
+          <PropSet>KETTLE_CAMP_NOBOIL</PropSet>
+          <InitClipSet>amb_camp@prop_camp_foodprep@cauldron_handle_down@base</InitClipSet>
+          <Offset x="-0.583756" y="0.888300" z="0.787039" />
+          <Rotation x="0.000000" y="0.000000" z="-90.000000" />
+          <FixedPhysics value="true" />
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionScenarioPointHasProp">
+                  <Id>p_kettle03x_PH_L_HAND</Id>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionChainedScenarioPointsHasProp">
+                  <Id>p_kettle03x_PH_L_HAND</Id>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+          <PropSet>MEAT_BOWL</PropSet>
+          <Offset x="0.300000" y="1.170000" z="0.800000" />
+          <Rotation x="0.000000" y="0.000000" z="90.000000" />
+          <FixedPhysics value="true" />
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>meatBowl_fill</DofName>
+          </AnimDofInitData>
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionScenarioPointHasProp">
+                  <Id>p_cs_meatBowl01x_PH_R_HAND</Id>
+                </Condition>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+	  <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_GRAB_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_MALE_D_SMOKE_ROLL" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_GRAB_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A_SMOKE_ROLL" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__SMOKE_ROLL_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V5" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__SMOKE_ROLL_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__SMOKE_ROLL_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__SMOKE_ROLL_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_MALE_A__TRANS__GRAB_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_MALE_A__TRANS__SMOKING_MALE_D_SMOKE_ROLL" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_GRAB_MALE_A__TRANS__MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__SMOKE_ROLL_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__SMOKE_ROLL_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__SMOKE_ROLL_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__SMOKE_ROLL_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_FEMALE_A__TRANS__GRAB_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_FEMALE_A__TRANS__SMOKING_FEMALE_A_SMOKE_ROLL" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKE_ROLL_GRAB_FEMALE_A__TRANS__FEMALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_MEDICINE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_MORTAR" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_MEDICINE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_MORTAR" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_POUCH" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_POUCH_TRANS_MORTAR" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_MORTAR_TRANS_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_MORTAR_TRANS_MEDICINE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_MEDICINE_TRANS_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_FEMALE_A_MEDICINE_TRANS_MORTAR" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_POUCH_TRANS_MORTAR" />
+		  <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_MORTAR_TRANS_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_POUCH_TRANS_MEDICINE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_MEDICINE_TRANS_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_MALE_A_MEDICINE_TRANS_MORTAR" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <VfxAnimInfo>ANM_CRAFT_POUR</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_MEDICINE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_MORTAR" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_POUCH" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_POUCH_TRANS_MORTAR" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_MORTAR_TRANS_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_MORTAR_TRANS_MEDICINE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_MEDICINE_TRANS_POUCH" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_MORTAR_PESTLE_HARRIET_MEDICINE_TRANS_MORTAR" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <VfxAnimInfo>ANM_CRAFT_POUR</VfxAnimInfo>
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>

@@ -1,0 +1,79 @@
+<EasyInstall>
+    <Name>Just Do The Thing Already!</Name>
+    <Author>fuhq2mofo</Author>
+    <Version>1.3 - Home Economics</Version>
+    <Link>https://www.nexusmods.com/reddeadredemption2/mods/1960</Link>
+    <Metadata />
+
+    <!-- Version 1.3 of the mod, with these changes:
+         - every file is rebuilt on the file of game build 1.0.1491.50. The download carried
+           amb_camp.meta and amb_rest.meta from the launch version of the game, which removed
+           what later patches added to them
+         - TimeToHoldLSForExit keeps the game's 0.25. The download removed that line from 33
+           scenarios, which makes the game fall back to 0.5 and get up more slowly
+         - discoverables.meta is added: it holds the last two scenario prompts with a hold
+           (examine a placed artifact, take the pirate skeleton's clothing)
+         - randomEvent.meta and rsc.meta use the common: path. These two files exist only in the
+           base game, so the update: path of the download never matched them
+         - scriptambvigs.meta is gone: its one change was a removed TimeToHoldLSForExit
+         - prompts.meta is the game's file with shorter holds, in milliseconds: MEDIUM 600 -> 400,
+           LONG 1500 -> 500, PLAYER_FOCUS 2000 -> 400, and HoldDefaultSettings 400 (the game leaves
+           it at 1000) for holds that name no class. Every hold stays a hold and stays above the
+           250 ms in which a press counts as a tap
+         - the prompts.meta and carryconfigdata.meta of the download are not installed (kept in
+           ../optional). They set the holds to 0 or 1 ms: story decisions and purchases would fire
+           on a single tap, and a hold could no longer be told from a tap on the same key -->
+
+    <Resources>
+        <Resource>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/amb_camp.meta</GamePath>
+                <FilePath>amb_camp.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/amb_rest.meta</GamePath>
+                <FilePath>amb_rest.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>common:/data/ai/scenarios/discoverables.meta</GamePath>
+                <FilePath>discoverables.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/mech.meta</GamePath>
+                <FilePath>mech.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/mech_ransack.meta</GamePath>
+                <FilePath>mech_ransack.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/mech_ransack_parent.meta</GamePath>
+                <FilePath>mech_ransack_parent.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/mech_ransack_parent_named_props.meta</GamePath>
+                <FilePath>mech_ransack_parent_named_props.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/proc.meta</GamePath>
+                <FilePath>proc.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/control/prompts.meta</GamePath>
+                <FilePath>prompts.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>common:/data/ai/scenarios/randomevent.meta</GamePath>
+                <FilePath>randomEvent.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>common:/data/ai/scenarios/rsc.meta</GamePath>
+                <FilePath>rsc.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/scenarios/sequencescenarios.meta</GamePath>
+                <FilePath>sequencescenarios.meta</FilePath>
+            </FileReplacement>
+        </Resource>
+    </Resources>
+</EasyInstall>

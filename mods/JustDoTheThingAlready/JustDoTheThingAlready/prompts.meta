@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PromptInternal__PromptTunables>
+  <AdvancedModePressedTimedEasing>TYPE_LINEAR</AdvancedModePressedTimedEasing>
+  <AdvancedModeHoldEasing>TYPE_QUADRATIC_IN</AdvancedModeHoldEasing>
+  <AdvancedModeHoldAutoFillEasing>TYPE_LINEAR</AdvancedModeHoldAutoFillEasing>
+  <AdvancedModeMashEasing>TYPE_LINEAR</AdvancedModeMashEasing>
+  <AdvancedModeMashWithResistanceEasing>TYPE_QUADRATIC_INOUT</AdvancedModeMashWithResistanceEasing>
+  <AdvancedModeMashAutoFillEasing>TYPE_LINEAR</AdvancedModeMashAutoFillEasing>
+  <UrgentPulseDuration value="200" />
+  <UrgentPulseCount value="6" />
+  <UrgentPulseWaitDuration value="3000" />
+  <FadeInEasing>TYPE_QUADRATIC_IN</FadeInEasing>
+  <FadeOutUnselectedEasing>TYPE_QUADRATIC_OUT</FadeOutUnselectedEasing>
+  <FadeOutSelectedEasing>TYPE_QUADRATIC_IN</FadeOutSelectedEasing>
+  <HoldDefaultSettings>
+    <HoldDuration value="400" />
+  </HoldDefaultSettings>
+  <HoldModeSettings>
+    <Item key="KEYBOARD_DELETE">
+        <HoldDuration value="5000000" />
+    </Item>
+	<Item key="RUSTLING_CALM_TIMING">
+      <HoldDuration value="5000" />
+    </Item>
+	<Item key="PLAYER_REACTION_TIMING">
+      <HoldDuration value="3000" />
+    </Item>
+	<Item key="PLAYER_FOCUS_TIMING">
+      <HoldDuration value="400" />
+    </Item>
+    <Item key="LONG_TIMED_EVENT">
+      <HoldDuration value="500" />
+    </Item>
+    <Item key="MEDIUM_TIMED_EVENT">
+      <HoldDuration value="400" />
+    </Item>
+    <Item key="SHORT_TIMED_EVENT">
+      <HoldDuration value="300" />
+    </Item>
+    <Item key="SHORT_TIMED_EVENT_MP">
+      <HoldDuration value="250" />
+    </Item>
+  </HoldModeSettings>
+</PromptInternal__PromptTunables>

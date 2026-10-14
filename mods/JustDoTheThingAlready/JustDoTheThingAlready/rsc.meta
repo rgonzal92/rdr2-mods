@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_PLAYER_PEEK_WINDOW_NO_SCRIPT</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_PLAYER_PEEK_WINDOW_NO_SCRIPT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_PLAYER_PEEK_WINDOW_NO_SCRIPT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeZOverride value="0.200000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.100000" z="0.000000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.400000" z="1.700000" />
+          <PromptText>PEEK_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.750000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="215.199997" />
+          <CamLookAngle value="35.000000" />
+          <CloseRadius value="1.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitInputType>INPUT_CONTEXT_B</QuitInputType>
+          <!-- <QuitPromptHoldDuration value="0.500000" /> -->
+          <!-- <QuitHoldTimeType>MEDIUM_TIMED_EVENT</QuitHoldTimeType> -->
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_PLAYER_RSC_GIVE_MEDICINE</Name>
+      <Flags>IgnoreLowShockingEvents NoMeleeTakedowns PlayerOnly SingleUse BlockMeleeGrapple</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>WORLD_PLAYER_RSC_GIVE_MEDICINE_BLAH</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_PLAYER_RSC_GIVE_MEDICINE_BLAH" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="1.775000" y="0.950000" z="0.000000" />
+          <PromptText>GIVE_MEDS</PromptText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <InteractionRadius value="2.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="123.574997" />
+          <PointDirectionHalfAngle value="67.025002" />
+          <CloseRadius value="1.000000" />
+          <TimeoutSeconds value="5.000000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>

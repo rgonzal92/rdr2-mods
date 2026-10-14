@@ -1,0 +1,2382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_SIT_GROUND</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_SIT_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_STEW_EATING_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_TRANS__EAT_STEW" />
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_STEW_TRANS__SIT_GROUND" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <BlockedByNearbyScenariosRange value="0.600000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.030000" y="0.108000" z="0.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_spoon01x_PH_R_HAND</Id>
+          <PropSet>SPOONS</PropSet>
+          <Offset x="0.755088" y="0.304200" z="0.067941" />
+          <Rotation x="3.629241" y="-19.604370" z="-18.179740" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_bowl04x_stew_PH_L_HAND</Id>
+          <PropSet>BOWLS</PropSet>
+          <Offset x="0.598600" y="0.345500" z="0.000000" />
+          <Rotation x="-0.000029" y="0.000004" z="-2.547760" />
+          <FixedPhysics value="true" />
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>Stew_Fill</DofName>
+            <MinInitValue value="0.800000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_SIT_GROUND_NO_STEW</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_SIT_GROUND_NO_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_STEW_EATING_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_TRANS__EAT_STEW_FROM_ABIGAIL" />
+          <Item ref="WORLD_CAMP_JACK_SIT_GROUND_STEW_TRANS__SIT_GROUND" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <BlockedByNearbyScenariosRange value="0.600000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.030000" y="0.108000" z="0.000000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_BUCKET_PUTDOWN_FULL</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionScenarioPointHasNoProp" />
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_BUCKET_PUTDOWN_FULL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_BUCKET_PUTDOWN_FULL_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <vegVolumeRadius value="1.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DROP_FISH_BAG_TABLE</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DROP_FISH_BAG_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DROP_FISH_BAG_TABLE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_BUCKET_PICKUP_FULL</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionScenarioPointHasNoProp" />
+          </Item>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_BUCKET_PICKUP_FULL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_BUCKET_PICKUP_FULL_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <vegVolumeRadius value="1.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_bucket01x_PH_R_HAND</Id>
+          <PropSet>BUCKET</PropSet>
+          <Offset x="0.070002" y="0.650000" z="0.000004" />
+          <Rotation x="0.000380" y="-0.000114" z="-84.999990" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>bucket_Fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_BUCKET_PICKUP_EMPTY</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionScenarioPointHasNoProp" />
+          </Item>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_BUCKET_PICKUP_EMPTY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_BUCKET_PICKUP_EMPTY_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_bucket01x_PH_R_HAND</Id>
+          <PropSet>BUCKET</PropSet>
+          <Offset x="0.070002" y="0.650000" z="0.000004" />
+          <Rotation x="0.000380" y="-0.000114" z="-84.999990" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_BUCKET_FILL</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionScenarioPointHasNoProp" />
+          </Item>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_BUCKET_FILL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_BUCKET_FILL_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>FETCHING_WATER</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_BUCKET_POUR</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_BUCKET_POUR</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_BUCKET_POUR_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <VfxAnimInfo>ANM_BUCKET_DUMP</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_BUCKET_PUTDOWN_EMPTY</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario LeaveScenarioOnReactionEnd</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionScenarioPointHasNoProp" />
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_BUCKET_PUTDOWN_EMPTY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_BUCKET_PUTDOWN_EMPTY_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <vegVolumeRadius value="1.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_SLEEP</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_SLEEP</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_SLEEP_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_READ_GROUND</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_READ_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_READ_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>READING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_ES_FIRE_SEAT_BOX</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds SeatedScenarioChair EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_ES_FIRE_SEAT_BOX</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_ES_FIRE_SEAT_BOX_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_JACK_ES_READ_SEAT</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds SeatedScenarioChair EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_JACK_ES_READ_SEAT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_JACK_ES_READ_CHAIR_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>READING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_SEATED_GROUND</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_SEATED_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_DRINKING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_CROUCH_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_CROUCH_GROUND_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_D" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_E" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_DRINKING_MALE_A__TRANS__MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_CROUCH_GROUND_MALE_A__TRANS__SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_CROUCH_GROUND_MALE_A__TRANS__SIT_GROUND_MALE_D" />
+          <Item ref="WORLD_CAMP_FIRE_CROUCH_GROUND_MALE_B__TRANS__SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__DRINKING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__CROUCH_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__CROUCH_GROUND_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__RECLINE_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__RECLINE_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__RECLINE_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__E" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__RECLINE_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__RECLINE_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__RECLINE_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__RECLINE_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__RECLINE_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__RECLINE_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_D__TRANS__RECLINE_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_D__TRANS__CROUCH_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_E__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C__TRANS__MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C__TRANS__MALE_D" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V2" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V3" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V4" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V5" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V6" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V7" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V8" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEA__TRANS_V9" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V2" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V3" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V4" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V5" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V6" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V7" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V8" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEB__TRANS_V9" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V2" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V3" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V4" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V5" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V6" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V7" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V8" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALED__TRANS_V9" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V2" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V3" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V4" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V5" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V6" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V7" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1_ALT__TRANS_V8" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <BlockedByNearbyScenariosRange value="0.600000" />
+      <ExitProbeZOverride value="0.460000" />
+      <ExitProbeCapsuleRadiusOverride value="0.300000" />
+      <ExitProbeCapsuleStartOffset x="0.030000" y="0.108000" z="-0.540000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_FIRE_SEATED</Name>
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioBench SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_FIRE_SEATED</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_FEMALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_FEMALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_FEMALE_D" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_D" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_E" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_F" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_G" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_H" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_I" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_J" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_K" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_L" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_M" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_N" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_O" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_P" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_Q" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_FIRE_SEATED_FEMALE_B__TRANS__SEAT_BENCH_FEMALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEATED_MALE_F" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEATED_MALE_L" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__CAMP_FIRE_SEATED_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_FEMALE_A__TRANS__SEATED_FEMALE_D" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__SEATED_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__SEATED_MALE_E" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__SEATED_MALE_K" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__SEATED_MALE_M" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_MALE_D" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_MALE_G" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_MALE_H" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_MALE_I" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_MALE_J" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_C__TRANS__SEATED_MALE_N" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_C__TRANS__SEATED_MALE_O" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_C__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_FEMALE_D__TRANS__SEAT_BENCH_FEMALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_A__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_B__TRANS__SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_C__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_D__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_E__TRANS__SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_F__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_G__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_H__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_I__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_J__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_K__TRANS__SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_L__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_M__TRANS__SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_N__TRANS__SEAT_BENCH_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_O__TRANS__SEAT_BENCH_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_P__TRANS__Q" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_MALE_Q__TRANS__P" />
+          <Item ref="SCCF_EXCON_WS_SPEAKER_SITTING__TRANS" />
+          <Item ref="SCCF_EXCON_WS_SPEAKER_SITTING__TRANS_V2" />
+          <Item ref="SCCF_EXCON_WS_SPEAKER_SITTING__TRANS_V3" />
+          <Item ref="SCCF_EXCON_WS_SPEAKER_SITTING__TRANS_V4" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="0.210000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>CC_PROP_CAMP_FIRE_SEATED_DRINKING</Name>
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioBench SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>CC_PROP_CAMP_FIRE_SEATED_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_BEER_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_BEER_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_BEER_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_WHISKEY_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_WHISKEY_MALE_D" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_WHISKEY_MALE_E" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_BEER_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_BEER_MALE_B__TRANS__SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_WHISKEY_MALE_C__TRANS__SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_WHISKEY_MALE_D__TRANS__SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_WHISKEY_MALE_E__TRANS__SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A__TRANS__SEATED_DRINKING_BEER_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B__TRANS__SEATED_DRINKING_WHISKEY_MALE_E" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEATED_DRINKING_BEER_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__DRINKING_BEER_ MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEATED_DRINKING_BEER_ MALE_C__TRANS__SEAT_CHAIR_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__SEATED_DRINKING_WHISKEY_MALE_C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__SEATED_DRINKING_WHISKEY_MALE_D" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="0.210000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_FIRE_SEATED_TEND_FIRE</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_FIRE_SEATED_TEND_FIRE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_FIRE_SEATED_TEND_FIRE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.200000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.138000" z="0.270000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_stickFirePoker01x_PH_R_HAND</Id>
+          <PropSet>FIRE_POKER</PropSet>
+          <Offset x="0.380000" y="0.008000" z="-0.480000" />
+          <Rotation x="-90.000000" y="-140.000000" z="-57.800000" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_FIRE_SEAT_BENCH</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_FIRE_SEAT_BENCH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_FEMALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.249000" />
+      <ExitProbeCapsuleStartOffset x="-0.012000" y="0.294000" z="0.240000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_CAMP_FIRE_SEAT_BOX</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_CAMP_FIRE_SEAT_BOX</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_FEMALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_CAMP_FIRE_SEAT_BOX_MALE_C__TRANS__B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeZOverride value="0.250000" />
+      <ExitProbeCapsuleRadiusOverride value="0.282000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_FIRE_SEAT_CHAIR</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_FIRE_SEAT_CHAIR</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_FEMALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_A__TRANS__C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_B__TRANS__C" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_CHAIR_MALE_C__TRANS__B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeZOverride value="0.250000" />
+      <ExitProbeCapsuleRadiusOverride value="0.282000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_MEAT_BOWL_PICKUP_TABLE</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_MEAT_BOWL_PICKUP_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_MEAT_BOWL_PICKUP_TABLE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_MEAT_BOWL_PUT_DOWN_TABLE</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario LeaveScenarioOnReactionEnd</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_MEAT_BOWL_PUT_DOWN_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_MEAT_BOWL_PUT_DOWN_TABLE_MALE_A" />
+          <Item ref="PROP_CAMP_MEAT_BOWL_PUT_DOWN_TABLE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_MEAT_BOWL_DUMP_CAULDRON_LEAVE_W_BOWL</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_MEAT_BOWL_DUMP_CAULDRON_LEAVE_W_BOWL</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_MEAT_BOWL_DUMP_CAULDRON_LEAVE_W_BOWL_MALE_A_EMPTY" />
+          <Item ref="PROP_CAMP_MEAT_BOWL_DUMP_CAULDRON_LEAVE_W_BOWL_MALE_A_FULL" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_MEAT_BOWL_DUMP_CAULDRON_LEAVE_W_BOWL_MALE_A_FULL__TRANS__EMPTY" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_CAULDRON_SERVE_STEW</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_LEAN" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontAttachDuringExit EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoBulkyItems DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePropScenario AllowItemInteractions</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_kettle03x</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_CAULDRON_SERVE_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_MALE_B" />
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <ExitProbeZOverride value="0.200000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="90.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_CAULDRON_SERVE_STEW_ALWAYS</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_LEAN" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePropScenario AllowItemInteractions</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionOr">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPlayer" />
+          </Item>
+          <Item type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionIsPlayer" />
+              <Item type="CAIConditionScenarioPointHasProp">
+                <Id>p_spoon01x_PH_R_HAND</Id>
+              </Item>
+              <Item type="CAIConditionScenarioPointHasProp">
+                <Id>p_bowl04x_stew_PH_L_HAND</Id>
+              </Item>
+            </Conditions>
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_CAULDRON_SERVE_STEW_ALWAYS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_ALWAYS_MALE_B" />
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_PLAYER" />
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_ALWAYS_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <ExitProbeZOverride value="0.200000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="90.000000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.400000" z="1.000000" />
+          <PromptText>VI_TAKE</PromptText>
+          <PromptGroupText>SERVE_STEW</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <DirectionWeight value="0.000000" />
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitPromptWeight value="0.000000" />
+          <TimeoutSeconds value="0.000001" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_CAULDRON_SERVE_STEW_NO_POT</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_LEAN" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_CAULDRON_SERVE_STEW_NO_POT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_NO_POT_MALE_B" />
+          <Item ref="PROP_HUMAN_CAULDRON_SERVE_STEW_NO_POT_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <ExitProbeZOverride value="0.200000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="90.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_CRAFT_POISON_KNIVES</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_CRAFT_POISON_KNIVES</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_CRAFT_POISON_KNIVES_MALE_A_APPLY_POISON" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_CRAFT_POISON_KNIVES_MALE_A_WET_RAG" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_CRAFT_POISON_KNIVES_MALE_A_WET_RAG_TRANS_APPLY_POISON" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_BILL_SLEEP</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioChair EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_BILL_SLEEP</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_BILL_SLEEP_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>bill</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.030000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="120.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_BOWL_PICKUP_CRATE_TABLE</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>BlockGestures EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePickupPropScenario</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_BOWL_PICKUP_CRATE_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_BOWL_PICKUP_CRATE_TABLE_MALE_A" />
+          <Item ref="WORLD_CAMP_BOWL_PICKUP_CRATE_TABLE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_STEW_BOWL_PUT_DOWN_GROUND</Name>
+      <PropEndOfLifeTimeoutMS value="1" />
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePutdownPropScenario LeaveScenarioOnReactionEnd AllowItemInteractions</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_STEW_BOWL_PUT_DOWN_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_STEW_BOWL_PUT_DOWN_GROUND_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_BOWL_PUT_DOWN_WASHBASIN</Name>
+      <PropEndOfLifeTimeoutMS value="1" />
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePutdownPropScenario LeaveScenarioOnReactionEnd AllowItemInteractions</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_BOWL_PUT_DOWN_WASHBASIN</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_BOWL_PUT_DOWN_WASHBASIN_FEMALE_A" />
+          <Item ref="WORLD_CAMP_BOWL_PUT_DOWN_WASHBASIN_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="-0.200000" z="0.500000" />
+          <PromptText>GENERIC_PUT_DOWN</PromptText>
+          <PromptGroupText>DISH_BASIN</PromptGroupText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitPromptWeight value="0.000000" />
+          <TimeoutSeconds value="1.000000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_CAULDRON_HANG</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_CAULDRON_HANG</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_CAULDRON_HANG_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_CAULDRON_UNHANG</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_CAULDRON_UNHANG</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_CAULDRON_UNHANG_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_CAULDRON_PICKUP_TABLE</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DisableInteractions DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_CAULDRON_PICKUP_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_CAULDRON_PICKUP_TABLE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_CAULDRON_PUT_DOWN_TABLE</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_CAULDRON_PUT_DOWN_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_CAULDRON_PUT_DOWN_TABLE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.243000" />
+      <ExitProbeCapsuleStartOffset x="-0.078000" y="-0.162000" z="-0.024000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_FIRE_SEAT_LOG_LEAN</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_FIRE_SEAT_LOG_LEAN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_FEMALE_A" />
+          <Item ref="PROP_CAMP_FIRE_SEAT_BENCH_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_JACK_ES_EAT_STEW</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_JACK_ES_EAT_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_JACK_ES_EAT_STEW_EATING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+      <VfxAnimInfo>ANM_BOWL_STEAM_04</VfxAnimInfo>
+    </Item>
+	<Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW_BEECHERS</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW_BEECHERS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.120000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A__TRANS__RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B__TRANS__RESTING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A__TRANS__RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B__TRANS__RESTING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_A__TRANS__EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_B__TRANS__EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_A__TRANS__EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_B__TRANS__EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.120000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+      <VfxAnimInfo>ANM_BOWL_STEAM_04</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW_LAZY</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW_LAZY</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_LAZY_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_LAZY_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_LAZY_MALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_LAZY_MALE_A__TRANS__RESTING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_LAZY_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_LAZY_MALE_B__TRANS__RESTING_LAZY_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_LAZY_MALE_A__TRANS__EATING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_LAZY_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_LAZY_MALE_B__TRANS__EATING_LAZY_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW_FALLBACK</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_TABLE_STEW_FALLBACK</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_A__TRANS__RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_MALE_B__TRANS__RESTING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_A__TRANS__RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_EATING_FEMALE_B__TRANS__RESTING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_A__TRANS__EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_MALE_B__TRANS__EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_A__TRANS__EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_B__TRANS__EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_TABLE_STEW_RESTING_FEMALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_DUTCH_SMOKE_CIGAR</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_DUTCH_SMOKE_CIGAR</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_DUTCH_SMOKE_CIGAR_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>PENSIVE</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_DUTCH_SMOKE_CIGAR_GUS</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_DUTCH_SMOKE_CIGAR_GUS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_DUTCH_SMOKE_CIGAR_GUS" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>PENSIVE</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_LAY_BACK_GROUND</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_LAY_BACK_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <BlockedByNearbyScenariosRange value="0.800000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_LAY_GROUND_SIDE</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_LAY_GROUND_SIDE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.100000" y="0.100000" z="0.000000" />
+      <BlockedByNearbyScenariosRange value="0.600000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_SIT_GROUND</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_SIT_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_DRINKING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_D" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_E" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_F" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_G" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_H" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_DRINKING_MALE_A__TRANS__MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__DRINKING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_A__TRANS__E" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_B__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_C__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_MALE_E__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <BlockedByNearbyScenariosRange value="0.600000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_SIT_GROUND_RECLINE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_SIT_GROUND_RECLINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_A__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_B__TRANS__C" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C__TRANS__A" />
+          <Item ref="WORLD_CAMP_FIRE_SIT_GROUND_RECLINE_MALE_C__TRANS__B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_POKE_GROUND</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>BlockLegIk DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_POKE_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_POKE_GROUND" />
+          <Item ref="WORLD_CAMP_JACK_POKE_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>JACK</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_POKE_GROUND_STICK</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>BlockLegIk DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_POKE_GROUND_STICK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_POKE_GROUND_STICK_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>JACK</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_SKY</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_SKY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_SKY" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_SLEEP</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>BlockGestures DisableInteractions DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_SLEEP</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_SLEEP" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_THROWS_ROCKS_CASUAL</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_THROWS_ROCKS_CASUAL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_THROWS_ROCKS_CASUAL" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_THROWS_ROCKS_LEDGE</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_THROWS_ROCKS_LEDGE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_THROWS_ROCKS_LEDGE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_TOY_PLAY</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_TOY_PLAY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_TOY_PLAY_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JACK_TREE</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JACK_TREE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JACK_TREE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeZOverride value="0.460000" />
+      <ExitProbeCapsuleRadiusOverride value="0.200000" />
+      <CategoryHash>TREE_GAZING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JOHN_RECOVER</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JOHN_RECOVER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JOHN_RECOVER_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.240000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_KIERAN_TIED_UP_COLD</Name>
+      <Flags>BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection IgnoreBlockingAreas</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_KIERAN_TIED_UP_COLD</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_KIERAN_TIED_UP_COLD_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_KIERAN_TREE_TIED</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection IgnoreBlockingAreas</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_KIERAN_TREE_TIED</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_KIERAN_TIED_TREE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_LENNY_GUARD_CROUCH_TRACKS</Name>
+      <Flags>CrouchedScenario AllowEquippedWeapons EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_LENNY_GUARD_CROUCH_TRACKS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_LENNY_GUARD_CROUCH_TRACKS_MALE_A" />
+          <Item ref="WORLD_CAMP_LENNY_GUARD_CROUCH_TRACKS_MALE_A_UNEQUIPPED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>Guard</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_LENNY_LEAN_READING</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking Temp DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_LENNY_LEAN_READING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_LENNY_LEAN_READING" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>READING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_PISTOL</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AllowEquippedWeapons AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection CheckForWeaponTags</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_PISTOL</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_PISTOL_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_MICAH_SEAT_CHAIR_CLEAN_GUN</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AllowEquippedWeapons AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection CheckForWeaponTags DontRandomizeBaseOnStartup</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_MICAH_SEAT_CHAIR_CLEAN_GUN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_MICAH_SEAT_CHAIR_CLEAN_GUN_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.140000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.210000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_SIT_GROUND_STEW</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenario SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_SIT_GROUND_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_A__TRANS__RESTING_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_A__TRANS" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_MALE_A__TRANS__EATING_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_MALE_B__TRANS__RESTING_MALE_B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_MALE_B__TRANS__EATING_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+      <VfxAnimInfo>ANM_BUCKET_DUMP</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_SIT_GROUND_STEW_LAZY</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenario SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_SIT_GROUND_STEW_LAZY</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_LAZY_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_LAZY_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_LAZY_MALE_B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_LAZY_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_LAZY_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_LAZY_MALE_A__TRANS__RESTING_LAZY_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_LAZY_MALE_A__TRANS__B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_LAZY_MALE_A__TRANS__EATING_LAZY_MALE_A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_LAZY_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_EATING_LAZY_MALE_B__TRANS__RESTING_LAZY_MALE_B" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_LAZY_MALE_B__TRANS__A" />
+          <Item ref="WORLD_CAMP_SIT_GROUND_STEW_RESTING_LAZY_MALE_B__TRANS__EATING_LAZY_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>EATING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_STEW</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress AllowItemInteractions</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_STEW</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_A__TRANS__RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_B__TRANS__RESTING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_A__TRANS__RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_B__TRANS__RESTING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_A__TRANS__EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_B__TRANS__EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_A__TRANS__EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_B__TRANS__EATING_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>EATING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+      <VfxAnimInfo>ANM_BOWL_STEAM_04</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_BENCH_STEW</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_BENCH_STEW</Name>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>EATING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_STEW_FALLBACK</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress AllowItemInteractions</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_STEW_FALLBACK</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_A__TRANS__RESTING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_FEMALE_B__TRANS__RESTING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_A__TRANS__RESTING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_MALE_B__TRANS__RESTING_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_A__TRANS__EATING_FEMALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_FEMALE_B__TRANS__EATING_FEMALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_A__TRANS__EATING_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_MALE_B__TRANS__EATING_MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>EATING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SEAT_CHAIR_STEW_LAZY</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SEAT_CHAIR_STEW_LAZY</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_LAZY_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_LAZY_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_LAZY_MALE_A__TRANS__RESTING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_LAZY_MALE_B__TRANS__A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_EATING_LAZY_MALE_B__TRANS__RESTING_LAZY_MALE_B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_LAZY_MALE_A__TRANS__B" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_LAZY_MALE_A__TRANS__EATING_LAZY_MALE_A" />
+          <Item ref="PROP_CAMP_SEAT_CHAIR_STEW_RESTING_LAZY_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>EATING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_CAULDRON_STIR</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="20.000000" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_kettle03x</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_CAULDRON_STIR</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_CAULDRON_STIR_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_CAULDRON_STIR_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_spoonMid01x_PH_R_Hand</Id>
+          <PropSet>SPOONS_MID</PropSet>
+          <Offset x="0.679811" y="0.709018" z="0.735706" />
+          <Rotation x="106.515800" y="-89.723720" z="166.827700" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest LookAtTarget RespawnOnRequest</Flags>
+        </Item>
+        <Item>
+          <Id>p_kettle03x</Id>
+          <PropSet>KETTLE_CAMP</PropSet>
+          <Offset x="-0.003226" y="0.709985" z="0.129995" />
+          <Rotation x="1.490109" y="-0.960391" z="-94.940190" />
+          <FixedPhysics value="true" />
+          <SpawnCondition type="CAIConditionAnd">
+            <Conditions>
+              <Item type="CAIConditionNot">
+                <Condition type="CAIConditionScenarioPointHasProp">
+                  <Id>p_kettle03x_PH_L_HAND</Id>
+                </Condition>
+              </Item>
+              <Item type="CAIConditionTime">
+                <Hours>H0 H1 H2 H3 H4 H5 H6 H7 H13 H14 H15 H16 H17 H18 H19 H20 H21 H22 H23</Hours>
+              </Item>
+            </Conditions>
+          </SpawnCondition>
+        </Item>
+        <Item>
+          <Id>p_spoon01x_PH_R_HAND</Id>
+          <PropSet>SPOONS</PropSet>
+          <Offset x="0.755088" y="0.304200" z="0.067941" />
+          <Rotation x="3.629241" y="-19.604370" z="-18.179740" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_bowl04x_stew_PH_L_HAND</Id>
+          <PropSet>BOWLS</PropSet>
+          <Offset x="0.598600" y="0.345500" z="0.000000" />
+          <Rotation x="-0.000029" y="0.000004" z="-2.547760" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_CAULDRON_STIR_ALWAYS</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="20.000000" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Working</ActivityType>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_kettle03x</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_CAULDRON_STIR_ALWAYS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_CAULDRON_STIR_ALWAYS_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_CAULDRON_STIR_ALWAYS_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_spoonMid01x_PH_R_Hand</Id>
+          <PropSet>SPOONS_MID</PropSet>
+          <Offset x="0.691428" y="0.701263" z="0.734176" />
+          <Rotation x="179.053300" y="-84.992490" z="-179.458800" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest RespawnOnRequest</Flags>
+        </Item>
+        <Item>
+          <Id>p_kettle03x</Id>
+          <PropSet>KETTLE_CAMP</PropSet>
+          <Offset x="-0.003226" y="0.709985" z="0.129995" />
+          <Rotation x="1.490109" y="-0.960391" z="-94.940190" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+        <Item>
+          <Id>p_spoon01x_PH_R_HAND</Id>
+          <PropSet>SPOONS</PropSet>
+          <Offset x="0.755088" y="0.304200" z="0.067941" />
+          <Rotation x="3.629241" y="-19.604370" z="-18.179740" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>p_bowl04x_stew_PH_L_HAND</Id>
+          <PropSet>BOWLS</PropSet>
+          <Offset x="0.598600" y="0.345500" z="0.000000" />
+          <Rotation x="-0.000029" y="0.000004" z="-2.547760" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_CAULDRON_STIR_NO_POT</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_CAULDRON_STIR_NO_POT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_CAULDRON_STIR_NO_POT_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.330000" z="0.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_spoonMid01x_PH_R_Hand</Id>
+          <PropSet>SPOONS_MID</PropSet>
+          <Offset x="0.686035" y="0.400851" z="0.604120" />
+          <Rotation x="106.515800" y="-89.723720" z="166.827700" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>CreateOnRequest LookAtTarget RespawnOnRequest</Flags>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>FOOD_PREP</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_FIRE_TEND_KNEEL</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>CrouchedScenario DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_FIRE_TEND_KNEEL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_FIRE_TEND_KNEEL" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapsuleRadiusOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CameraFramingInfo>
+        <eCameraFraming>CameraFraming_Crouched</eCameraFraming>
+      </CameraFramingInfo>
+      <VfxAnimInfo>ANM_FIRE_TEND_EMBERS</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_FIRE_COFFEE_KETTLE_PEDS</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TimeTilPedLeaves value="0.000001" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>BlockGestures DontAttachDuringExit DontRandomizeBaseOnStartup DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePropScenario EnableBodyBlendBaseToMotion</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_FIRE_COFFEE_KETTLE_PEDS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_FIRE_COFFEE_KETTLE_MALE_A_EMPTY" />
+          <Item ref="WORLD_HUMAN_FIRE_COFFEE_KETTLE_MALE_A_FULL" />
+          <Item ref="WORLD_HUMAN_FIRE_COFFEE_KETTLE_FEMALE_A_EMPTY" />
+          <Item ref="WORLD_HUMAN_FIRE_COFFEE_KETTLE_FEMALE_A_FULL" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_FIRE_COFFEE_KETTLE_MALE_A_EMPTY__TRANS__FULL" />
+          <Item ref="WORLD_HUMAN_FIRE_COFFEE_KETTLE_FEMALE_A_EMPTY__TRANS__FULL" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapsuleRadiusOverride value="0.350000" />
+      <BlockedByNearbyScenariosRange value="0.600000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <vegVolumeRadius value="1.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PrespawnedProps>
+        <Item>
+          <Id>p_boiler02x_PH_L_HAND</Id>
+          <PropSet>BOILERS_CAMP</PropSet>
+          <Offset x="-0.105300" y="0.608500" z="0.001200" />
+          <Rotation x="0.000000" y="0.000000" z="140.000000" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_FIRE_STAND</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_FIRE_STAND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_FIRE_STAND_MALE_A" />
+          <Item ref="WORLD_HUMAN_FIRE_STAND_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>CC_WORLD_HUMAN_CAMP_FIRE_STAND</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking NotPlaceable WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>CC_WORLD_HUMAN_CAMP_FIRE_STAND</Name>
+        <ConditionalAnims>
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_B" />
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_E" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_A__TRANS__HUMAN_SMOKE_MALE_C" />
+		  <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_E__TRANS__HUMAN_SMOKE_MALE_C" />
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_FEMALE_A__TRANS__WORLD_CAMP_FIRE_STANDING_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_FEMALE_A__TRANS__CC_WORLD_HUMAN_STAND_DRINK_FEMALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_FEMALE_A__TRANS__HUMAN_SMOKE_FEMALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_FEMALE_B__TRANS__HUMAN_SMOKE_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_B__TRANS__CAMP_FIRE_STANDING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_B__TRANS__CAMP_FIRE_STANDING_FEMALE_B" />
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS__WORLD_CAMP_FIRE_STANDING_MALE_A" />
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS__WORLD_CAMP_FIRE_STANDING_MALE_B" />
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS__WORLD_CAMP_FIRE_STANDING_MALE_C" />
+          <Item ref="CC_WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS__WORLD_CAMP_FIRE_STANDING_MALE_E" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_C" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_E" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_A" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_C" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_E" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_FIRE_STANDING</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking Temp WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_FIRE_STANDING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_A" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_B" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_C" />
+          <Item ref="WORLD_CAMP_FIRE_STANDING_MALE_E" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_A" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_C" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__CAMP_FIRE_STANDING_MALE_E" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_C__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_C__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_C__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_C__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_C__TRANS_V5" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_C__TRANS_V6" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_C__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_C__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_C__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_C__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_D__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_D__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_D__TRANS_V3" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>CAMP_FIRE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_GUARD_COLD</Name>
+      <Flags>AllowEquippedWeapons EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_GUARD_COLD</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_GUARD_COLD_MALE_A" />
+          <Item ref="WORLD_CAMP_GUARD_COLD_MALE_A_UNEQUIPPED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Guard</CategoryHash>
+    </Item>
+		<Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_GUARD_COLD_FEMALE</Name>
+      <Flags>AllowEquippedWeapons EnableKinematicPhysicsForPed NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+			<Condition type="CAIConditionIsInNetworkSession" />
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_GUARD_COLD_FEMALE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_GUARD_COLD_FEMALE_A" />
+          <Item ref="WORLD_CAMP_GUARD_COLD_FEMALE_A_UNEQUIPPED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Guard</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_DUTCH_CHESS</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockLegIk DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions IgnoreScenarioPointHeading NavmeshBlocking NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioChair EnableEnterAlignHelper UseExitDirection NotUsableInCombat BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_DUTCH_CHESS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_DUTCH_CHESS_ANIMSCENES" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>dutch</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.210000" z="0.210000" />
+      <EnterPoseFixupDistanceThreshold value="0.500000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="120.000000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>BOOK</Id>
+          <PropSet>BOOK</PropSet>
+          <Offset x="0.276529" y="0.904696" z="-0.020293" />
+          <Rotation x="180.000000" y="180.000000" z="-10.000000" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+        <Item>
+          <Id>CHESS</Id>
+          <PropSet>CHESS_SET</PropSet>
+          <Offset x="0.188647" y="0.907726" z="0.011236" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>CRATE</Id>
+          <PropSet>CRATES</PropSet>
+          <Offset x="0.197367" y="0.931897" z="-0.493000" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>CHESS</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE</Name>
+      <Flags>AllowEquippedWeapons AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection DontRandomizeBaseOnStartup</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_MALE_A_UNEQUIPPED" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_FEMALE_A_UNEQUIPPED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_GUS</Name>
+      <Flags>AllowEquippedWeapons AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection DontRandomizeBaseOnStartup</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_GUS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_GUS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CLEAN_RIFLE_GUS_UNEQUIPPED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_RIFLE</Name>
+      <Flags>AllowEquippedWeapons AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_RIFLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_RIFLE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_CLEAN_RIFLE_MALE_A_UNEQUIPPED" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.160000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_JACK_SEAT_CHAIR_STEW_EATING</Name>
+      <Flags>AttachPed BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly Temp DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_JACK_SEAT_CHAIR_STEW_EATING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_JACK_SEAT_CHAIR_STEW_EATING_WIP_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>EATING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_JAVIER_SEAT_CHAIR_CRICKETS</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly Temp DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_JAVIER_SEAT_CHAIR_CRICKETS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_JAVIER_SEAT_CHAIR_CRICKETS_WIP_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_JAVIER_SEAT_CRATE_BRUSH_HAT</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_JAVIER_SEAT_CRATE_BRUSH_HAT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_JAVIER_SEAT_CRATE_BRUSH_HAT_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_CAMP_JAVIER_KNIFE</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioTableChair EnableEnterAlignHelper UseExitDirection NotUsableInCombat BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_CAMP_JAVIER_KNIFE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_CAMP_JAVIER_KNIFE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.210000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="-0.200000" z="0.500000" />
+          <PromptText>PLAYER_SIT</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="110.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="1.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <QuitPromptText>Stop</QuitPromptText>
+          <QuitInputType>INPUT_CONTEXT_B</QuitInputType>
+          <!-- <QuitPromptHoldDuration value="0.500000" /> -->
+          <!-- <QuitHoldTimeType>MEDIUM_TIMED_EVENT</QuitHoldTimeType> -->
+        </Item>
+      </PlayerUseInfos>
+      <CategoryHash>PLAY_KNIFE</CategoryHash>
+      <CameraFramingInfo>
+        <eCameraFraming>CameraFraming_Seated</eCameraFraming>
+      </CameraFramingInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_SLEEP_PEW_COLD</Name>
+      <Flags>BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking NoMeleeTakedowns WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_SLEEP_PEW_COLD</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_SLEEP_PEW_COLD_MALE_B" />
+          <Item ref="PROP_CAMP_SLEEP_PEW_COLD_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_FISHING_ROD</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_FISHING_ROD</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_FISHING_ROD_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_CRAB_TRAP</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_CRAB_TRAP</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CRAB_TRAP_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <vegVolumeRadius value="1.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PrespawnedProps>
+        <Item>
+          <Id>p_trap05x</Id>
+          <PropSet>CRAB_TRAP</PropSet>
+          <Offset x="0.102200" y="1.018000" z="-0.488000" />
+          <Rotation x="0.000000" y="0.000000" z="-90.000000" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+		<Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_CRAB_TRAP_NO_PROP</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Working</ActivityType>
+			<Condition type="CAIConditionIsInNetworkSession" />
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_CRAB_TRAP_NO_PROP</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CRAB_TRAP_MALE_A_NO_PROP" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.50000" z="0.00000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <vegVolumeRadius value="1.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>

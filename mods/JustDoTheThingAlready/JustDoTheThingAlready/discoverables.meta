@@ -1,0 +1,2108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_FME_TH_ROCK_PILE</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse Temp LootingScenario</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>MP_FME_TH_ROCK_PILE</Name>
+        <ConditionalAnims>
+          <Item ref="MP_FME_TH_ROCK_PILE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="1.000000" z="1.000000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <CloseRadius value="1.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>CHEST</Id>
+          <PropSet>TH_HRT_CHEST</PropSet>
+          <Offset x="-0.008715" y="1.018275" z="0.000000" />
+          <Rotation x="0.000001" y="0.000001" z="-0.000009" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+        <Item>
+          <Id>OBJECT1</Id>
+          <PropSet>TH_HRT_COINS</PropSet>
+          <Offset x="0.054435" y="0.980646" z="0.101269" />
+          <Rotation x="10.346710" y="-4.881140" z="1.486373" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>CreateOnRequest</Flags>
+        </Item>
+        <Item>
+          <Id>OBJECT2</Id>
+          <PropSet>TH_HRT_COINS</PropSet>
+          <Offset x="0.019404" y="0.978131" z="0.106024" />
+          <Rotation x="9.050551" y="0.000001" z="-0.000009" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>CreateOnRequest</Flags>
+        </Item>
+        <Item>
+          <Id>OBJECT3</Id>
+          <PropSet>TH_HRT_MAP</PropSet>
+          <Offset x="-0.081336" y="0.895460" z="-1.000000" />
+          <Rotation x="74.734520" y="-80.488129" z="-72.847061" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <Flags>CreateOnRequest</Flags>
+        </Item>
+        <Item>
+          <Id>ROCKS</Id>
+          <PropSet>TH_HRT_ROCKS</PropSet>
+          <Offset x="-0.008715" y="1.018275" z="0.000000" />
+          <Rotation x="0.000001" y="0.000001" z="-0.000009" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+      <iNumberOfDaysPersistent value="3" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_FME_TH_ROCK_PILE_NO_PROPS</Name>
+      <SpawnProbability value="0.000000" />
+      <Flags>DontRandomizeBaseOnStartup PlayerOnly SingleUse Temp LootingScenario</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>MP_FME_TH_ROCK_PILE_NO_PROPS</Name>
+        <ConditionalAnims>
+          <Item ref="MP_FME_TH_ROCK_PILE_NO_PROPS" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="1.000000" z="1.000000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <CloseRadius value="1.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <iNumberOfDaysPersistent value="3" />
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>SHACK_MISSING_HUSBAND_RS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>shack_missinghusband1_wagon</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="120.000000" />
+        <ScriptStopDistance value="140.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_STR_INSPECT_RAZORBOX</Name>
+      <ScriptName>ts_str_inspect_razorbox</ScriptName>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>TS_STR_INSPECT_RAZORBOX</Name>
+        <ConditionalAnims>
+          <Item ref="INSPECT_RAZOR_BOX" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>INSPECT_RAZOR_BOX</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <CloseRadius value="0.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>BOX</Id>
+          <PropSet>TS_RAZORBOX</PropSet>
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_STR_INSPECT_MAYOR_LETTER</Name>
+      <ScriptName>ts_str_mayor_letter</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly NotUsableInCombat</Flags>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionIsPlayer" />
+          <Item type="CAIConditionScenarioPointHasProp">
+            <Id>GENERIC_LETTER</Id>
+          </Item>
+        </Conditions>
+      </Condition>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.423292" y="0.501312" z="0.500000" />
+          <PromptText>INSPECT_MAYOR_LETTER</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="75.000000" />
+          <CloseRadius value="1.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>GENERIC_LETTER</Id>
+          <PropSet>GENERIC_LETTER</PropSet>
+          <Offset x="0.000000" y="0.714311" z="1.064115" />
+          <Rotation x="0.000000" y="0.000000" z="-9.999990" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_INSPECT_PLACED_ARTIFACT</Name>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>TS_VAL_INSPECT_PLACED_ARTIFACT</Name>
+        <ConditionalAnims>
+          <Item ref="INSPECT_PLACED_ARTIFACT" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.100000" y="0.600000" z="1.000000" />
+          <PromptText>EXAMINE_MASK</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="0.700000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <CloseRadius value="0.700000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>mask</Id>
+          <PropSet>TS_PLACED_ARTIFACT</PropSet>
+          <Offset x="0.163457" y="0.583640" z="1.031940" />
+          <Rotation x="-15.381550" y="3.321879" z="-19.872919" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_MASS_GRAVE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>TS_VAL_MASS_GRAVE</Name>
+        <ConditionalAnims>
+          <Item ref="TS_MASS_GRAVE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.000000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <CloseRadius value="1.000000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>Skull</Id>
+          <PropSet>TS_MASS_GRAVE</PropSet>
+          <Offset x="0.185364" y="-0.060056" z="0.084442" />
+          <Rotation x="66.549057" y="-3.921625" z="-164.603394" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_INSPECT_SUBMERGED_ARTIFACT_1</Name>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>TS_VAL_INSPECT_SUBMERGED_ARTIFACT_1</Name>
+        <ConditionalAnims>
+          <Item ref="INSPECT_SUBMERGED_ARTIFACT_1" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.006000" y="0.440000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="0.000000" />
+          <CloseRadius value="0.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>Stick</Id>
+          <PropSet>TS_SUBMERGED_ARTIFACT_1</PropSet>
+          <Offset x="0.005758" y="0.440784" z="-0.008000" />
+          <Rotation x="95.829529" y="3.420288" z="177.455002" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_INSPECT_SUBMERGED_ARTIFACT_2</Name>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>TS_VAL_INSPECT_SUBMERGED_ARTIFACT_2</Name>
+        <ConditionalAnims>
+          <Item ref="INSPECT_SUBMERGED_ARTIFACT_2" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.006000" y="0.440000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="0.000000" />
+          <CloseRadius value="0.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>Stick</Id>
+          <PropSet>TS_SUBMERGED_ARTIFACT_2</PropSet>
+          <Offset x="0.006000" y="0.441000" z="0.000000" />
+          <Rotation x="95.829529" y="3.420288" z="177.455002" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_INSPECT_SUBMERGED_ARTIFACT_3</Name>
+      <Flags>BlockLegIk DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <Condition type="CAIConditionIsPlayer" />
+      <ConditionalAnims>
+        <Name>TS_VAL_INSPECT_SUBMERGED_ARTIFACT_3</Name>
+        <ConditionalAnims>
+          <Item ref="INSPECT_SUBMERGED_ARTIFACT_3" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>player</SingleParticipantId>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.006000" y="0.440000" z="0.500000" />
+          <PromptText>INSPECT_GENERIC</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="1.500000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="0.000000" />
+          <CloseRadius value="0.500000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>Stick</Id>
+          <PropSet>TS_SUBMERGED_ARTIFACT_3</PropSet>
+          <Offset x="0.006000" y="0.441000" z="0.050000" />
+          <Rotation x="95.829529" y="0.000000" z="177.455002" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_HIDEMAP_PIECE_01</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>CantBeReused IgnoreBlockingAreas PlayerOnly SingleUse</Flags>
+      <PrespawnedProps>
+        <Item>
+          <Id>TS_HIDEMAP_PIECE</Id>
+          <PropSet>TS_HIDEMAP_PIECE</PropSet>
+          <Rotation x="90.000000" y="0.000000" z="0.000000" />
+          <SpawnCondition type="CAIConditionModelNameInList">
+            <ModelNames>
+              <Item>player_zero</Item>
+            </ModelNames>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_HIDEMAP_PIECE_02</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>CantBeReused IgnoreBlockingAreas PlayerOnly SingleUse</Flags>
+      <PrespawnedProps>
+        <Item>
+          <Id>TS_HIDEMAP_PIECE</Id>
+          <PropSet>TS_HIDEMAP_PIECE</PropSet>
+          <Rotation x="90.000000" y="0.000000" z="0.000000" />
+          <SpawnCondition type="CAIConditionModelNameInList">
+            <ModelNames>
+              <Item>player_zero</Item>
+            </ModelNames>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_HIDEMAP_PIECE_03</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>CantBeReused IgnoreBlockingAreas PlayerOnly SingleUse</Flags>
+      <PrespawnedProps>
+        <Item>
+          <Id>TS_HIDEMAP_PIECE</Id>
+          <PropSet>TS_HIDEMAP_PIECE</PropSet>
+          <Rotation x="90.000000" y="0.000000" z="0.000000" />
+          <SpawnCondition type="CAIConditionModelNameInList">
+            <ModelNames>
+              <Item>player_zero</Item>
+            </ModelNames>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>TS_VAL_HIDEMAP_PIECE_04</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>CantBeReused IgnoreBlockingAreas PlayerOnly SingleUse</Flags>
+      <PrespawnedProps>
+        <Item>
+          <Id>TS_HIDEMAP_PIECE</Id>
+          <PropSet>TS_HIDEMAP_PIECE</PropSet>
+          <Rotation x="90.000000" y="0.000000" z="0.000000" />
+          <SpawnCondition type="CAIConditionModelNameInList">
+            <ModelNames>
+              <Item>player_zero</Item>
+            </ModelNames>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ABANDONED_CHURCH</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ABANDONED_FURNITURE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ABANDONED_MISSION</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ABANDONED_OIL_WELL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ABANDONED_TRADING_POST</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ABANDONED_WELL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ALCHEMIST</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_alchemist_house</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ANCIENT_ARROW_HEADS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ANCIENT_TOMAHAWK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ANCIENT_SEALED_CLAY_URN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ANCIENT_URN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_ancient_urn</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_AXE_IN_TREE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="75.000000" />
+        <ScriptStopDistance value="150.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_AZTEC_MASK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="10.000000" />
+        <ScriptStopDistance value="20.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BANK_STAGECOACH</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BARREL_RIDER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BATS_IN_BARN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_ped</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BIRD_NEST</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BLACK_FLOWER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BLACK_SHEEP</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_ped</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BOAT_IN_TREE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BRA_SECRET</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_ped</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BRAITH_3</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BROKEN_BRIDGE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BROKEN_WAGONS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BUCK_CARCASS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BRUSH_FIRE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BURNED_SETTLEMENT</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WB_DISCO_BOOTS_NOTE_NOTE</Name>
+      <ScriptName>disco_letter</ScriptName>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>CantBeReused DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse WaitOnStreamingBeforeNavigatingToStartPosition</Flags>
+      <ConditionalAnims>
+        <Name>WB_DISCO_BOOTS_NOTE</Name>
+        <ConditionalAnims>
+          <Item ref="WB_DISCO_BOOTS_NOTE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.700000" z="1.000000" />
+          <PromptText>TAKE_POSTER</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <InteractionRadius value="2.200000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <PointDirectionHalfAngle value="60.000000" />
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <Id>LETTER</Id>
+          <PropSet>LETTER_READ</PropSet>
+          <Offset x="0.000000" y="0.535971" z="0.100000" />
+          <Rotation x="90.000000" y="0.000000" z="180.000000" />
+          <FixedPhysics value="true" />
+          <SpawnCondition type="CAIConditionModelNameInList">
+            <ModelNames>
+              <Item>player_zero</Item>
+            </ModelNames>
+          </SpawnCondition>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_BOOTS_NOTE_RANGE</Name>
+      <SpawnProbability value="0.000000" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CAT_MASK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CATTLE_CARCASSES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CEREMONIAL_HATCHET</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CIRCUS_WAGON</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CIV_WAR_FORT</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CIV_WAR_BATTLEFIELD</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CIV_WAR_KNIFE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CONESTOGA_WAGON</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="105.000000" />
+        <ScriptStopDistance value="180.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CORPSE_PIT</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_CRASHED_AIRSHIP</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_BEAR</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_TOWN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_CHAIN_GANG</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_CHINESE_TRAVELLER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_CIV_WAR</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_MINER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_MICAH</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEAD_SNAKE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DEFACED_GRAVE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DERAILED_TRAIN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DESERT_SKELETONS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DESERT_WAGON</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DESERTED_FARM</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DONKEY_LADY</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_DREAMCATCHERS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="50.000000" />
+        <ScriptStopDistance value="75.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_EARLY_SETTLERS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_EASEL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_easel</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FACE_IN_CLIFF</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FACE_TREES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FACTORY_IN_SWAMP</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FIRE_LOOKOUT_TOWER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FLATTENED_CABIN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FLYING_MACHINE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FOSSILIZED_MAN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FRANKENSTEIN_BOOK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_FROZEN_SETTLER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_GIANT_REMAINS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_GEYSER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_geyser</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_GHOST_TRAIN</Name>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_ghost_train</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_GRAVE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="20.000000" />
+        <ScriptStopDistance value="40.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ARTHUR_GRAVE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_GRAVESTONE_TREE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_GRAYS_SECRET</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_HIDDEN_TUNNEL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="60.000000" />
+        <ScriptStopDistance value="120.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_HERMIT_WOMAN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_hermit_woman</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_HORNET_NESTS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="80.000000" />
+        <ScriptStopDistance value="100.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_INDIAN_BURIAL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_indian_burial</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_JESUIT_MISSIONARY</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_KILL_ZONE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="30.000000" />
+        <ScriptStopDistance value="60.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_KILL_ZONE_02</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="30.000000" />
+        <ScriptStopDistance value="60.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_LIGHTNING_ALLEY</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_LIGHTNING_TREES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_lightning_trees</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_LOVE_MESSAGE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MAIL_TRUCK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MAMMOTH</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MEDITATING_MONK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_ped</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MESSAGE_BOTTLE_1</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MESSAGE_BOTTLE_2</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_METEORITE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_METEOR_HOUSE</Name>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_METEOR_SHOWER</Name>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_meteor_shower</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MICAH_CAMP</Name>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_MOUNTAIN_CLIMB</Name>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OBELISK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OBJECT_IN_TREE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OLD_DIRTY_CABIN</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_ped</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="60.000000" />
+        <ScriptStopDistance value="80.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OLD_FIREPIT</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OLD_FIREPLACE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OLD_GRAVESTONES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OLD_RAILROAD_CAMP</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OLD_WORLD_SCRIPT</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ONE_ROOM_CHURCH</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_OVERTURNED_HEARSE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PAGAN_RITUAL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PHONOGRAPH_HOUSE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <BlockedByNearbyScenariosRange value="-0.100000" />
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PIG_MASK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <BlockedByNearbyScenariosRange value="-0.100000" />
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PILE_SKULLS</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PIRATE_KNIFE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PIRATE_RUM</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_PIRATE_SKELETON</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_PLAYER_PICKUP_PIRATE_SKELETON_CLOTHING</Name>
+      <Flags>AllowEquippedWeapons DontRandomizeBaseOnStartup IgnoreBlockingAreas PlayerOnly SingleUse Temp DontValidateExitsWithProbeChecks WaitOnStreamingBeforeNavigatingToStartPosition SkipStartPositionApproach LootingScenario</Flags>
+      <ConditionalAnims>
+        <Name>PROP_PLAYER_PICKUP_PIRATE_SKELETON_CLOTHING</Name>
+        <ConditionalAnims>
+          <Item ref="PICKUP_DISCO_PIRATE_SKELETON_CLOTHING" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.270000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.000000" y="0.400000" z="0.000000" />
+          <PromptText>DISCO_GET_CLTHS</PromptText>
+          <InputType>INPUT_CONTEXT_Y</InputType>
+          <FixedWeight value="5.000000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHalfAngle value="180.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="100.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="2.000000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <TimeoutSeconds value="12.400000" />
+        </Item>
+      </PlayerUseInfos>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_POTS_TREE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_POWDER_KEG</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_QUARRY</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_RAM_MASK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_REGISTER_ROCK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_RAILROAD_GRAVESTONE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ROADSIDE_BROTHEL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_ROPE_BRIDGE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_RUNAWAY_CORPSE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SCARECROW_1</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SCARECROW_2</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SCARECROW_3</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SCARECROW_4</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SERPENT_MOUND</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SHEEP_GUY</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SHRINE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SPERM_WHALE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="50.000000" />
+        <ScriptStopDistance value="75.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_STONEHENGE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_STRANGE_STATUES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_STUFFED_GORILLA</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SUN_DIAL</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_SWAMP_HAND</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_TRADING_POST</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_TRAIL_TREES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="15.000000" />
+        <ScriptStopDistance value="30.000000" />
+      </RangedScriptInfo>
+    </Item>	
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_TREASURE_MAP_HALVES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_TREE_HOUSE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_tree_house</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_TREE_STRUCK</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_TREE_TRUNK_BOAT</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_tree_trunk_boat</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_UTE_WICKUP</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_UTOPIAN_COLONY</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_VAMPIRE_CLUES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="10.000000" />
+        <ScriptStopDistance value="20.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_VIKING_GEAR</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WAGON_CHEST</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WAGON_CIRCLE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WATER_DIVINER</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_corpse</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WHALE_BONE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WHISKEY_TREE</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_carriable</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WHISPERING_TREES</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+    <Item type="CScenarioWorldBrainInfo">
+      <Name>WB_DISCO_WITCHES_CAULDRON</Name>
+      <StationaryReactHash />
+      <Flags>IgnoreBlockingAreas</Flags>
+      <RangedScriptInfo type="CScenarioRangedScriptInfo">
+        <ScriptName>discoverable_generic_location</ScriptName>
+        <StackSize>default</StackSize>
+        <ScriptStartDistance value="125.000000" />
+        <ScriptStopDistance value="200.000000" />
+      </RangedScriptInfo>
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>

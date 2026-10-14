@@ -1,0 +1,3534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CScenarioInfoFile>
+  <Scenarios>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_PUT_DOWN_GROUND</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasNoProp" />
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_PUT_DOWN_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_PUT_DOWN_GROUND_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BOOK_PUT_DOWN_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_PICKUP_GROUND</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_PICKUP_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_PICKUP_GROUND_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_book04x_PH_R_HAND</Id>
+          <PropSet>BOOK_04</PropSet>
+          <Offset x="0.091422" y="0.669324" z="0.027016" />
+          <Rotation x="180.000000" y="0.000003" z="168.314667" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_PICKUP_GROUND_NO_BOOK</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking NotPlaceable WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_PICKUP_GROUND_NO_BOOK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_PICKUP_GROUND_FEMALE_A_NO_BOOK" />
+          <Item ref="WORLD_HUMAN_BOOK_PICKUP_GROUND_MALE_A_NO_BOOK" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_PICKUP_GROUND_MALE</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_PICKUP_GROUND_MALE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_PICKUP_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_book04x_PH_R_HAND</Id>
+          <PropSet>BOOK_04</PropSet>
+          <Offset x="0.198691" y="0.447371" z="0.014300" />
+          <Rotation x="180.000000" y="0.000006" z="166.000000" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRUNK_PASSED_OUT_FLOOR</Name>
+      <Flags>BlockGestures EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection PassedOut BlockEvasiveAnims</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRUNK_PASSED_OUT_FLOOR</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRUNK_PASSED_OUT_FLOOR_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SKETCHBOOK_PUT_DOWN_GROUND</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasNoProp" />
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SKETCHBOOK_PUT_DOWN_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SKETCHBOOK_PUT_DOWN_GROUND_MALE_A" />
+          <Item ref="WORLD_HUMAN_SKETCHBOOK_PUT_DOWN_GROUND_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_book04x_PH_R_HAND</Id>
+          <PropSet>SKETCH_BOOK</PropSet>
+          <Offset x="0.198691" y="0.447371" z="0.014300" />
+          <Rotation x="180.000000" y="0.000006" z="166.000000" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_NO_SKETCHBOOK</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking NotPlaceable WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_NO_SKETCHBOOK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_MALE_A_NO_SKETCHBOOK" />
+          <Item ref="WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_FEMALE_A_NO_SKETCHBOOK" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_FEMALE</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_FEMALE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SKETCHBOOK_PICKUP_GROUND_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_book04x_PH_R_HAND</Id>
+          <PropSet>SKETCH_BOOK</PropSet>
+          <Offset x="0.091422" y="0.669324" z="0.027016" />
+          <Rotation x="180.000000" y="0.000003" z="168.314667" />
+          <FixedPhysics value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH_TIRED</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioBench SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH_TIRED</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_TIRED_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+			<PedCapusleOffset x="0.000000" y="0.500000" z="0.000000" />
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>GENERIC_SEAT_CHAIR_SCENARIO</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>GENERIC_SEAT_CHAIR_SCENARIO</Name>
+        <ConditionalAnims>
+          <Item ref="GENERIC_SEAT_CHAIR_SCENARIO_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.054000" z="0.234000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>GENERIC_SEAT_CHAIR_TABLE_SCENARIO</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>GENERIC_SEAT_CHAIR_TABLE_SCENARIO</Name>
+        <ConditionalAnims>
+          <Item ref="GENERIC_SEAT_CHAIR_TABLE_SCENARIO_LF_FWD_FEMALE_A" />
+          <Item ref="GENERIC_SEAT_CHAIR_TABLE_SCENARIO_LF_FWD_MALE_A" />
+          <Item ref="GENERIC_SEAT_CHAIR_TABLE_SCENARIO_RF_FWD_FEMALE_A" />
+          <Item ref="GENERIC_SEAT_CHAIR_TABLE_SCENARIO_RF_FWD_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.054000" z="0.234000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>GENERIC_SIT_GROUND_SCENARIO</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>GENERIC_SIT_GROUND_SCENARIO</Name>
+        <ConditionalAnims>
+          <Item ref="GENERIC_SIT_GROUND_SCENARIO_LF_FWD_MALE_A" />
+          <Item ref="GENERIC_SIT_GROUND_SCENARIO_RF_FWD_MALE_A" />
+          <Item ref="GENERIC_SIT_GROUND_SCENARIO_LEGS_DOWN_FEMALE_A" />
+          <Item ref="GENERIC_SIT_GROUND_SCENARIO_LEGS_UP_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>GENERIC_STANDING_SCENARIO</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ConditionalAnims>
+        <Name>GENERIC_STANDING_SCENARIO</Name>
+        <ConditionalAnims>
+          <Item ref="GENERIC_STANDING_SCENARIO_LF_FWD_FEMALE_A" />
+          <Item ref="GENERIC_STANDING_SCENARIO_LF_FWD_MALE_A" />
+          <Item ref="GENERIC_STANDING_SCENARIO_RF_FWD_FEMALE_A" />
+          <Item ref="GENERIC_STANDING_SCENARIO_RF_FWD_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.200000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.030000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_FAN</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_FAN</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_FAN_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>PENSIVE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_FAN_MALE_SAL1</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_FAN_MALE_SAL1</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_FAN_MALE_SAL1" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINK_PUT_DOWN_TABLE</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINK_PUT_DOWN_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRINK_PUT_DOWN_TABLE_BEER_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRINK_PUT_DOWN_TABLE_BEER_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_DRINK_PUT_DOWN_TABLE_WHISKEY_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRINK_PUT_DOWN_TABLE_WHISKEY_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_DRINK_PUT_DOWN_TABLE_COFFEE_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRINK_PUT_DOWN_TABLE_COFFEE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BADASS</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BADASS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BADASS_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.220000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.020000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BAR_DRINK_BARTENDER</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BAR_DRINK_BARTENDER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BAR_DRINK_BARTENDER_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOTTLE_PICKUP_BOX_TABLE</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>DisableInteractions DontAttachDuringExit DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePickupPropScenario EnableBodyBlendBaseToMotion</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOTTLE_PICKUP_BOX_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_MALE_B" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_MALE_D" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_PLAYER_WHISKEY" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_PLAYER_BEER" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.100000" z="0.000000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.200000" y="0.300000" z="1.000000" />
+          <PromptText>VI_TAKE</PromptText>
+          <PromptGroupText>GRAB_BOTTLE</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <InteractionRadius value="1.200000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="120.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <PropSet>BOTTLE_CRATE</PropSet>
+          <Offset x="0.200000" y="0.600000" z="0.800000" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <DisablePickup value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOTTLE_PICKUP_BOX_TABLE_BEER</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>DisableInteractions DontAttachDuringExit DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePickupPropScenario EnableBodyBlendBaseToMotion</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOTTLE_PICKUP_BOX_TABLE_BEER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_MALE_B" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_PLAYER_BEER" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.100000" z="0.000000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.200000" y="0.300000" z="1.000000" />
+          <PromptText>VI_TAKE</PromptText>
+          <PromptGroupText>GRAB_BEER</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <InteractionRadius value="1.200000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="120.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <PropSet>BOTTLE_CRATE</PropSet>
+          <Offset x="0.200000" y="0.600000" z="0.800000" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <DisablePickup value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOTTLE_PICKUP_BOX_TABLE_JD</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>DisableInteractions DontAttachDuringExit DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed NavmeshBlocking TriggersCrimeForTheft WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat SimplePickupPropScenario EnableBodyBlendBaseToMotion</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOTTLE_PICKUP_BOX_TABLE_JD</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_MALE_D" />
+          <Item ref="WORLD_HUMAN_BOTTLE_PICKUP_TABLE_BOX_PLAYER_WHISKEY" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="-0.100000" z="0.000000" />
+      <PlayerUseInfos>
+        <Item>
+          <UseContextOffset x="0.200000" y="0.300000" z="1.000000" />
+          <PromptText>VI_TAKE</PromptText>
+          <PromptGroupText>GRAB_WHISKEY_BOTTLE</PromptGroupText>
+          <InputType>INPUT_CONTEXT_X</InputType>
+          <InteractionRadius value="1.200000" />
+          <PointDirectionWeight value="1.000000" />
+          <PointDirectionHeading value="180.000000" />
+          <AbsolutePointHeadingWeight value="1.000000" />
+          <AbsolutePointHeadingHalfAngle value="120.000000" />
+          <CamLookAngle value="0.000000" />
+          <CloseRadius value="0.500000" />
+          <!-- <HoldTime value="0.500000" /> -->
+          <!-- <HoldTimeType>MEDIUM_TIMED_EVENT</HoldTimeType> -->
+          <!-- <HoldAsPrimaryAction value="true" /> -->
+          <VisibleQuitPrompt value="false" />
+        </Item>
+      </PlayerUseInfos>
+      <PrespawnedProps>
+        <Item>
+          <PropSet>BOTTLE_CRATE</PropSet>
+          <Offset x="0.200000" y="0.600000" z="0.800000" />
+          <Rotation x="0.000000" y="0.000000" z="180.000000" />
+          <DisablePickup value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BUCKET_DRINK_GROUND</Name>
+      <Flags>DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BUCKET_DRINK_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BUCKET_DRINK_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ImmediateExitBlendOutDuration value="1.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <vegVolumeRadius value="1.250000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_bucket01bx_PH_R_HAND</Id>
+          <PropSet>BUCKET_DOF</PropSet>
+          <Offset x="0.099600" y="0.709800" z="0.000000" />
+          <Rotation x="0.000000" y="0.000000" z="90.000000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget</Flags>
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>bucket_Fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+        </Item>
+      </PrespawnedProps>
+      <CameraFramingInfo>
+        <eCameraFraming>CameraFraming_Crouched</eCameraFraming>
+      </CameraFramingInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BUCKET_DRINK_GROUND_NO_BUCKET</Name>
+      <Flags>DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BUCKET_DRINK_GROUND_NO_BUCKET</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BUCKET_DRINK_GROUND_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ImmediateExitBlendOutDuration value="1.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <vegVolumeRadius value="1.250000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BUCKET_DRINK_LADLE_GROUND</Name>
+      <Flags>BlockGestures DontRandomizeBaseOnStartup EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BUCKET_DRINK_LADLE_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BUCKET_DRINK_LADLE_GROUND_MALE_A" />
+          <Item ref="WORLD_HUMAN_BUCKET_DRINK_LADLE_GROUND_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ImmediateExitBlendOutDuration value="1.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <vegVolumeRadius value="1.250000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PrespawnedProps>
+        <Item>
+          <Id>p_ladle04x_PH_R_HAND</Id>
+          <PropSet>LADLES</PropSet>
+          <Offset x="0.325900" y="0.501100" z="0.430000" />
+          <Rotation x="180.000000" y="26.000000" z="-35.000000" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+        </Item>
+        <Item>
+          <Id>p_cs_bucket01bx</Id>
+          <PropSet>BUCKET_DOF</PropSet>
+          <Offset x="0.182800" y="0.599500" z="0.000000" />
+          <Rotation x="0.000000" y="0.000000" z="90.000000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget</Flags>
+          <AnimDofInitData type="CScenarioSpawnedPropInfo__DofInitData">
+            <DofName>bucket_Fill</DofName>
+            <MinInitValue value="1.000000" />
+            <MaxInitValue value="1.000000" />
+          </AnimDofInitData>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_COFFEE_DRINK_WIP</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking Temp WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_COFFEE_DRINK_WIP</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_COFFEE_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_COFFEE_DRINK_FEMALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <VfxAnimInfo>ANM_COFFEE_STEAM</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_COFFEE_DRINK</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_COFFEE_DRINK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_COFFEE_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_COFFEE_DRINK_FEMALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>COFFEE</CategoryHash>
+      <VfxAnimInfo>ANM_COFFEE_STEAM</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINK_FLASK</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINK_FLASK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRINK_FLASK_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINK_CHAMPAGNE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINK_CHAMPAGNE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRINK_CHAMPAGNE_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRINK_CHAMPAGNE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINKING</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_B" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_C" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_D" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_C" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_D" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS_V2" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS_V3" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_C__TRANS__D" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_D__TRANS__C" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_C__TRANS__D" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_D__TRANS__C" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS_V5" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS_V6" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_B__TRANS_V7" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V5" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V6" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V7" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V8" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V9" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V10" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V11" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V12" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V13" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V14" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_B__TRANS_V15" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_A__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_A__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_A__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_A__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_B__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_B__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_4PEDS_MALE_B__TRANS_V3" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.198000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINKING_MOONSHINE</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINKING_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_MALE_A" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_MALE_B" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_MALE_C" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_MALE_D" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_FEMALE_C" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MOONSHINE_FEMALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.198000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINKING_INTERACTION</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINKING_INTERACTION</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS_V2" />
+          <Item ref="WORLD_HUMAN_STAND_DRINK_MALE_A__TRANS_V3" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINKING_DRUNK</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockEvasiveAnims</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINKING_DRUNK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_B" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_C" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_D" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_C__TRANS__D" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MALE_D__TRANS__C" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRINKING_DRUNK_MOONSHINE</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockEvasiveAnims</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRINKING_DRUNK_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MOONSHINE_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MOONSHINE_MALE_B" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MOONSHINE_MALE_C" />
+          <Item ref="WORLD_HUMAN_DRINKING_DRUNK_MOONSHINE_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRUNK_BAR_SLUMPED</Name>
+      <Flags>BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress BlockEvasiveAnims</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRUNK_BAR_SLUMPED</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRUNK_BAR_SLUMPED_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.275000" z="0.000000" />
+      <PedCapsuleRadiusOverride value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRUNK_BRACE_WALL</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DisableAmbientConversations DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems RagdollEasilyFromPlayerContact WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockEvasiveAnims</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRUNK_BRACE_WALL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_B" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_VOMIT_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.100000" y="0.150000" z="0.000000" />
+      <PedCapsuleRadiusOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>DRUNK_VOMIT</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRUNK_BRACE_WALL_VIRGIL</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <Condition type="CAIConditionIsInNetworkSession" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DisableAmbientConversations DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems RagdollEasilyFromPlayerContact SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockEvasiveAnims</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRUNK_BRACE_WALL_VIRGIL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_VIRGIL_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.100000" y="0.150000" z="0.000000" />
+      <PedCapsuleRadiusOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>DRUNK_VOMIT</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_DRUNK_BRACE_WALL_NO_VOMIT</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems RagdollEasilyFromPlayerContact WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockEvasiveAnims</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_DRUNK_BRACE_WALL_NO_VOMIT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_A" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_DRUNK_BRACE_WALL_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.100000" y="0.150000" z="0.000000" />
+      <PedCapsuleRadiusOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>DRUNK_VOMIT</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_FIRE_SIT</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario SpawnMalePedsOnly DontValidateExitsWithProbeChecks EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_FIRE_SIT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_FIRE_SIT_MALE_A" />
+          <Item ref="WORLD_HUMAN_FIRE_SIT_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_GLASS_PICKUP_CRATE</Name>
+      <SpawnProbability value="0.000000" />
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_GLASS_PICKUP_CRATE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_GLASS_PICKUP_CRATE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_GLASS_PICKUP_CRATE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_CHECK_PISTOL</Name>
+      <Flags>AllowEquippedWeapons BlockLegIk EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection CheckForWeaponTags</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_CHECK_PISTOL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_CHECK_PISTOL_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_TABLE_SHARPEN_KNIFE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_TABLE_SHARPEN_KNIFE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_TABLE_SHARPEN_KNIFE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BARREL</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BARREL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BARREL_READ_PAPER_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BAR_READ_NEWSPAPER</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BAR_READ_NEWSPAPER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BAR_READ_NEWSPAPER_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_newspaper_03x_PH_R_HAND</Id>
+          <PropSet>NEWSPAPER_03</PropSet>
+          <InitClipSet>AMB_REST_LEAN@WORLD_HUMAN_LEAN@BAR@READ_NEWSPAPER@MALE_D@stand_enter_newspaper</InitClipSet>
+          <Offset x="0.245182" y="0.559731" z="1.069644" />
+          <Rotation x="-0.000151" y="-0.000309" z="159.049759" />
+          <DisablePickup value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_POST_LEFT</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_POST_LEFT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_POST_LEFT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_POST_LEFT_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_POST_LEFT_MOONSHINE</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_POST_LEFT_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_POST_LEFT_MOONSHINE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_POST_LEFT_MOONSHINE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_POST_LEFT_HAND_PLANTED</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_POST_LEFT_HAND_PLANTED</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_POST_LEFT_HAND_PLANTED_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_POST_RIGHT</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_POST_RIGHT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_POST_RIGHT_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_POST_RIGHT_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_POST_RIGHT_HAND_PLANTED</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_POST_RIGHT_HAND_PLANTED</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_POST_RIGHT_HAND_PLANTED_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="EA_APP_FOREMAN_LEAN_POST_RIGHT__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_C" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_A__TRANS__C" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_A__TRANS__D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_C__TRANS__A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_C__TRANS__D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D__TRANS__A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D__TRANS__C" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D__TRANS__SMOKING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A__TRANS__MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_D__TRANS__MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_B__TRANS__A" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V2" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V3" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V4" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V5" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V6" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V7" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V8" />
+          <Item ref="SCCF_ODRIS_GANGPOL_01_MALEC__TRANS_V9" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1__TRANS" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1__TRANS_V2" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1__TRANS_V3" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1__TRANS_V4" />
+          <Item ref="SCRIPT_REMC_RET_MALE_A_POSE_1__TRANS_V5" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.130000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.185000" z="0.000000" />
+      <TimeToHoldLSForExit value="0.250000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A_CA</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A_CA</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.230000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.185000" z="0.000000" />
+      <EnterPoseFixupDistanceThreshold value="0.350000" />
+      <EnterPoseFixupHeadingThresholdDegrees value="45.000000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>SMOKING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL_NO_PROPS</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL_NO_PROPS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_C" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_A__TRANS__C" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_A__TRANS__D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_C__TRANS__A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_C__TRANS__D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D__TRANS__A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_MALE_D__TRANS__C" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_FEMALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL_DRINKING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL_DRINKING_MOONSHINE</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL_DRINKING_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MOONSHINE_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MOONSHINE_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MOONSHINE_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL_SMOKING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL_SMOKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_BAR_CA</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_BAR_CA</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WALL_SMOKING_FEMALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_WALL_DRINKING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_WALL_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_DRINKING_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_WHITTLE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_WHITTLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_WHITTLE_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+      <CategoryHash>WHITTLE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_FENCE_FWD_CHECK_OUT_LIVESTOCK</Name>
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_FENCE_FWD_CHECK_OUT_LIVESTOCK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_FENCE_FWD_CHECK_OUT_LIVESTOCK_MALE_E" />
+          <Item ref="WORLD_HUMAN_LEAN_FENCE_FWD_CHECK_OUT_LIVESTOCK_MALE_F" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_FENCE_FWD_CHECK_OUT_LIVESTOCK_MALE_E__TRANS__F" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_NO_PROPS</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_NO_PROPS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_C" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_C" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_DRINKING_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A__TRANS__SMOKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_B__TRANS__A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_B__TRANS__SMOKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_A__TRANS__MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_B__TRANS__MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_RAILING_DRINKING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_RAILING_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_RAILING_DRINKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_LEFT</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_LEFT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_LEFT_DRINKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_LEFT_DRINKING_MALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>SMOKING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_RIGHT</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_RIGHT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_RIGHT_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>SMOKING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_DRINKING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_DRINKING_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+      <VfxAnimInfo>ANM_COFFEE_STEAM</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_SMOKING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_SMOKING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_MALE_D" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_SMOKING_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_INTERACTION</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_INTERACTION</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_RAILING_DYNAMIC</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NotPlaceable SpawnMalePedsOnly DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_RAILING_DYNAMIC</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_C" />
+          <Item ref="WORLD_HUMAN_LEAN_RAILING_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_BACK_RAILING</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachPed DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_BACK_RAILING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_BACK_RAILING_DRINKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_WALL_LEFT</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_WALL_LEFT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_LEFT_DRINKING_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_LEFT_SMOKING_MALE_C" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_LEFT_DRINKING_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.150000" z="0.000000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_WALL_LEFT_DRINKING_MOONSHINE</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_WALL_LEFT_DRINKING_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_LEFT_DRINKING_MOONSHINE_MALE_A" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_LEFT_DRINKING_MOONSHINE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.150000" z="0.000000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_WALL_DRINKING_RIGHT</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_WALL_DRINKING_RIGHT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_RIGHT_DRINKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_WALL_DRINKING_RIGHT_MOONSHINE</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_WALL_DRINKING_RIGHT_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_RIGHT_DRINKING_MOONSHINE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>Drunk</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_LEAN_WALL_RIGHT</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_LEAN_WALL_RIGHT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_LEAN_WALL_RIGHT_MALE_B" />
+          <Item ref="WORLD_HUMAN_LEAN_WALL_RIGHT_DRINKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.150000" z="0.000000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SEAT_LEDGE_NEW</Name>
+      <Flags>AttachPed BlockLegIk EnableKinematicPhysicsForPed NavmeshBlocking RagdollEasilyFromPlayerContact SeatedScenario SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SEAT_LEDGE_NEW</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SEAT_LEDGE_NEW_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.600000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SEAT_STEPS</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>AttachPed BlockLegIk EnableKinematicPhysicsForPed NavmeshBlocking NoMeleeTakedowns PreferMeleeRagdoll SeatedScenario WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat TriggerExitOnStick BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SEAT_STEPS</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SEAT_STEPS_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.300000" z="0.300000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.055000" z="0.600000" />
+      <TimeToHoldLSForExit value="0.250000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_BACK_EXHAUSTED</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_BACK_EXHAUSTED</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_BACK_EXHAUSTED_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_BACK_EXHAUSTED_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_RE_DEAD_BODIES_SECOND_ENCOUNTER__REACT_01" />
+          <Item ref="SCRIPT_RE_DEAD_BODIES_SECOND_ENCOUNTER__REACT_02" />
+          <Item ref="SCRIPT_RE_DEAD_BODIES_SECOND_ENCOUNTER__REACT_03" />
+          <Item ref="SCRIPT_RE_DEAD_BODIES_SECOND_ENCOUNTER__REACT_04" />
+          <Item ref="SCRIPT_RE_DEAD_BODIES_SECOND_ENCOUNTER__REACT_05" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_A__TRANS__C" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_MALE_C__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_FALL_ASLEEP</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems RagdollEasilyFromPlayerContact WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_FALL_ASLEEP</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_SLEEPING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_TIRED_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_SLEEPING_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_TIRED_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_SLEEPING_FEMALE_A__TRANS__TIRED_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_TIRED_FEMALE_A__TRANS__SLEEPING_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_SLEEPING_MALE_A__TRANS__TIRED_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_TIRED_MALE_A__TRANS__SLEEPING_MALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_DRINK</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_DRINK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_DRINK_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_DRINK_MALE_B" />
+          <Item ref="WORLD_HUMAN_SIT_DRINK_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>Drunk</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_DRINK_DRUNK</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario Temp WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress BlockEvasiveAnims</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_DRINK_DRUNK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_DRINK_DRUNK_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>Drunk</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT</Name>
+      <Flags>BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking RagdollEasilyFromPlayerContact WillAttractPeds EnableEnterAlignHelper UseExitDirection PassedOut BlockEvasiveAnims</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_MALE_D" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_MALE_B" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_MOONSHINE</Name>
+      <Flags>BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking RagdollEasilyFromPlayerContact WillAttractPeds EnableEnterAlignHelper UseExitDirection PassedOut BlockEvasiveAnims</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_MOONSHINE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_DRINKING_DRUNK_PASSED_OUT_MOONSHINE_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_SKETCHING</Name>
+      <Flags>BlockLegIk EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_SKETCHING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_SKETCHING_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_SMOKE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_SMOKE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_SMOKE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_SMOKE_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>SMOKE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_COFFEE_DRINK</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_COFFEE_DRINK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_COFFEE_DRINK_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_COFFEE_DRINK_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>COFFEE</CategoryHash>
+      <VfxAnimInfo>ANM_COFFEE_STEAM</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_READING</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_READING</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_BOOK_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_NEWSPAPER_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_BOOK_MALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_JOURNAL_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>READING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_READING_BOOK_STOW</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_READING_BOOK_STOW</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_BOOK_MALE_A_STOW" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>READING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_READING_BOOK</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_READING_BOOK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_BOOK_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_BOOK_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>READING</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_READING_JOURNAL</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_READING_JOURNAL</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_JOURNAL_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <CategoryHash>READING</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_READ_NEWSPAPER</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenario EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_READ_NEWSPAPER</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_READING_NEWSPAPER_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>READING_NEWSPAPER</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SIT_GROUND_WHITTLE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection ReduceAnimalThreatRanges</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SIT_GROUND_WHITTLE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SIT_GROUND_WHITTLE_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <CategoryHash>WHITTLE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SLEEP_GROUND_ARM</Name>
+      <Flags>BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection PassedOut</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <Condition type="CAIConditionAnd">
+        <Conditions>
+          <Item type="CAIConditionNot">
+            <Condition type="CAIConditionIsPedInRain" />
+          </Item>
+        </Conditions>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SLEEP_GROUND_ARM</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SLEEP_GROUND_ARM_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SLEEP_GROUND_ARM_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SLEEP_GROUND_PILLOW</Name>
+      <Flags>BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection PassedOut</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SLEEP_GROUND_PILLOW</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SLEEP_GROUND_PILLOW_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SLEEP_GROUND_PILLOW_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <vegVolumeRadius value="1.500000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+      <PrespawnedProps>
+        <Item>
+          <Id>p_bedRollClosed_sml02x</Id>
+          <PropSet>BEDROLL_CLOSED_SML</PropSet>
+          <Offset x="0.000000" y="-0.600000" z="0.170000" />
+          <Rotation x="160.000000" y="0.000000" z="0.000000" />
+          <DisablePickup value="true" />
+          <FixedPhysics value="true" />
+          <UprootsSiblings value="true" />
+          <Flags>LookAtTarget</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SLEEP_GROUND_PILLOW_NO_PILLOW</Name>
+      <Flags>BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SLEEP_GROUND_PILLOW_NO_PILLOW</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SLEEP_GROUND_PILLOW_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SLEEP_GROUND_PILLOW_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="-0.300000" />
+      <vegVolumeRadius value="1.500000" />
+      <vegVolumeType>VMT_Cull</vegVolumeType>
+      <vegVolumeFlags>Debris Grass Bush Weed Flower Sapling Tree Rock LongGrass</vegVolumeFlags>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V5" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_B__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__LCMP_MONEY_ON_TABLE" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_C__TRANS__LCMP_DONT_WANT_MONEY" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <CameraNameHash>FOLLOW_PED_ON_SEAT_CAMERA</CameraNameHash>
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TRAIN</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoMeleeTakedowns SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection CanBeUsedByPedsBoardingTrain BlockMeleeGrapple UseTramFriendlyExitMTHOverride</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_BUMP RBF_PED_RAGDOLL_BUMP</RagdollBlockingFlags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TRAIN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <CameraNameHash>FOLLOW_PED_ON_SEAT_CAMERA</CameraNameHash>
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_LOBBY_PROP_HUMAN_SEAT_CHAIR</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>MP_LOBBY_PROP_HUMAN_SEAT_CHAIR</Name>
+        <ConditionalAnims>
+          <Item ref="MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <CameraNameHash>FOLLOW_PED_ON_SEAT_CAMERA</CameraNameHash>
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_FAN</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_FAN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_FAN_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SLEEP_BED_PILLOW_HIGH</Name>
+      <Flags>AttachPed BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems NoMeleeTakedowns WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPlayerOnAMission" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SLEEP_BED_PILLOW_HIGH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_HIGH_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeZOverride value="0.270000" />
+      <ExitProbeCapsuleRadiusOverride value="0.150000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.270000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SLEEP_BED_PILLOW</Name>
+      <Flags>AttachPed BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems NoMeleeTakedowns WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPlayerOnAMission" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SLEEP_BED_PILLOW</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A__TRANS__RESTING_LEFT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A__TRANS__RESTING_RIGHT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_FEMALE_A__TRANS__FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_FEMALE_A__TRANS__FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A__TRANS__RESTING_LEFT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_A__TRANS__MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A__TRANS__RESTING_RIGHT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_A__TRANS__MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B__TRANS__RESTING_LEFT_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_B__TRANS__MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B__TRANS__RESTING_RIGHT_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_B__TRANS__MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeZOverride value="0.270000" />
+      <ExitProbeCapsuleRadiusOverride value="0.150000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.270000" />
+      <TimeToHoldLSForExit value="0.250000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_CAMP_JACK_ES_SLEEP_BED_PILLOW_LEFT</Name>
+      <Flags>AttachPed BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems NoMeleeTakedowns WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_CAMP_JACK_ES_SLEEP_BED_PILLOW_LEFT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_CAMP_JACK_ES_SLEEP_BED_PILLOW_MALE_A" />
+          <Item ref="PROP_CAMP_JACK_ES_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_CAMP_JACK_ES_SLEEP_BED_PILLOW_MALE_A__TRANS__RESTING_LEFT_MALE_A" />
+          <Item ref="PROP_CAMP_JACK_ES_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_A__TRANS__MALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeZOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="0.300000" />
+      <TimeToHoldLSForExit value="0.250000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SLEEP_BED_PILLOW_LEFT</Name>
+      <Flags>AttachPed BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems NoMeleeTakedowns WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SLEEP_BED_PILLOW_LEFT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A__TRANS__RESTING_LEFT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_FEMALE_A__TRANS__FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A__TRANS__RESTING_LEFT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_A__TRANS__MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B__TRANS__RESTING_LEFT_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_LEFT_MALE_B__TRANS__MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeZOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="0.300000" />
+      <TimeToHoldLSForExit value="0.250000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SLEEP_BED_PILLOW_RIGHT</Name>
+      <Flags>AttachPed BlockGestures BlockLegIk EnableKinematicPhysicsForPed IgnoreLowShockingEvents NavmeshBlocking NoBulkyItems NoMeleeTakedowns WillAttractPeds EnableEnterAlignHelper UseExitDirection TriggerExitOnStick BlockMeleeGrapple</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SLEEP_BED_PILLOW_RIGHT</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_FEMALE_A__TRANS__RESTING_RIGHT_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_FEMALE_A__TRANS__FEMALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_A__TRANS__RESTING_RIGHT_MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_A__TRANS__MALE_A" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_MALE_B__TRANS__RESTING_RIGHT_MALE_B" />
+          <Item ref="PROP_HUMAN_SLEEP_BED_PILLOW_RESTING_RIGHT_MALE_B__TRANS__MALE_B" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <SingleParticipantId>Ped</SingleParticipantId>
+      <ExitProbeZOverride value="0.350000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.190000" z="0.300000" />
+      <TimeToHoldLSForExit value="0.250000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SMOKE</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SMOKE</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_A" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_D" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_A" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_B" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_A__TRANS__C" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_A__TRANS__D" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__A" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_C__TRANS__D" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_D__TRANS__A" />
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_D__TRANS__C" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_A__TRANS__B" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_B__TRANS__A" />
+          <Item ref="SCCF_EXCON_WS_SPEAKER_STANDING__TRANS" />
+          <Item ref="SCCF_EXCON_WS_SPEAKER_STANDING__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_A__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_A__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_A__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_A__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_A__TRANS_V5" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_2PEDS_MALE_A__TRANS_V6" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS_V2" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS_V3" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS_V4" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS_V5" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS_V6" />
+          <Item ref="SCRIPT_RE_LABOR_STRIKE_3PEDS_MALE_A__TRANS_V7" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.135000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SMOKE_NAZAR</Name>
+      <Flags>DontAttachDuringExit EnableKinematicPhysicsForPed NavmeshBlocking SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionIsInNetworkSession" />
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SMOKE_NAZAR</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SMOKE_NAZAR_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.135000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SMOKE_INTERACTION</Name>
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <Flags>DontAttachDuringExit DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection DontNailTargetPosForDynamicScenario</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SMOKE_INTERACTION</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SMOKE_MALE_A" />
+          <Item ref="WORLD_HUMAN_SMOKE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SMOKE_CIGAR</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SMOKE_CIGAR</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SMOKE_CIGAR_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SMOKE_NERVOUS_STRESSED</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SMOKE_NERVOUS_STRESSED</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_SMOKE_NERVOUS_STRESSED_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <CategoryHash>SMOKING</CategoryHash>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_STERNGUY_IDLES</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_STERNGUY_IDLES</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_STERNGUY_IDLES_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_LOBBY_WORLD_HUMAN_STERNGUY_IDLES</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>MP_LOBBY_WORLD_HUMAN_STERNGUY_IDLES</Name>
+        <ConditionalAnims>
+          <Item ref="MP_LOBBY_WORLD_HUMAN_STERNGUY_IDLES_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_PASSED_OUT_TABLE</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed BlockGestures DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection PassedOut</Flags>
+      <ActivityType>Sleeping</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_PASSED_OUT_TABLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_PASSED_OUT_TABLE_MALE_B" />
+          <Item ref="PROP_HUMAN_PASSED_OUT_TABLE_MALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+      <WIPAccessOffset x="0.000000" y="-0.550000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnHistoryRange value="25.000000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_BUMP</RagdollBlockingFlags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V2" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V3" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V4" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V5" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V6" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V7" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V8" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V9" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V10" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V11" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V12" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V13" />
+          <Item ref="SCCF_ODRIS_PLANROB_01_MALEC__TRANS_V14" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <SeatedOffset x="0.000000" y="0.000000" z="-0.000010" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH_MOONSHINER_CAMP</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnHistoryRange value="25.000000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_BUMP</RagdollBlockingFlags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH_MOONSHINER_CAMP</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_MALE_B_MOONSHINE" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V2" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V3" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V4" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V5" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V6" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V7" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V8" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V9a" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V9b" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V10" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V11" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V12" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V13" />
+          <Item ref="SCRIPT_REMC_RET_MALE_B_POSE_1__TRANS_V14" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <SeatedOffset x="0.000000" y="0.000000" z="-0.000010" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH_TRAIN</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnHistoryRange value="25.000000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection CanBeUsedByPedsBoardingTrain BlockMeleeGrapple UseTramFriendlyExitMTHOverride</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_BUMP RBF_PED_RAGDOLL_BUMP</RagdollBlockingFlags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH_TRAIN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <SeatedOffset x="0.000000" y="0.000000" z="-0.000010" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH_BACK</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioBench SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH_BACK</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_BACK_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_BACK_MALE_C" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_BACK_MALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_BACK_MALE_C__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_NO_BACK_COLLECTION</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_NO_BACK_COLLECTION</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V5" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_NO_BACK_WIP_COLLECTION</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair Temp WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_NO_BACK_WIP_COLLECTION</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_SMOKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_MALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READING_FEMALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_A__TRANS__SMOKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_B__TRANS__SMOKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_C__TRANS__SMOKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_FEMALE_D__TRANS__SMOKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS__PORCH_SMOKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V4" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_A__TRANS_V5" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GENERIC_MALE_D__TRANS__PORCH_SMOKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_SMOKING_MALE_A__TRANS__GENERIC_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_SMOKING_MALE_A__TRANS__GENERIC_MALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A__TRANS__GENERIC_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A__TRANS__GENERIC_FEMALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A__TRANS__GENERIC_FEMALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A__TRANS__GENERIC_FEMALE_D" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_MALE_D__TRANS__GENERIC_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_MALE_D__TRANS__GENERIC_MALE_D" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_GROOMING_GROSS</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_GROOMING_GROSS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GROOMING_GROSS_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>GROOMING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_GROOMING_POSH</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair Temp WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_GROOMING_POSH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_GROOMING_POSH_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.210000" />
+      <CategoryHash>GROOMING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS</Name>
+        <ConditionalAnims>
+          <Item ref="MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.300000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>PLAY_KNIFE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SHARPEN_KNIFE_GUS</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SHARPEN_KNIFE_GUS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SHARPEN_KNIFE_GUS" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.300000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>PLAY_KNIFE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS</Name>
+      <BlockedModels ref="CANT_LEAN" />
+      <StationaryReactHash>CODE_HUMAN_STAND_COWER</StationaryReactHash>
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_PLAY_MALE_A" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_A__TRANS__PLAY_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_B__TRANS__A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_SHARPEN_MALE_B__TRANS__PLAY_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_KNIFE_BADASS_PLAY_MALE_A__TRANS__SHARPEN_MALE_A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <PedCapusleOffset x="0.000000" y="0.300000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>PLAY_KNIFE</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.450000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>READING_NEWSPAPER</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER_TRAIN</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoMeleeTakedowns SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <RagdollBlockingFlags>RBF_PLAYER_BUMP RBF_PED_RAGDOLL_BUMP</RagdollBlockingFlags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER_TRAIN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READ_NEWSPAPER_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>READING_NEWSPAPER</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_SKETCH_BOOK_TABLE_PICKUP</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_SKETCH_BOOK_TABLE_PICKUP</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PICKUP_MALE_A" />
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PICKUP_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_book04x_PH_R_HAND</Id>
+          <PropSet>SKETCH_BOOK</PropSet>
+          <Offset x="0.125000" y="0.518200" z="0.810000" />
+          <Rotation x="0.000000" y="180.000000" z="25.350000" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_TABLE_PICKUP</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_TABLE_PICKUP</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PICKUP_MALE_A" />
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PICKUP_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_cs_book04x_PH_R_HAND</Id>
+          <PropSet>BOOK_04</PropSet>
+          <Offset x="0.125000" y="0.518200" z="0.810000" />
+          <Rotation x="0.000000" y="180.000000" z="25.350000" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_TABLE_PICKUP_NO_BOOK</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking NotPlaceable WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePickupPropScenario</Flags>
+      <Condition type="CAIConditionScenarioPointHasProp">
+        <Id>p_cs_book04x_PH_R_HAND</Id>
+      </Condition>
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_TABLE_PICKUP_NO_BOOK</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PICKUP_NO_BOOK_MALE_A" />
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PICKUP_NO_BOOK_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>WORLD_HUMAN_BOOK_TABLE_PUTDOWN</Name>
+      <TimeTilPedLeaves value="0.000001" />
+      <Flags>EnableKinematicPhysicsForPed ForceModel NavmeshBlocking WillAttractPeds EnableEnterAlignHelper UseExitDirection SimplePutdownPropScenario LeaveScenarioOnReactionEnd</Flags>
+      <Condition type="CAIConditionScenarioPointHasNoProp" />
+      <ConditionalAnims>
+        <Name>WORLD_HUMAN_BOOK_TABLE_PUTDOWN</Name>
+        <ConditionalAnims>
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PUTDOWN_MALE_A" />
+          <Item ref="WORLD_HUMAN_BOOK_TABLE_PUTDOWN_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_READING</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_READING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READING_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.345000" />
+      <CategoryHash>READING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_READING_TRAIN</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoMeleeTakedowns SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_READING_TRAIN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_READING_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.345000" />
+      <CategoryHash>READING</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SAD</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair DontValidateExitsWithProbeChecks WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SAD</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SAD_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SAD_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SKETCHING</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SKETCHING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SKETCHING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SKETCHING_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SKETCHING_HARRIET</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SKETCHING_HARRIET</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SKETCHING_HARRIET" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_CIGAR</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_CIGAR</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_CIGAR_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.310000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SMOKING</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SMOKING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.140000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.160000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_SMOKING_TRAIN</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoMeleeTakedowns SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection CanBeUsedByPedsBoardingTrain BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_SMOKING_TRAIN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_SMOKING_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.200000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.310000" />
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat AllowItemInteractions</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.100000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat AllowItemInteractions</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE_MALE_C" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MOONSHINE_FEMALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.100000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_WHISKEY_MOONSHINE</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_WHISKEY_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_D_MOONSHINE" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <CategoryHash>Drunk</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_WHISKEY</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionScenarioPointHasProp">
+          <Id>p_glass01x_PH_R_HAND</Id>
+        </Condition>
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_WHISKEY</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_bottleJD01x_ph_r_hand</Id>
+          <PropSet>DRINK_JD</PropSet>
+          <Offset x="0.208400" y="0.743200" z="0.302200" />
+          <Rotation x="0.460000" y="0.370000" z="155.050003" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>Drunk</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_TRAIN</Name>
+      <ScriptCondition type="CAIConditionIsPlayer" />
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed IgnoreObstructions NavmeshBlocking NoMeleeTakedowns SeatedScenarioTableChair WillAttractPeds EnableEnterAlignHelper UseExitDirection NotUsableInCombat BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_TRAIN</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_MALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.080000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <CategoryHash>Drunk</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_MOONSHINE</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_MOONSHINE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_MOONSHINE_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.080000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.160000" />
+      <CategoryHash>Drunk</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_BEER</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_BEER</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_BEER_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.150000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.310000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_bottleBeer01x_PH_R_HAND</Id>
+          <PropSet>DRINK_BEER</PropSet>
+          <Offset x="0.167500" y="0.860000" z="0.300000" />
+          <Rotation x="0.000000" y="0.000000" z="250.000000" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>Drunk</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_WHISKEY</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection WorkInProgress</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_WHISKEY</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_DRINKING_BADASS_WHISKEY_MALE_D" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.310000" />
+      <PrespawnedProps>
+        <Item>
+          <Id>p_bottleJD01x_ph_r_hand</Id>
+          <PropSet>DRINK_JD</PropSet>
+          <Offset x="0.200000" y="0.775000" z="0.311390" />
+          <Rotation x="0.000000" y="0.000000" z="250.000000" />
+          <Flags>LookAtTarget ResetPointIfUprooted</Flags>
+        </Item>
+      </PrespawnedProps>
+      <CategoryHash>Drunk</CategoryHash>
+      <WIPAccessOffset x="0.000000" y="-0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_PLAY_KNIFE</Name>
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_PLAY_KNIFE_MALE_A</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PLAY_KNIFE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.230000" />
+      <ExitProbeCapsuleStartOffset x="-0.045000" y="0.278000" z="0.333000" />
+      <CategoryHash>PLAY_KNIFE</CategoryHash>
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_PORCH</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_PORCH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_DRINKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_DRINKING_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_SMOKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_SMOKING_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_FEMALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_MALE_A__TRANS__B" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_PORCH_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="-0.100000" y="0.500000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <VfxAnimInfo>ANM_COFFEE_STEAM</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH_PORCH</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnProbability value="0.500000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH_PORCH</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING_MALE_B" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_MALE_B" />
+        </ConditionalAnims>
+        <ConditionalAnimTransitions>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING_MALE_A__TRANS" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING_MALE_A__TRANS_V2" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_MALE_B__TRANS__A" />
+        </ConditionalAnimTransitions>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.310000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MOONSHINE</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnProbability value="0.500000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MOONSHINE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MOONSHINE_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.310000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_LOBBY_PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnProbability value="0.500000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>MP_LOBBY_PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="MP_LOBBY_PROP_HUMAN_SEAT_BENCH_PORCH_DRINKING_MALE_B" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.310000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_LOBBY_PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <SpawnProbability value="0.500000" />
+      <MaxNoInRange value="2" />
+      <Range value="6.000000" />
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems NoMeleeTakedowns PreferMeleeRagdoll SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection BlockMeleeGrapple</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>MP_LOBBY_PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING</Name>
+        <ConditionalAnims>
+          <Item ref="MP_LOBBY_PROP_HUMAN_SEAT_BENCH_PORCH_SMOKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.400000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.110000" z="0.310000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <VfxAnimInfo>ANM_CIG_SMOKE</VfxAnimInfo>
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_DRINKING</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_DRINKING</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_DRINKING_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_DRINKING_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.198000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_DRINKING_MOONSHINE</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_DRINKING_MOONSHINE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_DRINKING_MOONSHINE_FEMALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_DRINKING_MOONSHINE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.000000" z="0.198000" />
+      <WIPAccessOffset x="0.000000" y="0.500000" z="0.000000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_WHITTLE</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_WHITTLE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_WHITTLE_MALE_A" />
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_WHITTLE_MALE_C" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.230000" />
+      <ExitProbeCapsuleStartOffset x="-0.028000" y="0.313000" z="0.380000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>WHITTLE</CategoryHash>
+      <SeatedOffset x="0.000000" y="0.000000" z="0.000100" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_WHITTLE</Name>
+      <BlockedModels ref="CANT_SIT_DOWN" />
+      <Flags>AttachPed BlockGestures EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_WHITTLE</Name>
+        <ConditionalAnims>
+          <Item ref="MP_LOBBY_PROP_HUMAN_SEAT_CHAIR_WHITTLE_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <PedCapusleOffset x="0.000000" y="0.350000" z="0.000000" />
+      <ExitProbeCapsuleRadiusOverride value="0.230000" />
+      <ExitProbeCapsuleStartOffset x="-0.028000" y="0.313000" z="0.380000" />
+      <eLookAtImportance>LOW</eLookAtImportance>
+      <CategoryHash>WHITTLE</CategoryHash>
+      <SeatedOffset x="0.000000" y="0.000000" z="0.000100" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CRATE_CLEAN_BOOTS</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioChair SpawnMalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <Condition type="CAIConditionNot">
+        <Condition type="CAIConditionIsPedInRain" />
+      </Condition>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CRATE_CLEAN_BOOTS</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CRATE_CLEAN_BOOTS_MALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.510000" z="0.210000" />
+      <CategoryHash>POLISH_BOOTS</CategoryHash>
+      <eClothState>SITTING</eClothState>
+      <ClothPinFrames value="5" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_FAN_WHORE</Name>
+      <PropEndOfLifeTimeoutMS value="60" />
+      <TransitionInfo type="CScenarioTransitionInfo" />
+      <Flags>AttachPed DontTimeoutUntilIdleFinishes EnableKinematicPhysicsForPed NavmeshBlocking NoBulkyItems SeatedScenarioTableChair SpawnFemalePedsOnly WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>PROP_HUMAN_SEAT_CHAIR_TABLE_FAN_WHORE</Name>
+        <ConditionalAnims>
+          <Item ref="PROP_HUMAN_SEAT_CHAIR_TABLE_FAN_WHORE_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <OutroBlendOutDuration value="0.500000" />
+      <ExitProbeCapsuleRadiusOverride value="0.180000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.100000" z="0.160000" />
+    </Item>
+    <Item type="CScenarioPlayAnimsInfo">
+      <Name>GENERIC_SEAT_BENCH_SCENARIO</Name>
+      <Flags>AttachPed EnableKinematicPhysicsForPed NavmeshBlocking SeatedScenarioBench WillAttractPeds EnableEnterAlignHelper UseExitDirection</Flags>
+      <ActivityType>Relaxing</ActivityType>
+      <ConditionalAnims>
+        <Name>GENERIC_SEAT_BENCH_SCENARIO</Name>
+        <ConditionalAnims>
+          <Item ref="GENERIC_SEAT_BENCH_LF_FWD_MALE_A" />
+          <Item ref="GENERIC_SEAT_BENCH_LF_FWD_FEMALE_A" />
+          <Item ref="GENERIC_SEAT_BENCH_RF_FWD_MALE_A" />
+          <Item ref="GENERIC_SEAT_BENCH_RF_FWD_FEMALE_A" />
+        </ConditionalAnims>
+      </ConditionalAnims>
+      <ExitProbeCapsuleRadiusOverride value="0.170000" />
+      <ExitProbeCapsuleStartOffset x="0.000000" y="0.408000" z="0.264000" />
+      <eClothState>SITTING</eClothState>
+    </Item>
+  </Scenarios>
+</CScenarioInfoFile>
