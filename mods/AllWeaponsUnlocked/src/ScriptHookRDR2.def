@@ -1,0 +1,10 @@
+; The six functions the plugin imports from ScriptHookRDR2.dll, under the decorated C++ names
+; found in the original AllWeaponsUnlocked.asi. The Makefile turns this into an import library.
+LIBRARY ScriptHookRDR2.dll
+EXPORTS
+    ?nativeCall@@YAPEA_KXZ
+    ?nativeInit@@YAX_K@Z
+    ?nativePush64@@YAX_K@Z
+    ?scriptRegister@@YAXPEAUHINSTANCE__@@P6AXXZ@Z
+    ?scriptUnregister@@YAXPEAUHINSTANCE__@@@Z
+    ?scriptWait@@YAXK@Z
