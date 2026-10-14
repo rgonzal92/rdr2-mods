@@ -1,0 +1,15 @@
+<EasyInstall>
+  <Name>Sadie Name On Replay Fix</Name>
+  <Author>Unofficial patch work 2026-10-13: the 1.0.1491.50 file with Sadie's entry back in its launch form</Author>
+  <Version>1491.50</Version>
+  <Link />
+  <Metadata />
+  <Resources>
+    <Resource>
+      <FileReplacement>
+        <GamePath>update:/common/data/ui/dialoguecharacters.meta</GamePath>
+        <FilePath>dialoguecharacters.meta</FilePath>
+      </FileReplacement>
+    </Resource>
+  </Resources>
+</EasyInstall>

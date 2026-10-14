@@ -1,0 +1,8 @@
+; The four functions the plugin imports from KERNEL32.dll: one to read UnofficialPatch.ini and
+; three to append to UnofficialPatch.log. The Makefile turns this into an import library.
+LIBRARY KERNEL32.dll
+EXPORTS
+    CloseHandle
+    CreateFileA
+    GetPrivateProfileIntA
+    WriteFile

@@ -1,0 +1,12 @@
+<EasyInstall>
+	<Name>Bill Eyebrows Guarma Fix</Name>
+	<Author>UnofficialPatch (rdr2-mods)</Author>
+	<Version>0.1</Version>
+	<Link />
+	<Metadata />
+	<Resources>
+		<Resource>
+			<StreamingFiles>stream</StreamingFiles>
+		</Resource>
+	</Resources>
+</EasyInstall>

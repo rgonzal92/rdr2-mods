@@ -1,0 +1,16 @@
+<EasyInstall>
+	<Name>Cowhand Horse Outfit Fix</Name>
+	<Author>UnofficialPatch (rdr2-mods)</Author>
+	<Version>0.1</Version>
+	<Link></Link>
+	<Metadata>
+	</Metadata>
+	<Resources>
+		<Resource>
+			<FileReplacement>
+				<GamePath>update:/x64/packs/base/data/ai/quickselectitems.ymt</GamePath>
+				<FilePath>quickselectitems.ymt</FilePath>
+			</FileReplacement>
+		</Resource>
+	</Resources>
+</EasyInstall>
