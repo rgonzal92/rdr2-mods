@@ -1,0 +1,11 @@
+; The seven functions the plugin imports from ScriptHookRDR2.dll, under the decorated C++ names
+; that DLL exports. The Makefile turns this into an import library.
+LIBRARY ScriptHookRDR2.dll
+EXPORTS
+    ?getGlobalPtr@@YAPEA_KH@Z
+    ?nativeCall@@YAPEA_KXZ
+    ?nativeInit@@YAX_K@Z
+    ?nativePush64@@YAX_K@Z
+    ?scriptRegister@@YAXPEAUHINSTANCE__@@P6AXXZ@Z
+    ?scriptUnregister@@YAXPEAUHINSTANCE__@@@Z
+    ?scriptWait@@YAXK@Z

@@ -1,0 +1,8 @@
+; The four functions the plugin imports from KERNEL32.dll: one to read BatchCrafting.ini and
+; three to append to BatchCrafting.log. The Makefile turns this into an import library.
+LIBRARY KERNEL32.dll
+EXPORTS
+    CloseHandle
+    CreateFileA
+    GetPrivateProfileIntA
+    WriteFile
