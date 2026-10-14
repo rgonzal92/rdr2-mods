@@ -1,0 +1,41 @@
+<EasyInstall>
+    <Name>Just Get The Loot Already!</Name>
+    <Author>fuhq2mofo</Author>
+    <Version>1.9.1 - rebuilt</Version>
+    <Link>https://www.nexusmods.com/reddeadredemption2/mods/1958</Link>
+    <Metadata />
+
+    <!-- Not the files of the download (those are in ../original). Both files here are the files
+         of game build 1.0.1491.50 with these changes only:
+         - lootconfigdata.meta: three new rate selectors at 2.0, used by body looting, plant and
+           egg picking and dead-horse saddlebags (FAST_LOOT), by the swipe and placeholder
+           skinning sets (FAST_SWIPE_SKINNING) and by the skinning scenes of each species, small
+           animals and birds (FAST_SCENE_SKINNING). Change the one Default value of a selector
+           to tune its group
+         - lootconfigdata.meta: 17 carriable species (deer, buck, pronghorn, ram, boar, pig,
+           javelina, wolves, cougar, panther, coyote, fox, beaver, goat, small alligator) are
+           skinned with the swipe set the game itself keeps as their fallback, which gives the
+           same pelt. Animals created by a script (missions, legendary hunts) are left out
+         - humaninteraction.meta: AnimRate 2.0 on Interaction_LootSaddleBags (saddlebags of a
+           standing horse)
+         Left as the game has them: the Chapter 1 deer skinned with Charles, the legendary
+         alligator, all prompts and hold times, loot contents.
+         Not taken from the download: its one coyote skinning set for every animal (large pelts
+         became medium pelts and got lost), its carryconfigdata.meta and prompts.meta, and its
+         scenario files, which are the unrepaired files of Just Do The Thing Already.
+         Not taken from Quick Loot 1.3 (../../QuickLoot): its loot flag also matched horses,
+         large birds and the legendary alligator -->
+
+    <Resources>
+        <Resource>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/humaninteraction.meta</GamePath>
+                <FilePath>humaninteraction.meta</FilePath>
+            </FileReplacement>
+            <FileReplacement>
+                <GamePath>update:/common/data/ai/looting/lootconfigdata.meta</GamePath>
+                <FilePath>lootconfigdata.meta</FilePath>
+            </FileReplacement>
+        </Resource>
+    </Resources>
+</EasyInstall>
