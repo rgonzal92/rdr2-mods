@@ -1,0 +1,5 @@
+; The one function the plugin imports from KERNEL32.dll, to read RemoveSpeedLimits.ini as the
+; original did. The Makefile turns this into an import library.
+LIBRARY KERNEL32.dll
+EXPORTS
+    GetPrivateProfileIntA
