@@ -146,17 +146,17 @@ static void aGallopIsNotRememberedAsASprintOnFoot() {
     assert(leftToTheGame(foot.update(ON_FOOT, MOVING, NO_SPRINT_KEY, 16)));
 }
 
-const bool GALLOPING = true, FORWARD_KEY = true;
+const bool GALLOPING = true, FORWARD_KEY = true, BACK_KEY = true;
 
 static void aHorseIsLeftAloneUntilAKeyAsksOtherwise() {
-    for (bool galloping : {false, true}) assert(leftToTheGame(horsePace(galloping, NO_SPRINT_KEY, !FORWARD_KEY)));
+    for (bool galloping : {false, true}) assert(leftToTheGame(HorsePace().update(galloping, NO_SPRINT_KEY, !FORWARD_KEY, !BACK_KEY)));
 }
 
 static void forwardOrSprintLiftsTheCapWithoutForcingAPace() {
     // The original set a minimum of 1.6 with forward held, so a cantering horse could not slow
     // to a trot or keep pace with a slower companion.
-    for (const Pace pace : {horsePace(!GALLOPING, NO_SPRINT_KEY, FORWARD_KEY), horsePace(!GALLOPING, SPRINT_KEY, FORWARD_KEY),
-                            horsePace(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY)}) {
+    for (const Pace pace : {HorsePace().update(!GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY), HorsePace().update(!GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY),
+                            HorsePace().update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY)}) {
         assert(pace.atLeast == 0);
         assert(pace.atMost == 10.0f);
     }
@@ -164,13 +164,44 @@ static void forwardOrSprintLiftsTheCapWithoutForcingAPace() {
 
 static void holdingSprintBelowAGallopDoesNotForceOne() {
     // The game reads that hold as "keep this pace" and "match my companion's speed".
-    const Pace pace = horsePace(!GALLOPING, SPRINT_KEY, !FORWARD_KEY);
+    const Pace pace = HorsePace().update(!GALLOPING, SPRINT_KEY, !FORWARD_KEY, !BACK_KEY);
     assert(pace.atLeast == 0);
     assert(pace.atMost == 10.0f);
 }
 
 static void holdingSprintAtAGallopKeepsTheGallop() {
-    for (bool forward : {false, true}) assert(heldAt(horsePace(GALLOPING, SPRINT_KEY, forward), 10.0f));
+    for (bool forward : {false, true}) assert(heldAt(HorsePace().update(GALLOPING, SPRINT_KEY, forward, !BACK_KEY), 10.0f));
+}
+
+static void aGallopFromTheSprintKeyLastsWhileForwardIsHeld() {
+    HorsePace horse;
+    assert(heldAt(horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY), 10.0f));
+    // Sprint let go: forward alone keeps the gallop, frame after frame.
+    for (int frame = 0; frame < 600; ++frame) assert(heldAt(horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY), 10.0f));
+}
+
+static void lettingGoOfForwardEndsTheGallop() {
+    HorsePace horse;
+    horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    assert(leftToTheGame(horse.update(GALLOPING, NO_SPRINT_KEY, !FORWARD_KEY, !BACK_KEY)));
+    // Forward again does not bring the gallop back without the sprint key.
+    const Pace pace = horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    assert(pace.atLeast == 0 && pace.atMost == 10.0f);
+}
+
+static void theBackKeyEndsTheGallop() {
+    HorsePace horse;
+    horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    assert(horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, BACK_KEY).atLeast == 0);
+    assert(horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY).atLeast == 0);
+}
+
+static void aHorseThatStopsGallopingIsNotForcedBack() {
+    // A fall, an obstacle, a tired horse or a scene: the gallop is not pushed back on.
+    HorsePace horse;
+    horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    assert(horse.update(!GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY).atLeast == 0);
+    assert(horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY).atLeast == 0);
 }
 
 int main() {
@@ -194,5 +225,9 @@ int main() {
     forwardOrSprintLiftsTheCapWithoutForcingAPace();
     holdingSprintBelowAGallopDoesNotForceOne();
     holdingSprintAtAGallopKeepsTheGallop();
+    aGallopFromTheSprintKeyLastsWhileForwardIsHeld();
+    lettingGoOfForwardEndsTheGallop();
+    theBackKeyEndsTheGallop();
+    aHorseThatStopsGallopingIsNotForcedBack();
     std::puts("SpeedLogic: all checks passed");
 }

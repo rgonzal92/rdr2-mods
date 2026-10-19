@@ -98,13 +98,23 @@ private:
 // The horse the player is riding.
 constexpr float HORSE_TOP = 10.0f;
 
-constexpr Pace horsePace(bool galloping, bool sprintHeld, bool forwardHeld) {
-    // Holding sprint on a galloping horse keeps it at a full gallop for as long as the key is
-    // held. Below a gallop the same hold is the game's "keep this pace" and "match my
-    // companion's speed", so nothing is forced there.
-    if (galloping && sprintHeld) return {HORSE_TOP, HORSE_TOP};
-    // Asking the horse to move lifts whatever cap a mission has put on it, and sets no minimum:
-    // the gait stays the rider's choice.
-    if (sprintHeld || forwardHeld) return {0, HORSE_TOP};
-    return {0, 0};
-}
+class HorsePace {
+public:
+    // Call every frame on the horse. A new HorsePace is needed for each horse ridden.
+    Pace update(bool galloping, bool sprintHeld, bool forwardHeld, bool backHeld) {
+        // The sprint key at a gallop starts a full gallop, and it lasts while sprint or forward is
+        // held, so the rider can let go of sprint. Letting go of both, the back key, or the horse
+        // leaving the gallop (a fall, an obstacle, tiredness, a scene) ends it. Below a gallop a
+        // sprint hold is the game's "keep this pace" and "match my companion's speed", so nothing
+        // is forced there.
+        fullGallop = galloping && (sprintHeld || (fullGallop && forwardHeld && !backHeld));
+        if (fullGallop) return {HORSE_TOP, HORSE_TOP};
+        // Asking the horse to move lifts whatever cap a mission has put on it, and sets no
+        // minimum: the gait stays the rider's choice.
+        if (sprintHeld || forwardHeld) return {0, HORSE_TOP};
+        return {0, 0};
+    }
+
+private:
+    bool fullGallop = false;
+};

@@ -7,9 +7,9 @@
 //     while the sprint key was down, and let the cover key switch fast walk from the saddle
 //   - sets no minimum pace on the horse below a gallop; the original held it at a canter or
 //     faster while forward was held, so it could not slow down or keep pace with a companion
-//   - keeps the gallop only while the sprint key is held at a gallop; the original also forced
-//     a gallop after three seconds of that key at a canter, where the game reads the hold as
-//     "keep this pace"
+//   - keeps a full gallop only once the sprint key is pressed at a gallop, and then while sprint
+//     or forward stays held; the original also forced a gallop after three seconds of that key
+//     at a canter, where the game reads the hold as "keep this pace"
 //   - exempts the horse from the speed zones around camps and towns the way the game's own
 //     scripts do, with reset flag 154 on the horse; the original fought the zones with the
 //     forced pace
@@ -98,6 +98,8 @@ constexpr Hash INPUT_SPRINT = joaat("INPUT_SPRINT");
 constexpr Hash INPUT_COVER = joaat("INPUT_COVER");
 constexpr Hash INPUT_HORSE_MOVE_UP_ONLY = joaat("INPUT_HORSE_MOVE_UP_ONLY");
 constexpr Hash INPUT_HORSE_SPRINT = joaat("INPUT_HORSE_SPRINT");
+constexpr Hash INPUT_HORSE_MOVE_DOWN_ONLY = joaat("INPUT_HORSE_MOVE_DOWN_ONLY");
+constexpr Hash INPUT_HORSE_STOP = joaat("INPUT_HORSE_STOP");
 
 // Reset flags last one frame, and their names are not known (PRF_0x8A63AAF1 and PRF_0xE3667800).
 // In the game's own scripts 154 exempts a ped from the speed zones around camps, towns and
@@ -137,6 +139,7 @@ static void hold(int ped, Pace pace) {
 
 static void scriptMain() {
     FootPace foot(walkRatio(walkingSpeed), tapToWalkMs);
+    HorsePace horse;
     for (;;) {
         const int player = call(PLAYER_ID);
         const int playerPed = call(PLAYER_PED_ID);
@@ -156,7 +159,10 @@ static void scriptMain() {
 
         if (mount && horseBoost) {
             const bool galloping = call(IS_PED_SPRINTING, mount);
-            hold(mount, horsePace(galloping, pressed(INPUT_HORSE_SPRINT), pressed(INPUT_HORSE_MOVE_UP_ONLY)));
+            hold(mount, horse.update(galloping, pressed(INPUT_HORSE_SPRINT), pressed(INPUT_HORSE_MOVE_UP_ONLY),
+                                     pressed(INPUT_HORSE_MOVE_DOWN_ONLY) || pressed(INPUT_HORSE_STOP)));
+        } else {
+            horse = HorsePace();
         }
 
         const bool moving = onFoot && (pressed(INPUT_MOVE_UP_ONLY) || pressed(INPUT_MOVE_DOWN_ONLY) ||

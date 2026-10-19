@@ -15,7 +15,7 @@ Pace in this game is a "move blend ratio": 1 is a walk, 2 a run, 3 a sprint. A s
 - **Sprint on foot.** Sprint plus a direction holds a flat-out sprint (ratio 10.6). After sprint is let go, the player keeps running (ratio 2.0) until they stop or tap sprint.
 - **Tap to walk.** While running, a sprint press shorter than 250 ms drops the player to a walk without stopping. The pace stays capped at a walk until the next sprint press or a stop. A press from a walk sprints at once.
 - **Fast walk.** Pressing cover while moving switches a fast walk (ratio 1.5) on or off. That press does not take cover. While fast walk is on, the walk after a tap is the fast walk. Fast walk is off after every game start and every loaded save.
-- **On horseback.** While forward or sprint is held, the horse's pace cap is lifted and no lowest pace is set, so the gait stays the rider's choice. While sprint is held on a horse that already gallops, the gallop is kept.
+- **On horseback.** While forward or sprint is held, the horse's pace cap is lifted and no lowest pace is set, so the gait stays the rider's choice. Sprint pressed on a horse that already gallops starts a full gallop, which lasts while sprint or forward is held: sprint can be let go. Letting go of both, the back or stop key, or the horse leaving the gallop ends it.
 
 Where it deliberately does nothing:
 
@@ -33,7 +33,7 @@ The original was read from its binary (`RemoveSpeedLimits.asi`, built 2023-11-12
 
 1. **On-foot rules while riding.** The original ran every rule in every state. With sprint held it also held the rider at a sprint, and cover switched fast walk from the saddle. The expected effect is the rider losing stamina while riding. This build applies the on-foot rules only on foot.
 2. **Forced canter.** On a running horse with forward held, the original set a lowest pace of 1.6 (a canter) that kept itself going. The horse could not slow to a trot or keep pace with a slower companion, and the game's first ride asks keyboard players to hold forward to match speed with Dutch. This build sets no lowest pace below a gallop.
-3. **Forced gallop.** The original forced a full gallop after about three seconds of sprint held at a canter with forward let go, where the game reads the hold as "keep this pace". This build keeps a gallop only while sprint is held on a horse that already gallops.
+3. **Forced gallop.** The original forced a full gallop after about three seconds of sprint held at a canter with forward let go, where the game reads the hold as "keep this pace". This build keeps a gallop only once sprint is pressed on a horse that already gallops, and only while sprint or forward stays held.
 4. **Speed zones on horseback.** The original set the zone flags on the player only and fought the zones with the forced pace. This build sets the flag on the horse too, as the game's own scripts do.
 5. **Sprint with no direction.** The original held a sprint whenever sprint was down. A lowest pace is expected to make a person move with no input. This build holds a pace only while a direction is held.
 6. **Stray fast-walk switches.** The original switched fast walk on every cover press it read out of cover. It did not check that the player was moving or in control, and it read the key even while the game had it disabled. The press that takes cover from a standstill, and presses in shops and scripted scenes, are expected to have switched it too. This build switches only on a press made while moving, with the player in control.
@@ -75,7 +75,7 @@ Do not install the `.asi` and `.ini` in this folder's root: those are the origin
 
 - Tools: `make`, `clang++` with the `lld` linker, and `llvm-dlltool`. The plugin is cross-built on Linux and needs no Windows SDK or C runtime.
 - `make` builds `build/RemoveSpeedLimits.asi`, after making the two import libraries from the `.def` files.
-- `make test` builds `build/SpeedLogicTest` for the local machine and runs it. Its 20 checks cover the pace decisions in `src/SpeedLogic.h` without the game: the walking-speed range, sprint, the run after a sprint, tap to walk, the fast-walk switch, riding, and the horse rules.
+- `make test` builds `build/SpeedLogicTest` for the local machine and runs it. Its 23 checks cover the pace decisions in `src/SpeedLogic.h` without the game: the walking-speed range, sprint, the run after a sprint, tap to walk, the fast-walk switch, riding, and the horse rules, including the locked gallop.
 
 ## Files
 
@@ -98,7 +98,8 @@ Do not install the `.asi` and `.ini` in this folder's root: those are the origin
 - The plugin and a mission script can both set a pace for the same frame. Which one counts is not known, so sprint may or may not override a scripted slow section.
 - Whether the flag on the horse lifts every speed zone by itself has not been tried in the game.
 - Holding sprint on foot is always the flat-out sprint. A sprint from a run starts `TAP_TO_WALK_MS` (250 ms) late, because the press could still be a tap.
-- Holding sprint on a galloping horse keeps the full gallop. The unmodded game uses that hold to keep pace with a companion or a train, so matching speed at a gallop is expected not to work while sprint is held.
+- Sprint at a gallop locks the full gallop until forward and sprint are both let go. The unmodded game uses a sprint hold to keep pace with a companion or a train, so matching speed at a gallop is expected not to work after sprint was pressed; let go of forward to drop out of it.
+- The locked gallop does not look at the horse's stamina. It ends when the game stops counting the horse as galloping.
 - With `COVER_WALK_TOGGLE=1`, cover can only be taken from a standstill. Nothing on screen shows whether fast walk is on, and fast walk holds the pace at exactly `WALKING_SPEED`.
 - On the keyboard the cover key is also the key for tagging Dead Eye targets, studying an animal and turning a prompt page. Such a press made while moving on foot is expected to switch fast walk as well.
 - The holds look only at the keys, so the run after a sprint and the fast walk also apply while aiming, crouching, carrying or swimming.
