@@ -1,10 +1,10 @@
 # BetterPlayerHorses
 
-Gives the player's own horses top stats: health and stamina as good as the game's best breeds, and the highest agility, speed and acceleration the game allows. The horses of lawmen, enemies and gang members keep their normal stats.
+Gives the player's own horses top stats: health and stamina as good as the game's best breeds, the highest agility, speed and acceleration the game allows, and the top bonding level. The horses of lawmen, enemies and gang members keep their normal stats.
 
 - **Type:** ScriptHookRDR2 plugin (.asi)
 - **Origin:** Written from scratch for this repo
-- **Status:** In use, as of 2026-10-12
+- **Status:** In use, as of 2026-10-12; top bonding added 2026-10-16, not yet tried in game
 - **Game build:** 1.0.1491.50, story mode
 
 ## What it does
@@ -23,10 +23,18 @@ Each horse stat has a "base rank" from 0 to 9, which the game shows as level 1 t
 - The ranks are not stored in the save. The game creates the horse again after a loaded save, a stable visit or a fast travel, with its breed's ranks, and the plugin raises them again within a second.
 - A stabled horse gets the ranks when it is taken out as the main horse.
 
+Bonding (level 1 to 4) works differently, because the game keeps it in the save:
+
+- The game keeps 7 saved horse records (`Global_40.f_1095.f_1`), which hold the player's horses, stabled ones included. Once a second the plugin gives every record that holds a horse the top bonding rank and the points that rank needs, as the game's own scripts set a rank (`short_update.c`, `func_1521`). Which record holds which horse was not mapped; slot 6 gets extra handling in the game's scripts and may be a temporary horse.
+- The game copies the record onto the horse whenever the horse appears and after every bonding award, so bonding set on the horse alone would be undone. With the record at the top, the game's awards stop changing it.
+- The main horse and the saddled horse in the world also get the top bonding at once, with the game's bonding level call, so the extra moves work before the horse next appears.
+
 Where it deliberately does nothing:
 
 - A temporary horse without the player's saddle is not the player's, so it is left alone.
-- Stabled horses, horses lent by a mission, and the horses of lawmen, enemies and gang members are never touched.
+- Stabled horses never get the base ranks (they are not in the save), only top bonding in their saved record.
+- Horses lent by a mission get no base ranks. Whether a mission puts one in a saved record, and so gives it top bonding, was not checked.
+- The horses of lawmen, enemies and gang members are never touched.
 - The game's horse attribute file (`pedattributes.ymt`) is not replaced.
 - With no horse, and before a save is loaded, nothing is written.
 
@@ -39,14 +47,14 @@ The same ranks can be had from a data mod, "Better All Horses - Elite", which re
 
 A plugin can tell the player's horses from all others, which a data file cannot. The rank values are the Elite mod's.
 
-What was checked against the game's scripts: none of them writes these five base ranks on any horse (they write base ranks only for bonding, hunger, weight and dirtiness), so nothing undoes the plugin's values between its passes.
+What was checked against the game's scripts: none of them writes these five base ranks on any horse (they write base ranks only for bonding, hunger, weight and dirtiness), so nothing undoes the plugin's values between its passes. For bonding, the scripts only ever raise the saved record (`func_3160` adds an award and returns early once the record is at the top rank), and when a horse appears they set its bonding base rank, bonding level and points from the record (`player_horse.c`, the caller of `func_676`).
 
 Not built: a fix for the pause menu showing breed values (see Known limits). It would need a data file that raises the breed table for the stat set of one horse, which also boosts every other horse sharing that set.
 
 ## Requirements
 
 - An ASI loader: the `dinput8.dll` that loads `.asi` plugins from the game folder.
-- ScriptHookRDR2 (`ScriptHookRDR2.dll`). The plugin imports six of its functions, listed in `src/ScriptHookRDR2.def`.
+- ScriptHookRDR2 (`ScriptHookRDR2.dll`). The plugin imports seven of its functions, listed in `src/ScriptHookRDR2.def`.
 - No data mod is needed. The plugin works on the game's own horse attribute file.
 
 ## Install
@@ -54,7 +62,7 @@ Not built: a fix for the pause menu showing breed values (see Known limits). It 
 1. Run `make` to produce `build/BetterPlayerHorses.asi`.
 2. Copy `build/BetterPlayerHorses.asi` into the game's root folder.
 
-To uninstall, delete the file from the game folder. Nothing stays in the save: a horse has its breed's ranks again the next time the game creates it.
+To uninstall, delete the file from the game folder. The base ranks do not stay in the save: a horse has its breed's ranks again the next time the game creates it. Top bonding does stay: it is in the saved horse records, and the game's bonding awards stop changing a record at the top rank.
 
 ## Build and test
 
@@ -83,6 +91,8 @@ No file of another author is kept in this folder. The Elite data mod is not in t
 - For up to a second after the game creates a horse, it has its breed's ranks. The larger health and stamina tanks may then start partly empty and fill up by themselves.
 - A horse that stops being the main horse, for example after the saddle is moved to another one, keeps its raised ranks until the game creates it again. Nothing lowers a rank.
 - Nothing in the game's attribute file takes agility as an input, so what agility 9 changes in play is not known.
+- Top bonding is set directly, so the game's "Horse Bonding Increased" message does not show and its count of the highest bonding level reached (kept for the game's stats) is not updated.
+- The saved horse records are read at fixed script global indexes from the 1.0.1491.50 scripts. After a game update the plugin checks the array length first and leaves the records alone if it differs; the horses in the world still get top bonding until the game creates them again.
 
 ## Credits
 
