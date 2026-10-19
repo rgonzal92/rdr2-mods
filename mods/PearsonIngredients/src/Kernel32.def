@@ -1,0 +1,7 @@
+; The three functions the plugin imports from KERNEL32.dll, to append to
+; PearsonIngredients.log. The Makefile turns this into an import library.
+LIBRARY KERNEL32.dll
+EXPORTS
+    CloseHandle
+    CreateFileA
+    WriteFile
