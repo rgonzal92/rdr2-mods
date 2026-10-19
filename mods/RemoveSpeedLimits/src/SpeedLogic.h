@@ -103,11 +103,11 @@ public:
     // Call every frame on the horse. A new HorsePace is needed for each horse ridden.
     Pace update(bool galloping, bool sprintHeld, bool forwardHeld, bool backHeld) {
         // The sprint key at a gallop starts a full gallop, and it lasts while sprint or forward is
-        // held, so the rider can let go of sprint. Letting go of both, the back key, or the horse
-        // leaving the gallop (a fall, an obstacle, tiredness, a scene) ends it. Below a gallop a
-        // sprint hold is the game's "keep this pace" and "match my companion's speed", so nothing
-        // is forced there.
-        fullGallop = galloping && (sprintHeld || (fullGallop && forwardHeld && !backHeld));
+        // held, so the rider can let go of sprint. Letting go of both, the back key (even with
+        // sprint held), or the horse leaving the gallop (a fall, an obstacle, tiredness, a scene)
+        // ends it. Below a gallop a sprint hold is the game's "keep this pace" and "match my
+        // companion's speed", so nothing is forced there.
+        fullGallop = galloping && !backHeld && (sprintHeld || (fullGallop && forwardHeld));
         if (fullGallop) return {HORSE_TOP, HORSE_TOP};
         // Asking the horse to move lifts whatever cap a mission has put on it, and sets no
         // minimum: the gait stays the rider's choice.

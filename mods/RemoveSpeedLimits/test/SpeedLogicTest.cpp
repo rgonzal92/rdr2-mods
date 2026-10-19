@@ -196,6 +196,15 @@ static void theBackKeyEndsTheGallop() {
     assert(horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY).atLeast == 0);
 }
 
+static void theBackKeyEndsTheGallopWhileSprintIsHeld() {
+    // A gallop held at its top pace would fight the brake.
+    for (bool forward : {false, true}) {
+        HorsePace horse;
+        horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+        assert(horse.update(GALLOPING, SPRINT_KEY, forward, BACK_KEY).atLeast == 0);
+    }
+}
+
 static void aHorseThatStopsGallopingIsNotForcedBack() {
     // A fall, an obstacle, a tired horse or a scene: the gallop is not pushed back on.
     HorsePace horse;
@@ -228,6 +237,7 @@ int main() {
     aGallopFromTheSprintKeyLastsWhileForwardIsHeld();
     lettingGoOfForwardEndsTheGallop();
     theBackKeyEndsTheGallop();
+    theBackKeyEndsTheGallopWhileSprintIsHeld();
     aHorseThatStopsGallopingIsNotForcedBack();
     std::puts("SpeedLogic: all checks passed");
 }

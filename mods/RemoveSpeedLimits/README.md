@@ -15,7 +15,7 @@ Pace in this game is a "move blend ratio": 1 is a walk, 2 a run, 3 a sprint. A s
 - **Sprint on foot.** Sprint plus a direction holds a flat-out sprint (ratio 10.6). After sprint is let go, the player keeps running (ratio 2.0) until they stop or tap sprint.
 - **Tap to walk.** While running, a sprint press shorter than 250 ms drops the player to a walk without stopping. The pace stays capped at a walk until the next sprint press or a stop. A press from a walk sprints at once.
 - **Fast walk.** Pressing cover while moving switches a fast walk (ratio 1.5) on or off. That press does not take cover. While fast walk is on, the walk after a tap is the fast walk. Fast walk is off after every game start and every loaded save.
-- **On horseback.** While forward or sprint is held, the horse's pace cap is lifted and no lowest pace is set, so the gait stays the rider's choice. Sprint pressed on a horse that already gallops starts a full gallop, which lasts while sprint or forward is held: sprint can be let go. Letting go of both, the back or stop key, or the horse leaving the gallop ends it.
+- **On horseback.** While forward or sprint is held, the horse's pace cap is lifted and no lowest pace is set, so the gait stays the rider's choice. Sprint pressed on a horse that already gallops starts a full gallop, which lasts while sprint or forward is held: sprint can be let go. Letting go of both, the back or stop key (also with sprint held), or the horse leaving the gallop ends it.
 
 Where it deliberately does nothing:
 
@@ -75,7 +75,7 @@ Do not install the `.asi` and `.ini` in this folder's root: those are the origin
 
 - Tools: `make`, `clang++` with the `lld` linker, and `llvm-dlltool`. The plugin is cross-built on Linux and needs no Windows SDK or C runtime.
 - `make` builds `build/RemoveSpeedLimits.asi`, after making the two import libraries from the `.def` files.
-- `make test` builds `build/SpeedLogicTest` for the local machine and runs it. Its 23 checks cover the pace decisions in `src/SpeedLogic.h` without the game: the walking-speed range, sprint, the run after a sprint, tap to walk, the fast-walk switch, riding, and the horse rules, including the locked gallop.
+- `make test` builds `build/SpeedLogicTest` for the local machine and runs it. Its 24 checks cover the pace decisions in `src/SpeedLogic.h` without the game: the walking-speed range, sprint, the run after a sprint, tap to walk, the fast-walk switch, riding, and the horse rules, including the locked gallop.
 
 ## Files
 
