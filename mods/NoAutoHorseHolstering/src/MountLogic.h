@@ -34,76 +34,124 @@ struct Frame {
     int nowMs;         // the game timer
 };
 
-// One mount, from the last frame on foot until the weapon question is settled.
+// One ride, from the last frame on foot until the player gets off.
 //
 // On foot it remembers the weapon in hand. On the first frame on the horse, if that weapon was a
-// long arm or no weapon at all, it asks for it once (the original's mount-moment call). For the
-// next WINDOW_MS it watches: if the game takes the long arm away (the hand goes unarmed), or
-// puts a weapon in an unarmed rider's hand, it asks once more and is done. It is also done the
-// moment the player touches a weapon control, a scripted scene or mission is running, or the
-// window ends, and it does not start when the player touched one on foot in the last RECENT_MS,
-// since a holster or draw begun just before getting on may not show in the hand yet. Nothing is asked again until the player has been on foot and mounts again.
+// long arm or no weapon at all, it asks for it once (the original's mount-moment call).
+//
+// A long arm, the one mounted with or one drawn on the horse, is then kept for the whole ride:
+// when the hand goes empty it is asked for again. Not when the player touched a weapon control in
+// the last RECENT_MS (their own holster), a scripted scene or mission is running, or the game
+// takes it again within FIGHT_MS of the last time it was given back (the game insists; the mount
+// itself may take it once). Then it is let go until the player draws a long arm again. After
+// asking, it waits up to RECENT_MS for the weapon to show in the hand.
+//
+// An unarmed rider is watched for WINDOW_MS after the mount: a weapon that shows up in the hand
+// is put away once, unless the player touched a weapon control.
+//
+// Nothing is asked at the mount when the player touched a weapon control on foot in the last
+// RECENT_MS, since a holster or draw begun just before getting on may not show in the hand yet.
 class MountKeeper {
 public:
     static constexpr int WINDOW_MS = 4000;
     static constexpr int RECENT_MS = 1000;
+    static constexpr int FIGHT_MS = 5000;
 
-    // True on the frames where frame() may ask for a weapon, so the caller reads the gates only
-    // then, and the controls and the timer only then and on foot.
-    bool deciding(bool mounted) const { return mounted && state != State::SETTLED; }
+    // True on the frames where frame() may ask for a weapon, so the caller reads the gates, the
+    // controls and the timer only then and on foot.
+    bool deciding(bool mounted) const {
+        return mounted && (state == State::ON_FOOT || (state == State::RIDING && (watchingUnarmed || kept)));
+    }
 
     // Call every frame. Returns the weapon to put in the player's hand this frame, or 0.
     Hash frame(const Frame& f) {
+        if (f.playerChose) {
+            chose = true;
+            choseMs = f.nowMs;
+        }
         if (!f.mounted) {
             state = State::ON_FOOT;
-            heldOnFoot = f.held;
+            lastHeld = f.held;
             heldOnFootLongArm = f.heldLongArm;
-            if (f.playerChose) {
-                choseOnFoot = true;
-                choseOnFootMs = f.nowMs;
-            }
             return 0;
         }
-        switch (state) {
-            case State::ON_FOOT: {
-                state = State::SETTLED;
-                const bool choseJustBefore = choseOnFoot && f.nowMs - choseOnFootMs < RECENT_MS;
-                choseOnFoot = false;  // never carried to the next mount
-                if (f.blocked || f.playerChose || choseJustBefore) return 0;
-                if (!heldOnFootLongArm && heldOnFoot != WEAPON_UNARMED) return 0;  // pistols and the rest
-                kept = heldOnFoot;
-                mountedAtMs = f.nowMs;
-                state = State::WATCHING;
-                return kept;
-            }
-            case State::WATCHING:
-                if (f.blocked || f.playerChose || f.nowMs - mountedAtMs >= WINDOW_MS) {
-                    state = State::SETTLED;
-                    return 0;
-                }
-                // A long arm counts as taken when the hand is empty; a different long arm or a
-                // pistol in hand is not the game's holster. An unarmed rider counts as armed by
-                // anything.
-                if (kept == WEAPON_UNARMED ? f.held != WEAPON_UNARMED : f.held == WEAPON_UNARMED) {
-                    state = State::SETTLED;
-                    return kept;
-                }
-                return 0;
-            case State::SETTLED:
-                return 0;
-        }
+        if (state == State::ON_FOOT) return mount(f);
+        if (state == State::RIDING) return ride(f);
         return 0;
     }
 
 private:
-    enum class State { ON_FOOT, WATCHING, SETTLED };
+    enum class State { ON_FOOT, RIDING, UNTRACKED };
 
-    // Starts settled: a plugin loaded while the player is already riding leaves that ride alone.
-    State state = State::SETTLED;
-    Hash heldOnFoot = WEAPON_UNARMED;
+    bool choseRecently(int nowMs) const { return chose && nowMs - choseMs < RECENT_MS; }
+
+    Hash mount(const Frame& f) {
+        state = State::RIDING;
+        const Hash heldOnFoot = lastHeld;
+        lastHeld = f.held;
+        kept = 0;
+        watchingUnarmed = false;
+        if (f.blocked || choseRecently(f.nowMs)) return 0;
+        if (heldOnFoot == WEAPON_UNARMED) {
+            watchingUnarmed = true;
+            mountedAtMs = f.nowMs;
+            return WEAPON_UNARMED;
+        }
+        if (!heldOnFootLongArm) return 0;  // pistols and the rest
+        kept = heldOnFoot;
+        return giveBack(f.nowMs, true);
+    }
+
+    Hash ride(const Frame& f) {
+        const bool changed = f.held != lastHeld;
+        lastHeld = f.held;
+        if (watchingUnarmed) {
+            if (f.blocked || f.playerChose || f.nowMs - mountedAtMs >= WINDOW_MS) {
+                watchingUnarmed = false;
+            } else if (f.held != WEAPON_UNARMED) {
+                watchingUnarmed = false;
+                return WEAPON_UNARMED;
+            }
+            return 0;
+        }
+        if (f.held != WEAPON_UNARMED) {
+            // Only a change counts as a draw, so a long arm still in hand from a holster begun
+            // just before the mount is not taken up. Anything else in hand ends the keeping.
+            if (changed) kept = f.heldLongArm ? f.held : 0;
+            waiting = false;
+            return 0;
+        }
+        if (!kept) return 0;
+        if (waiting) {
+            if (f.nowMs - givenBackMs < RECENT_MS) return 0;  // not in the hand yet
+            waiting = false;
+        } else if (!changed) {
+            return 0;
+        }
+        if (f.blocked || choseRecently(f.nowMs) || (f.nowMs - givenBackMs < FIGHT_MS && !givenBackAtMount)) {
+            kept = 0;
+            return 0;
+        }
+        return giveBack(f.nowMs, false);
+    }
+
+    Hash giveBack(int nowMs, bool atMount) {
+        givenBackMs = nowMs;
+        givenBackAtMount = atMount;
+        waiting = true;
+        return kept;
+    }
+
+    // Starts untracked: a plugin loaded while the player is already riding leaves that ride alone.
+    State state = State::UNTRACKED;
+    Hash lastHeld = WEAPON_UNARMED;  // the weapon in hand on the previous frame
     bool heldOnFootLongArm = false;
-    Hash kept = 0;
+    Hash kept = 0;                   // the long arm kept in hand on this ride, 0 for none
+    int givenBackMs = 0;
+    bool givenBackAtMount = false;
+    bool waiting = false;            // asked for kept, not in the hand yet
+    bool watchingUnarmed = false;
     int mountedAtMs = 0;
-    bool choseOnFoot = false;  // a weapon control was held on foot since the last mount
-    int choseOnFootMs = 0;     // the last such frame
+    bool chose = false;              // a weapon control has been held
+    int choseMs = 0;                 // the last such frame
 };

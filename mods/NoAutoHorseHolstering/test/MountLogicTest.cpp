@@ -34,14 +34,55 @@ static void aBowCountsAsALongArm() {
     assert(mountWith(keeper, BOW, LONG_ARM) == BOW);
 }
 
-static void aLongArmTheGameHolstersIsDrawnBackOnce() {
+static void aLongArmTheGameHolstersDuringTheMountIsDrawnBack() {
     MountKeeper keeper;
     mountWith(keeper, RIFLE, LONG_ARM);
     assert(keeper.frame(riding(RIFLE, LONG_ARM, 1500)) == 0);
     assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1516)) == RIFLE);
-    // Once only: if the game takes it again, the plugin does not fight it.
+    // Waits for it to show in the hand before judging again.
     assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1532)) == 0);
+    assert(keeper.frame(riding(RIFLE, LONG_ARM, 1548)) == 0);
+    // Taken again at once: the game insists, and the plugin does not fight it.
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1700)) == 0);
     assert(!keeper.deciding(true));
+}
+
+static void aLongArmTheGameHolstersLaterInTheRideIsDrawnBack() {
+    MountKeeper keeper;
+    mountWith(keeper, RIFLE, LONG_ARM);
+    assert(keeper.frame(riding(RIFLE, LONG_ARM, 1016)) == 0);
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 60000)) == RIFLE);
+    assert(keeper.frame(riding(RIFLE, LONG_ARM, 60016)) == 0);
+    // Much later, again.
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 120000)) == RIFLE);
+}
+
+static void aLongArmDrawnOnTheHorseIsKept() {
+    MountKeeper keeper;
+    assert(mountWith(keeper, WEAPON_UNARMED, NOT_LONG_ARM) == WEAPON_UNARMED);
+    keeper.frame({true, WEAPON_UNARMED, NOT_LONG_ARM, true, false, 30000});  // the wheel
+    assert(keeper.frame(riding(RIFLE, LONG_ARM, 30200)) == 0);
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 50000)) == RIFLE);
+}
+
+static void aRestoreThatNeverShowsIsNotRepeatedForever() {
+    MountKeeper keeper;
+    mountWith(keeper, RIFLE, LONG_ARM);
+    keeper.frame(riding(RIFLE, LONG_ARM, 1016));
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 9000)) == RIFLE);
+    for (int t = 9016; t < 9000 + MountKeeper::RECENT_MS; t += 16) assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, t)) == 0);
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 9000 + MountKeeper::RECENT_MS)) == 0);
+    assert(!keeper.deciding(true));
+}
+
+static void thePlayersOwnHolsterOnTheHorseIsKept() {
+    MountKeeper keeper;
+    mountWith(keeper, RIFLE, LONG_ARM);
+    keeper.frame(riding(RIFLE, LONG_ARM, 1016));
+    keeper.frame({true, RIFLE, LONG_ARM, true, false, 20000});  // holster key
+    assert(keeper.frame(riding(RIFLE, LONG_ARM, 20300)) == 0);
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 20600)) == 0);
+    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 40000)) == 0);
 }
 
 static void anUnarmedRiderIsKeptUnarmed() {
@@ -92,7 +133,8 @@ static void aWeaponControlJustBeforeTheMountHandsTheRideToThePlayer() {
     holstered.frame({false, RIFLE, LONG_ARM, true, false, 500});
     holstered.frame(onFoot(RIFLE, LONG_ARM, 516));
     assert(holstered.frame(riding(RIFLE, LONG_ARM, 1000)) == 0);
-    assert(holstered.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1200)) == 0);
+    assert(holstered.frame(riding(RIFLE, LONG_ARM, 1300)) == 0);
+    assert(holstered.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1700)) == 0);
 
     // A weapon picked by an unarmed player just before getting on is not put away.
     MountKeeper drawn;
@@ -120,21 +162,16 @@ static void scriptedScenesAndMissionsAreLeftAlone() {
     assert(during.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1516)) == 0);
 }
 
-static void theWindowEndsAfterTheMount() {
-    MountKeeper keeper;
-    mountWith(keeper, RIFLE, LONG_ARM);
-    // The first draw later in the ride is the player's business, not a holster to undo.
-    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1000 + MountKeeper::WINDOW_MS)) == 0);
-    assert(keeper.frame(riding(RIFLE, LONG_ARM, 9000)) == 0);
-    assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 9016)) == 0);
-}
-
 static void eachMountIsItsOwnRide() {
     MountKeeper keeper;
     mountWith(keeper, RIFLE, LONG_ARM);
-    keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1100));  // the one correction
+    keeper.frame(riding(RIFLE, LONG_ARM, 1016));
+    keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1100));  // drawn back
+    keeper.frame(riding(RIFLE, LONG_ARM, 1116));
+    keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 1200));  // taken again: given up
     keeper.frame(onFoot(BOW, LONG_ARM, 20000));
     assert(keeper.frame(riding(BOW, LONG_ARM, 20016)) == BOW);
+    assert(keeper.frame(riding(BOW, LONG_ARM, 20032)) == 0);
     assert(keeper.frame(riding(WEAPON_UNARMED, NOT_LONG_ARM, 20100)) == BOW);
 }
 
@@ -157,14 +194,17 @@ static void decidingIsOnlyWhileMountedAndUnsettled() {
 int main() {
     aLongArmIsAskedForOnceOnTheMountFrame();
     aBowCountsAsALongArm();
-    aLongArmTheGameHolstersIsDrawnBackOnce();
+    aLongArmTheGameHolstersDuringTheMountIsDrawnBack();
+    aLongArmTheGameHolstersLaterInTheRideIsDrawnBack();
+    aLongArmDrawnOnTheHorseIsKept();
+    aRestoreThatNeverShowsIsNotRepeatedForever();
+    thePlayersOwnHolsterOnTheHorseIsKept();
     anUnarmedRiderIsKeptUnarmed();
     aWeaponTheGameDrawsForAnUnarmedRiderIsPutAwayOnce();
     pistolsAreLeftAlone();
     anyWeaponControlHandsTheRideToThePlayer();
     aWeaponControlJustBeforeTheMountHandsTheRideToThePlayer();
     scriptedScenesAndMissionsAreLeftAlone();
-    theWindowEndsAfterTheMount();
     eachMountIsItsOwnRide();
     aRideUnderwayWhenThePluginStartsIsLeftAlone();
     decidingIsOnlyWhileMountedAndUnsettled();

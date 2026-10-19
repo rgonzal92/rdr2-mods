@@ -1,13 +1,15 @@
-// NoAutoHorseHolstering: a ScriptHookRDR2 plugin that lets the player keep the long arm in hand
-// when mounting a horse, instead of the game putting it away, and keeps an unarmed rider unarmed.
+// NoAutoHorseHolstering: a ScriptHookRDR2 plugin that lets the player keep a long arm in hand
+// on a horse, at the mount and for the rest of the ride, instead of the game putting it away, and
+// keeps an unarmed rider unarmed.
 // Pistols and revolvers are left to the game.
 //
 // Recreated from the disassembly of NoHolstering.asi (No Auto Horse Holstering 1.1.1, built
 // 2023-01-23). Changes from it:
-//   - acts only around the mount: once on the first frame on the horse, and once more in the next
-//     four seconds if the game takes the long arm away or arms an unarmed rider. The original
-//     put an unarmed rider's empty hand back every frame of the ride, which could cancel a draw
-//     made with the mouse wheel or the weapon select keys
+//   - gives a long arm back only when the hand goes empty, at the mount or later in the ride, and
+//     stops when the game takes it again at once. An unarmed rider is corrected at most once, in
+//     the four seconds after the mount. The original put an unarmed rider's empty hand back every
+//     frame of the ride, which could cancel a draw made with the mouse wheel or the weapon select
+//     keys
 //   - any weapon control the player holds, on the horse or on foot in the last second before
 //     getting on, hands the ride back to the player, including weapon cycling and selecting; the
 //     original paused for five seconds only after the wheel, aim, holster and horse-attack
@@ -54,7 +56,8 @@ const int ATTACH_POINT_HAND_PRIMARY = 0;
 // The controls with which a rider picks, draws, holsters or uses a weapon. The original's four
 // (wheel, horse aim, holster, horse attack) and the ones it missed: cycling, the select keys and
 // the other attacks. Aiming or attacking on foot draws a weapon too, so those count just before
-// a mount.
+// a mount. The satchel, item and emote controls are here because using an item or an emote on the
+// horse puts the weapon away too, and that holster is the player's.
 constexpr Hash WEAPON_CONTROLS[] = {
     joaat("INPUT_AIM"),
     joaat("INPUT_ATTACK"),
@@ -80,6 +83,11 @@ constexpr Hash WEAPON_CONTROLS[] = {
     joaat("INPUT_SELECT_WEAPON_SPECIAL"),
     joaat("INPUT_QUICK_EQUIP_ITEM"),
     joaat("INPUT_DROP_WEAPON"),
+    joaat("INPUT_SELECT_ITEM_WHEEL"),
+    joaat("INPUT_QUICK_USE_ITEM"),
+    joaat("INPUT_OPEN_SATCHEL_MENU"),
+    joaat("INPUT_OPEN_SATCHEL_HORSE_MENU"),
+    joaat("INPUT_OPEN_EMOTE_WHEEL"),
 };
 
 // Calls a native whose arguments and result are all 32-bit values.
