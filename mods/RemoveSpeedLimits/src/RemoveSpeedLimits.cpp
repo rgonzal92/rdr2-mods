@@ -8,16 +8,17 @@
 //   - sets no minimum pace on the horse below a gallop; the original held it at a canter or
 //     faster while forward was held, so it could not slow down or keep pace with a companion
 //   - keeps a full gallop only once the sprint key is pressed at a gallop, and then while sprint
-//     or forward stays held; the original also forced a gallop after three seconds of that key
-//     at a canter, where the game reads the hold as "keep this pace"
+//     or forward stays held and back or stop is not; the original also forced a gallop after
+//     three seconds of that key at a canter, where the game reads the hold as "keep this pace"
 //   - exempts the horse from the speed zones around camps and towns the way the game's own
 //     scripts do, with reset flag 154 on the horse; the original fought the zones with the
 //     forced pace
 //   - holds a sprint or a fast walk on foot only while a direction key is held; the original
 //     held a sprint with none
 //   - switches fast walk only on a cover-key press made while moving with the player in
-//     control; the original also switched on the press that takes cover from a standstill, and
-//     on presses made in shops and scripted scenes
+//     control, and keeps the cover key from the game only then; the original also switched on
+//     the press that takes cover from a standstill, and on presses made in shops and scripted
+//     scenes
 //   - starts with fast walk off and nothing held; the original read all four of its states
 //     before setting them
 //   - a missing or zero WALKING_SPEED means 150, and the value is kept between 100 and 300; the
@@ -101,12 +102,12 @@ constexpr Hash INPUT_HORSE_SPRINT = joaat("INPUT_HORSE_SPRINT");
 constexpr Hash INPUT_HORSE_MOVE_DOWN_ONLY = joaat("INPUT_HORSE_MOVE_DOWN_ONLY");
 constexpr Hash INPUT_HORSE_STOP = joaat("INPUT_HORSE_STOP");
 
-// Reset flags last one frame, and their names are not known (PRF_0x8A63AAF1 and PRF_0xE3667800).
-// In the game's own scripts 154 exempts a ped from the speed zones around camps, towns and
-// bridges, and is set on the player and on the horse the player rides; 174 is set on the player
-// where the indoor limit should not apply.
-const int PED_RESET_FLAG_154 = 154;
-const int PED_RESET_FLAG_174 = 174;
+// Reset flags last one frame, and their game names are not known (PRF_0x8A63AAF1 and
+// PRF_0xE3667800), so they are named by what the game's own scripts use them for: 154 exempts a
+// ped from the speed zones around camps, towns and bridges, and is set on the player and on the
+// horse the player rides; 174 is set on the player where the indoor limit should not apply.
+const int PED_RESET_FLAG_IGNORE_SPEED_ZONES = 154;
+const int PED_RESET_FLAG_IGNORE_INDOOR_LIMIT = 174;
 
 // Settings from RemoveSpeedLimits.ini, read when the plugin loads. A switch that is missing is on.
 static int walkingSpeed, tapToWalkMs;
@@ -133,8 +134,8 @@ static bool pressed(Hash control) {
 
 // A pace limit lasts one frame; the game forgets it by the next.
 static void hold(int ped, Pace pace) {
-    if (pace.atLeast > 0) call(SET_PED_MIN_MOVE_BLEND_RATIO, ped, bits(pace.atLeast));
-    if (pace.atMost > 0) call(SET_PED_MAX_MOVE_BLEND_RATIO, ped, bits(pace.atMost));
+    if (pace.atLeast > NO_LIMIT) call(SET_PED_MIN_MOVE_BLEND_RATIO, ped, bits(pace.atLeast));
+    if (pace.atMost > NO_LIMIT) call(SET_PED_MAX_MOVE_BLEND_RATIO, ped, bits(pace.atMost));
 }
 
 static void scriptMain() {
@@ -152,9 +153,9 @@ static void scriptMain() {
         const bool onFoot = !mount && !call(IS_PED_IN_ANY_VEHICLE, playerPed, false);
 
         if (removeZoneSlowdown) {
-            call(SET_PED_RESET_FLAG, playerPed, PED_RESET_FLAG_154, true);
-            call(SET_PED_RESET_FLAG, playerPed, PED_RESET_FLAG_174, true);
-            if (mount) call(SET_PED_RESET_FLAG, mount, PED_RESET_FLAG_154, true);
+            call(SET_PED_RESET_FLAG, playerPed, PED_RESET_FLAG_IGNORE_SPEED_ZONES, true);
+            call(SET_PED_RESET_FLAG, playerPed, PED_RESET_FLAG_IGNORE_INDOOR_LIMIT, true);
+            if (mount) call(SET_PED_RESET_FLAG, mount, PED_RESET_FLAG_IGNORE_SPEED_ZONES, true);
         }
 
         if (mount && horseBoost) {
@@ -170,15 +171,17 @@ static void scriptMain() {
 
         if (coverWalkToggle && onFoot) {
             const bool inCover = call(IS_PED_IN_COVER, playerPed, false, false);
+            // In a shop or a scripted scene every control is disabled, so the player must be in
+            // control; the cover key is then left to the game entirely.
+            const bool inControl = call(IS_PLAYER_CONTROL_ON, player);
             // The game reports the cover key as a disabled control while this plugin or one of
-            // the game's scripts has it disabled, so both kinds of press are read. In a shop or
-            // a scripted scene every control is disabled, so the player must be in control too.
+            // the game's scripts has it disabled, so both kinds of press are read.
             if ((call(IS_CONTROL_JUST_PRESSED, 0, INPUT_COVER) || call(IS_DISABLED_CONTROL_JUST_PRESSED, 0, INPUT_COVER)) &&
-                !inCover && !call(IS_PED_GOING_INTO_COVER, playerPed) && call(IS_PLAYER_CONTROL_ON, player)) {
+                !inCover && !call(IS_PED_GOING_INTO_COVER, playerPed) && inControl) {
                 foot.coverKeyPressed(moving, call(GET_GAME_TIMER));
             }
             // While moving, the cover key only switches fast walk. To take cover, stand still.
-            if (moving && !inCover) call(DISABLE_CONTROL_ACTION, 0, INPUT_COVER, false);
+            if (moving && !inCover && inControl) call(DISABLE_CONTROL_ACTION, 0, INPUT_COVER, false);
         }
 
         hold(playerPed, foot.update(onFoot, moving, sprintBoost && pressed(INPUT_SPRINT), call(GET_GAME_TIMER)));

@@ -7,14 +7,16 @@
 
 // The fast-walk ratio for a WALKING_SPEED setting, a percentage from 100 to 300: 150 means 1.5.
 // Values outside that range are pulled to its nearest end. A setting that is missing or not a
-// number arrives as 0 and means the value the mod ships with.
+// number arrives as 0 and, like a negative one, means the value the mod ships with.
 constexpr float walkRatio(int walkingSpeed) {
     if (walkingSpeed <= 0) return 1.5f;
     return (walkingSpeed < 100 ? 100 : walkingSpeed > 300 ? 300 : walkingSpeed) / 100.0f;
 }
 
-// A pace range for one frame. atMost 0 means leave the pace to the game; atLeast 0 means set
+// A pace range for one frame. NO_LIMIT as atMost leaves the pace to the game; as atLeast it sets
 // no minimum.
+constexpr float NO_LIMIT = 0.0f;
+
 struct Pace {
     float atLeast;
     float atMost;
@@ -47,9 +49,9 @@ public:
     Pace update(bool onFoot, bool moving, bool sprintHeld, int nowMs) {
         // Every hold needs a direction key: a held pace with none would walk the player off.
         if (!onFoot || !moving) {
-            gait = Gait::THE_GAMES;
+            gait = Gait::GAME_DECIDES;
             sprintWasHeld = mayBeTap = false;
-            return {0, 0};
+            return {NO_LIMIT, NO_LIMIT};
         }
         if (sprintHeld && !sprintWasHeld) {
             // A tap means "walk again" only to a player who is running.
@@ -74,8 +76,8 @@ public:
         if (fastWalkOn) return {fastWalk, fastWalk};
         // After a tap the game may still count the player as running, so the pace is capped. No
         // minimum is set: slower than a walk stays the game's choice.
-        if (gait == Gait::WALK) return {0, WALK};
-        return {0, 0};
+        if (gait == Gait::WALK) return {NO_LIMIT, WALK};
+        return {NO_LIMIT, NO_LIMIT};
     }
 
 private:
@@ -83,38 +85,42 @@ private:
 
     // What holds the player's pace while the sprint key is up: the game, the run that follows
     // a sprint, or the walk that follows a tap. Stopping gives it back to the game.
-    enum class Gait { THE_GAMES, RUN, WALK };
+    enum class Gait { GAME_DECIDES, RUN, WALK };
 
     float fastWalk;
     int tapMs;
     bool fastWalkOn = false;
     int switchedAtMs = -TOGGLE_GAP_MS;  // the game's clock starts at 0, so the first press counts
-    Gait gait = Gait::THE_GAMES;
+    Gait gait = Gait::GAME_DECIDES;
     bool sprintWasHeld = false;
     bool mayBeTap = false;  // the sprint key went down during a run and has not yet outlasted a tap
     int pressedAtMs = 0;
 };
 
 // The horse the player is riding.
-constexpr float HORSE_TOP = 10.0f;
-
 class HorsePace {
 public:
+    static constexpr float TOP = 10.0f;
+
     // Call every frame on the horse. A new HorsePace is needed for each horse ridden.
     Pace update(bool galloping, bool sprintHeld, bool forwardHeld, bool backHeld) {
-        // The sprint key at a gallop starts a full gallop, and it lasts while sprint or forward is
-        // held, so the rider can let go of sprint. Letting go of both, the back key (even with
-        // sprint held), or the horse leaving the gallop (a fall, an obstacle, tiredness, a scene)
-        // ends it. Below a gallop a sprint hold is the game's "keep this pace" and "match my
-        // companion's speed", so nothing is forced there.
-        fullGallop = galloping && !backHeld && (sprintHeld || (fullGallop && forwardHeld));
-        if (fullGallop) return {HORSE_TOP, HORSE_TOP};
+        // A press of the sprint key at a gallop starts a full gallop, and it lasts while sprint or
+        // forward is held, so the rider can let go of sprint. Letting go of both, the back key
+        // (even with sprint held), or the horse leaving the gallop (a fall, an obstacle,
+        // tiredness, a scene) ends it, and only a new press starts it again. A sprint hold that
+        // began below a gallop is the game's "keep this pace" and "match my companion's speed",
+        // so nothing is forced for it.
+        const bool sprintPressed = sprintHeld && !sprintWasHeld;
+        sprintWasHeld = sprintHeld;
+        fullGallop = galloping && !backHeld && (sprintPressed || (fullGallop && (sprintHeld || forwardHeld)));
+        if (fullGallop) return {TOP, TOP};
         // Asking the horse to move lifts whatever cap a mission has put on it, and sets no
         // minimum: the gait stays the rider's choice.
-        if (sprintHeld || forwardHeld) return {0, HORSE_TOP};
-        return {0, 0};
+        if (sprintHeld || forwardHeld) return {NO_LIMIT, TOP};
+        return {NO_LIMIT, NO_LIMIT};
     }
 
 private:
     bool fullGallop = false;
+    bool sprintWasHeld = false;
 };

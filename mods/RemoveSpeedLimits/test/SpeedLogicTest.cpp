@@ -14,7 +14,8 @@ const float FAST_WALK = 1.5f;
 
 static bool leftToTheGame(Pace pace) { return pace.atLeast == 0 && pace.atMost == 0; }
 static bool heldAt(Pace pace, float ratio) { return pace.atLeast == ratio && pace.atMost == ratio; }
-static bool cappedAtAWalk(Pace pace) { return pace.atLeast == 0 && pace.atMost == 1.0f; }
+static bool cappedAt(Pace pace, float ratio) { return pace.atLeast == 0 && pace.atMost == ratio; }
+static bool cappedAtAWalk(Pace pace) { return cappedAt(pace, 1.0f); }
 
 // Sprints from a walk for a second and lets go, which leaves the player running. Ends at 1000 ms.
 static FootPace running(int tapMs) {
@@ -157,16 +158,14 @@ static void forwardOrSprintLiftsTheCapWithoutForcingAPace() {
     // to a trot or keep pace with a slower companion.
     for (const Pace pace : {HorsePace().update(!GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY), HorsePace().update(!GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY),
                             HorsePace().update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY)}) {
-        assert(pace.atLeast == 0);
-        assert(pace.atMost == 10.0f);
+        assert(cappedAt(pace, 10.0f));
     }
 }
 
 static void holdingSprintBelowAGallopDoesNotForceOne() {
     // The game reads that hold as "keep this pace" and "match my companion's speed".
     const Pace pace = HorsePace().update(!GALLOPING, SPRINT_KEY, !FORWARD_KEY, !BACK_KEY);
-    assert(pace.atLeast == 0);
-    assert(pace.atMost == 10.0f);
+    assert(cappedAt(pace, 10.0f));
 }
 
 static void holdingSprintAtAGallopKeepsTheGallop() {
@@ -186,7 +185,7 @@ static void lettingGoOfForwardEndsTheGallop() {
     assert(leftToTheGame(horse.update(GALLOPING, NO_SPRINT_KEY, !FORWARD_KEY, !BACK_KEY)));
     // Forward again does not bring the gallop back without the sprint key.
     const Pace pace = horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
-    assert(pace.atLeast == 0 && pace.atMost == 10.0f);
+    assert(cappedAt(pace, 10.0f));
 }
 
 static void theBackKeyEndsTheGallop() {
@@ -203,6 +202,23 @@ static void theBackKeyEndsTheGallopWhileSprintIsHeld() {
         horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
         assert(horse.update(GALLOPING, SPRINT_KEY, forward, BACK_KEY).atLeast == 0);
     }
+}
+
+static void aSprintHeldFromACanterDoesNotLockTheGallop() {
+    // Only a press at a gallop starts it; a hold that began below one is "keep this pace".
+    HorsePace horse;
+    horse.update(!GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    assert(cappedAt(horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY), 10.0f));
+    // A new press at the gallop does start it.
+    horse.update(GALLOPING, NO_SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    assert(heldAt(horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY), 10.0f));
+}
+
+static void aGallopEndedByTheBackKeyNeedsANewPress() {
+    HorsePace horse;
+    horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY);
+    horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, BACK_KEY);
+    assert(cappedAt(horse.update(GALLOPING, SPRINT_KEY, FORWARD_KEY, !BACK_KEY), 10.0f));
 }
 
 static void aHorseThatStopsGallopingIsNotForcedBack() {
@@ -238,6 +254,8 @@ int main() {
     lettingGoOfForwardEndsTheGallop();
     theBackKeyEndsTheGallop();
     theBackKeyEndsTheGallopWhileSprintIsHeld();
+    aSprintHeldFromACanterDoesNotLockTheGallop();
+    aGallopEndedByTheBackKeyNeedsANewPress();
     aHorseThatStopsGallopingIsNotForcedBack();
     std::puts("SpeedLogic: all checks passed");
 }
