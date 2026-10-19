@@ -4,7 +4,7 @@ Makes Arthur answer people who greet him, without the Greet button being pressed
 
 - **Type:** ScriptHookRDR2 plugin (.asi)
 - **Origin:** Rebuilt from source after Automatic Greet Replies 1.1, file `AutoGreet1.1.asi` (author not recorded in the mod's files, see Credits)
-- **Status:** In use, as of 2026-10-12 (the file in the game folder is identical to `build/AutomaticGreetReplies.asi`, and the ASI loader's log lists it as loaded)
+- **Status:** In use. Taken out of the game folder on 2026-10-14 for a clean camp-dialogue test (its replies may use up one-shot camp greets) and put back on 2026-10-16, identical to the build of that day; the ASI loader's log of 2026-10-18 lists it as loaded. The reply rule was moved into a tested header on 2026-10-18, with no change in behaviour.
 - **Game build:** 1.0.1491.50, story mode
 
 An `.asi` plugin is a small Windows library that an ASI loader loads into the game. ScriptHookRDR2 lets such a plugin call the game's own script commands.
@@ -44,7 +44,7 @@ The original came as a binary without source. The source here was written from i
 
 ## Install
 
-1. Run `make` in this folder, or use the built file that is already in `build/`.
+1. Run `make` in this folder. `build/` is not in git, so a fresh clone has no built file.
 2. Copy `build/AutomaticGreetReplies.asi` into the game's main folder, next to `RDR2.exe`.
 3. Do not install the original `AutoGreet1.1.asi` as well. The two would both switch the auto-reply on.
 
@@ -54,18 +54,21 @@ To uninstall, delete `AutomaticGreetReplies.asi` from the game folder. The plugi
 
 - Tools: `make`, `clang++` with the `x86_64-pc-windows-msvc` target, `lld` and `llvm-dlltool`. No Windows SDK is needed.
 - `make` builds `build/ScriptHookRDR2.lib` from `src/ScriptHookRDR2.def`, then `build/AutomaticGreetReplies.asi`.
-- There is no `make test`. Every rule of the plugin is a question to the game, so nothing runs without it.
+- `make test` builds `build/ReplyRuleTest` for the local machine and runs it. Its 5 checks cover the reply rule in `src/ReplyRule.h`: nobody speaking, new speakers, a person just spoken to, and one such person holding the reply back for everyone. Which people are speaking and what they remember are questions to the game and have no automated test.
 
 ## Files
 
 | File | What it is |
 | --- | --- |
-| `AutoGreet1.1.asi` | The original author's binary, version 1.1 (91,136 bytes, linked 2021-03-24). Kept for reference, not installed. |
-| `src/AutomaticGreetReplies.cpp` | Source of this build. |
+| `src/AutomaticGreetReplies.cpp` | Source of this build: the game calls and the per-frame loop. |
+| `src/ReplyRule.h` | The reply rule, with no game calls. |
+| `test/ReplyRuleTest.cpp` | The logic checks run by `make test`. |
 | `src/ScriptHookRDR2.def` | The seven functions imported from `ScriptHookRDR2.dll`. |
 | `Makefile` | Cross-builds the plugin on Linux. |
-| `build/AutomaticGreetReplies.asi` | Built from this repo's source (3,072 bytes). This is the file to install. |
-| `build/ScriptHookRDR2.lib` | Import library made by the build. |
+| `build/AutomaticGreetReplies.asi` | Built from this repo's source (3,072 bytes), not in git. This is the file to install. |
+| `build/ScriptHookRDR2.lib`, `build/ReplyRuleTest` | Import library and test program made by the build, not in git. |
+
+The original author's binary, `AutoGreet1.1.asi` (version 1.1, 91,136 bytes, linked 2021-03-24), is not in this repo. A reference copy is kept outside it, in `rdr2-tools/originals/AutomaticGreetReplies/`.
 
 ## Known limits
 
@@ -73,6 +76,8 @@ To uninstall, delete `AutomaticGreetReplies.asi` from the game folder. The plugi
 - Honor is expected to rise by itself. The game's scripts give one honor point when three people who were not greeted before are greeted within 60 seconds, outside camp and not counting enemy groups. An automatic reply is the same kind of speech as a pressed Greet. Each greeting also resets the game's count of people antagonized in a row.
 - Arthur answers more than hellos. The game sends some remarks as greetings: about a body he carries, a drawn weapon or his looks, a lawman's passing warning, a child's insult, a prostitute's offer. He answers each with the friendly line before the player can choose, and the answer to an offer counts as turning it down.
 - The auto-reply belongs to the player, not to one listener. The plugin decides only whether it is on in a frame; the game picks whom Arthur answers.
+- "Locked on" is read with `IS_PLAYER_TARGETTING_ANYTHING`, as the original did. The game's own scripts use it only next to weapon-aim checks, and read the Greet and Antagonize lock-on through `GET_PLAYER_INTERACTION_TARGET_ENTITY`, so an unarmed lock-on may not count and Arthur may still auto-reply while those choices are on screen. Not tried in the game.
+- Flag 54 (greeted by the player) is asked by none of the game's scripts, and both flag names come from a community list, not from the game.
 - The ten-second rule relies on the game recording an automatic reply in the person's memory the way it records a spoken greeting. If it does not, Arthur can answer the same person's next line.
 - While a person Arthur has just answered is still talking to him, a greeting from someone else in that moment can go unanswered.
 - In poker and blackjack inside story missions the game leaves the auto-reply off on purpose. The plugin can turn it on there as well.

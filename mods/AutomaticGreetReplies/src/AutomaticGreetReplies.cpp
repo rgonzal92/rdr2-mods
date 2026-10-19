@@ -13,6 +13,8 @@
 //   - checks every frame; the original slept a second at a time while Arthur spoke
 //   - scans the nearby people only when Arthur is free to reply
 
+#include "ReplyRule.h"
+
 // Functions imported from ScriptHookRDR2.dll, with the signatures encoded in the original's
 // import table (see ScriptHookRDR2.def).
 struct HINSTANCE__;
@@ -38,12 +40,13 @@ const unsigned long long IS_ANY_SPEECH_PLAYING = 0x729072355FA39EC9;            
 const int PLAYER_RESET_FLAG_ENABLE_GREET_AUTO_REPLY = 41;
 
 // What a person remembers about the player, as asked through _GET_PED_HAS_INTERACTED_WITH_PLAYER.
-const int SPOKEN_TO_BY_PLAYER = 7;
-const int GREETED_BY_PLAYER = 54;
+// The names come from the community's list of these flags, not from the game.
+const int INTERACTION_SPOKEN_TO_BY_PLAYER = 7;
+const int INTERACTION_GREETED_BY_PLAYER = 54;
 
-// How long a person Arthur has spoken to is left alone. The game's own scripts ask the same
-// question with the same ten seconds (medium_update).
-const int SAME_PERSON_MS = 10000;
+// How long a person Arthur has spoken to is left alone. The game's own scripts (medium_update)
+// ask flag 7 with the same ten seconds, paired there with flag 6; none of them asks flag 54.
+const int RECENTLY_SPOKEN_TO_MS = 10000;
 
 const int MAX_PEDS = 1024;
 
@@ -55,26 +58,24 @@ static int call(unsigned long long native, Args... args) {
     return static_cast<int>(*nativeCall());
 }
 
-// True when a person other than the player is looking at the player and speaking, and nobody
-// who is doing so has been spoken to by Arthur in the last ten seconds. The auto-reply belongs
-// to the player, not to one listener, so it has to stay off for as long as such a person talks.
-static bool someoneNewIsSpeakingToPlayer(int player, int playerPed) {
+// True when at least one person other than the player is looking at the player and speaking,
+// and only new people are: nobody doing so has been spoken to by Arthur in the last ten seconds.
+static bool onlyNewPeopleAreSpeakingToPlayer(int player, int playerPed) {
     static int peds[MAX_PEDS];
     const int count = worldGetAllPeds(peds, MAX_PEDS);
-    bool found = false;
+    ReplyRule rule;
     for (int i = 0; i < count; ++i) {
         const int ped = peds[i];
         if (!call(IS_PED_HEADTRACKING_PED, ped, playerPed) || !call(IS_ANY_SPEECH_PLAYING, ped) ||
             call(IS_PED_A_PLAYER, ped) || !call(IS_PED_HUMAN, ped)) {
             continue;
         }
-        if (call(GET_PED_HAS_INTERACTED_WITH_PLAYER, ped, player, SPOKEN_TO_BY_PLAYER, SAME_PERSON_MS) ||
-            call(GET_PED_HAS_INTERACTED_WITH_PLAYER, ped, player, GREETED_BY_PLAYER, SAME_PERSON_MS)) {
-            return false;
-        }
-        found = true;
+        const bool recentlySpokenTo =
+            call(GET_PED_HAS_INTERACTED_WITH_PLAYER, ped, player, INTERACTION_SPOKEN_TO_BY_PLAYER, RECENTLY_SPOKEN_TO_MS) ||
+            call(GET_PED_HAS_INTERACTED_WITH_PLAYER, ped, player, INTERACTION_GREETED_BY_PLAYER, RECENTLY_SPOKEN_TO_MS);
+        if (!rule.speaker(recentlySpokenTo)) break;
     }
-    return found;
+    return rule.reply();
 }
 
 static void scriptMain() {
@@ -85,7 +86,7 @@ static void scriptMain() {
         // Locked on, the player picks greet or antagonize by hand. Otherwise request a reply;
         // the flag lasts one frame, so it is set again every frame until Arthur starts speaking.
         if (playerPed && !call(IS_ANY_SPEECH_PLAYING, playerPed) && !call(IS_PLAYER_TARGETTING_ANYTHING, player) &&
-            someoneNewIsSpeakingToPlayer(player, playerPed)) {
+            onlyNewPeopleAreSpeakingToPlayer(player, playerPed)) {
             call(SET_PLAYER_RESET_FLAG, player, PLAYER_RESET_FLAG_ENABLE_GREET_AUTO_REPLY, true);
         }
         scriptWait(0);
